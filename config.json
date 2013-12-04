@@ -1,0 +1,7 @@
+{
+	"host_map": [
+		"$.whitecap.com => www.whitecap.com",
+		"$.whitecap.com => whitecap.com",
+		"$.blog.whitecap.com => blog.whitecap.com"
+	]
+}
