@@ -32,13 +32,31 @@ $(document).ready(function() {
 
 		// $(".dijitTooltipLeft").attr("class", "dijitTooltipBottom");
 
-	$("#WC_UserRegistrationAddForm_links_1").click(function(){
-		$(".dijitTooltipRight").attr("class", "dijitTooltipLeft");
-		$("input").focus(function(){
+	$(".btn").on('click',function(){
+		// console.log("this also happened");
+		// $(".dijitTooltipRight").attr("class", "dijitTooltipLeft");
+		$(".dijitTooltipRight").hide();
+
+
+
+		$("input").one('focus', function(){
 			console.log("this happened");
-			$(".dijitTooltipLeft").attr("style", "top: 100px !important;");
+			alert("Fill out required field correctly.");
+			// alert("Fill out required field.");
+			// $(".dijitTooltipLeft").attr("style", "top: 0px !important; margin-top:-100px !important;");
 		});
 	});
+
+	// $("input").on('formError', function(){
+	// 	alert("test");
+	// });
+
+
+	// $(".dijitTooltip").bind("DOMSubtreeModified", function(){
+	// 	alert("test");
+	// })
+
+
 	
 
 	// $(".dijitTooltipLeft").click(function(){
