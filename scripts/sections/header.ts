@@ -281,6 +281,15 @@ $("./body"){
 							attributes(data-ur-id: "pers-nav-menu")
 						}
 					}
+					$("./li[@id='menu6']"){
+						$("./a"){
+
+							attributes(data-ur-id: "pers-nav-account")
+						}
+						$("./ul[@class='subnav']"){
+							attributes(data-ur-id: "pers-nav-account")
+						}
+					}
 				}
 			}
 		}

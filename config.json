@@ -1,5 +1,7 @@
 {
 	"host_map": [
+
+		"$.qa-whitecap.ecom.hdsupply.com => qa-whitecap.ecom.hdsupply.com",
 		"$.stg-whitecap.ecom.hdsupply.com => stg-whitecap.ecom.hdsupply.com"
 	]
 }

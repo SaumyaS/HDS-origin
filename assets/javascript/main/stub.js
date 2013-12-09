@@ -34,6 +34,10 @@ $(document).ready(function() {
 
 	$("#WC_UserRegistrationAddForm_links_1").click(function(){
 		$(".dijitTooltipRight").attr("class", "dijitTooltipLeft");
+		$("input").focus(function(){
+			console.log("this happened");
+			$(".dijitTooltipLeft").attr("style", "top: 100px !important;");
+		});
 	});
 	
 
@@ -42,9 +46,9 @@ $(document).ready(function() {
 	// 	$(this).attr("class", "dijitTooltipRight");
 	// });
 
-	$("#WC_UserRegistrationAddForm_links_1").click(function(){
-		$("input").blur();
-	});
+	// $("#WC_UserRegistrationAddForm_links_1").click(function(){
+	// 	$("input").blur();
+	// });
 	
 
 	// $("input").on('click', function(){

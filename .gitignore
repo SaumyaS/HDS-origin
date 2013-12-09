@@ -14,3 +14,5 @@ assets/javascript/.remote/
 assets/javascript/main.js
 assets/javascript/host_map.js
 assets/stylesheets/.css/*
+config.json
+README.md
