@@ -48,6 +48,7 @@ $(document).ready(function() {
 		$(".dijitTooltipLeft").hide();
 		$(".dijitTooltipRight").hide();
 		$(".dijitTooltip").hide();
+		
 
 		console.log("this also happened again");
 
