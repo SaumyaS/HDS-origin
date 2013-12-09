@@ -16,7 +16,8 @@ Typically, on Mac or Linux, just browse to this project folder in a terminal and
 
     sudo moov server 
 
-Then, just browse to [mlocal.qa-whitecap.ecom.hdsupply.com](http://mlocal.qa-whitecap.ecom.hdsupply.com) and you are ready to start developing!
+Then, just browse to [mlocal.stg-whitecap.ecom.hdsupply.com](http://mlocal.stg-whitecap.ecom.hdsupply.com) and you are ready to start developing!
+
 
 ## Deployment
 
@@ -32,5 +33,4 @@ See detailed documentation for Moovweb at [console.moovweb.com](http://console.m
 ## Domains
 Remember to put all domains you're going to hit in your etc/hosts if you run your server with the `-auto-hosts=false` option.
 
-
-    127.0.0.1   mlocal.qa-whitecap.ecom.hdsupply.com
+    127.0.0.1   mlocal.stg-whitecap.ecom.hdsupply.com

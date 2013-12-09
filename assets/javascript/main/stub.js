@@ -116,5 +116,3 @@ $(".highslide-container").DOMNodeAppear(function(){
 $("#mainTabContainer_tablist").DOMNodeAppear(function(){
 	$('#mainTabContainer_tablist').hide();
 });
-
-
