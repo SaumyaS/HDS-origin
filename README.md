@@ -33,4 +33,8 @@ See detailed documentation for Moovweb at [console.moovweb.com](http://console.m
 ## Domains
 Remember to put all domains you're going to hit in your etc/hosts if you run your server with the `-auto-hosts=false` option.
 
+
+
+    127.0.0.1   mlocal.qa-whitecap.ecom.hdsupply.com
     127.0.0.1   mlocal.stg-whitecap.ecom.hdsupply.com
+
