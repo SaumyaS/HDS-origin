@@ -1,0 +1,80 @@
+.account-col{
+	h1{
+		@include title_bar;
+		margin-top: 0px;
+	}
+	._users{
+		padding: 5px;
+		background-color: #eee;
+		text-align: center;
+		a{
+			margin: 5px;
+		}
+	}
+	._addressOptions{
+		padding: 5px;
+	}
+	._ajaxAddressBook{
+		padding: 5px;
+		overflow: hidden;
+		.align{
+			border: 2px solid #ccc;
+			padding: 5px;
+		}
+		._addressInfo{
+			margin-top: 10px;
+			border: 2px solid #ccc;
+			padding: 5px;
+			.sub-col{
+				label{
+					display: inline-block;
+					min-width: 130px;
+				}
+				select{
+					width: 150px;
+				}
+				#address2{
+					margin-left: 134px !important;
+				}
+				input[type=text]{
+					margin: 5px 0px;
+					padding: 4px;
+					background: #ccc;
+					border: 1px solid #aaa;
+					box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4) inset;
+				}
+			}
+		}
+	}
+	.content_footer{
+		margin-bottom: 10px;
+		margin-left: 10px;
+		margin-right: 10px;
+		a{
+			margin: 5px;
+		}
+	}
+}
+.alert{
+	color: #C00;
+}
+
+._ajaxAddress{
+	label{
+		display: inline-block;
+		min-width: 130px;
+	}
+	select{
+		width: 150px;
+	}
+	#address2{
+		margin-left: 134px !important;
+	}
+	input[type=text]{
+		margin: 5px 0px;
+		padding: 4px;
+		background: #ccc;
+		border: 1px solid #aaa;
+		box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4) inset;
+	}
+}

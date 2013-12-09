@@ -1,16 +1,72 @@
 // Reset file for standardizing the page
-// @import "globals/_reset";
+@import "globals/_reset";
 
-// Import Bourbon
-@import "globals/bourbon/_bourbon.scss";
-
-
-// Import global base styles
+// Base file contains all the global styles
+@import "globals/_lib";
 @import "globals/_base";
+
+// File for global Uranium stylings
+@import "globals/_uranium.scss";
+
+// Site wide variables
+@import "globals/_variables.scss";
+@import "globals/_forms";
+@import "globals/_accordions";
+
+// Menu Icons
+@import "globals/_Icons.scss";
 
 // Header & Footer
 @import "sections/_header";
 @import "sections/_footer";
+@import "sections/_popup";
+@import "sections/_pagination";
 
 // Pages
+@import "pages/_categories";
 @import "pages/_home";
+@import "pages/_login";
+@import "pages/_products";
+@import "pages/_items";
+@import "pages/_orderItemDisplay";
+@import "pages/_brands";
+@import "pages/_search";
+@import "pages/_location";
+@import "pages/_contactus";
+@import "pages/_specials";
+@import "pages/_quickOrder";
+@import "pages/_register";
+@import "pages/_advancedSearch";
+@import "pages/_loggedIn";
+@import "pages/_forgetpassword";
+@import "pages/_changePassword";
+@import "pages/_reLogin";
+@import "pages/_logonForm";
+@import "pages/_shippingBilling";
+@import "pages/_brandCategoryDisplay";
+@import "pages/_shipmentOrderSummary";
+@import "pages/_userRegistrationForm";
+@import "pages/_ajaxAddressBook";
+@import "pages/_AjaxRequisitionListDisplayView";
+@import "pages/_AjaxRequisitionListCreateView";
+@import "pages/_AjaxRequisitionListDetailView";
+@import "pages/_requisitionList";
+@import "pages/_WillCallModalView";
+@import "pages/_searchBasedNavigationCategoryResultDisplayView";
+@import "pages/_processedOrders";
+@import "pages/_ajaxOrderDetail";
+@import "pages/_standardCreditCard";
+@import "pages/_addressEditView";
+@import "pages/_termsConditions";
+@import "pages/_privacyPolicy";
+@import "pages/_trader";
+@import "pages/_footerEmail";
+@import "pages/_oliverBoots-sub";
+@import "pages/_video";
+@import "pages/_oliverBoots";
+@import "pages/_catalogRequestForm";
+@import "pages/_safetyCatalog";
+@import "pages/_woc";
+@import "pages/_footerRewards";
+@import "pages/_safetydealzone";
+@import "pages/_genericError";

@@ -1,0 +1,102 @@
+._shippingBilling{
+	label{
+		min-width: 120px;
+		display: inline-block;
+	}
+	input[type="text"], input[type="password"]{
+		border: 1px solid #aaa;
+		background-color: #ccc;
+		padding: 3px;
+		margin: 5px 0px;
+	}
+	select[name="state"]{
+		width: 160px !important;
+	}
+	textarea{
+		border: 1px solid #aaa;
+		background-color: #ccc;
+		padding: 3px;
+		margin: 5px 0px;
+		vertical-align: top;
+		font-family: Arial, Helvetica, sans-serif;
+		min-width: 124px;
+		height: 70px;
+	}
+	.erpUserdropdown{
+		display: none;
+	}
+	h3{
+		letter-spacing: -1px;
+		padding: 5px;
+		background-color: #eee;
+	}
+	h1{
+		@include title_bar;
+	}
+	.checkout-container{
+		border: 2px solid #ccc;
+		padding: 10px;
+		margin: 10px 5px;
+		overflow: hidden;
+
+		#willCallDisplayArea{
+			margin-bottom: 5px;
+			padding: 5px;
+			border-bottom: 1px solid #CCCCCC;
+			background-color: #FEFDCD;
+			input{
+				margin-left: 100px;
+			}
+			#ShiptoBranch_1{
+				background: none;
+				border: none;
+				padding: 0px;
+				font-size: 1em;
+				margin: 0;
+				a{
+					color: #505050;
+					text-decoration: underline;
+				}
+			}
+		}
+
+		#willCallShippingAddressForm{
+
+		}
+		.shipping_method_content{
+
+
+			#willCallShippingMethods{
+				display: block;
+
+				span{
+					input[type="radio"]{
+						margin-left: 100px;
+					}
+				}
+			}
+		}
+
+		#create-account-container{
+			line-height: 1.3em;
+		}
+	}
+	#WC_UnregisteredCheckout_links_4{
+		margin-bottom: 10px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	#shippingBillingPageNext{
+		margin: 10px;
+	}
+	.billing_method{
+		label{
+			min-width: 100px;
+		}
+		
+	}
+	#WC_EmptyShopCartDisplayf_div_1{
+		padding: 10px;
+	}
+}
+

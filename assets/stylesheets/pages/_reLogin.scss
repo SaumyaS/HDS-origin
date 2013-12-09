@@ -1,0 +1,19 @@
+._reLogin{
+	h1{
+		@include title_bar;
+	}
+	#WC_UserTimeoutView_5{
+		padding: 5px;
+		padding-bottom: 10px;
+		span{
+			margin-left: 1px;
+			margin-right: 1px;
+			padding-top: 10px;
+		}
+		.btn{
+			margin-left: 10px;
+			margin-right: 10px;
+			margin-top: 5px;
+		}
+	}
+}

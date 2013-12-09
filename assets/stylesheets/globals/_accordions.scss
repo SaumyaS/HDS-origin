@@ -1,0 +1,11 @@
+[data-ur-toggler-component="toggler"] {
+	
+}
+
+[data-ur-toggler-component="button"] {
+	@include toggler;
+}
+
+[data-ur-tabs-component="button"] {
+	// @include subToggler;
+}

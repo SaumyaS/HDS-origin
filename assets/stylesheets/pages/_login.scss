@@ -1,0 +1,98 @@
+.log_heading{
+	font-size: 16px;
+	color: #505050;
+	display: block;
+	h1{
+		@include title_bar;
+
+	}
+	hr{
+		@include horizontal_line;
+	}
+}
+
+.login-box{
+
+	.col-1{
+		padding: 10px 20px;
+		h2{
+			font-weight: bold;
+		}
+		form{
+			display: block;
+			margin-top: 0em;
+			label{
+				min-width: 100px;
+				display: inline-block;
+				font-weight: bold;
+				margin: 5px 0;
+			}
+			input{
+				margin: 5px 0px;
+				width: 200px;
+				padding: 0.5em !important;
+				background: #ccc;
+				border: 1px solid #aaa;
+				border-radius: 4px;
+				box-shadow: 0px 1px 4px rgba(0,0,0,0.4) inset;
+			}
+			#WC_AccountDisplay_links_1{
+				color: #3a00f4;
+				text-decoration: underline;
+				display: inline-block;
+				cursor: auto;
+				font-size: 12px;
+			}
+			#WC_AccountDisplay_links_2{
+				margin-top: 4px;
+				text-decoration: none;
+			}
+
+		}
+	}
+	.col-2{
+		padding: 10px 20px;
+		background: #ddd;
+		#ad_18601{
+			color: #505050;
+			h2{
+				font-size: 16px;
+				font-weight: bold;
+			}
+			a{
+				margin-top: 10px;
+			}
+		}
+	}
+
+}
+#LinkAccount{
+	padding: 5px;
+	label{
+		display: inline-block;
+		min-width: 110px;
+	}
+	input{
+		margin: 5px 0;
+		border: 1px solid #aaa;
+		background: #ccc;
+		padding: 0.5em !important;
+	}
+	textarea{
+		margin: 5px 0;
+		border: 1px solid #aaa;
+		background: #ccc;
+		padding: 0.5em !important;
+	}
+	hr{
+		margin-top: 10px;
+	}
+	._youtube{
+		float: left;
+		width: 100%;
+	}
+	a{
+		margin-left: 1px;
+		margin-right: 1px;
+	}
+}

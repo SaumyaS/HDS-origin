@@ -1,0 +1,30 @@
+._location{
+	div{
+		display: block;
+		h1{
+			@include title_bar;
+		}
+		hr{
+			@include horizontal_line;
+		}
+		#ad_18101{
+			#WC_ContentAreaESpot_div_22_1{
+				height: auto;
+			}
+			a{
+				display: none;
+			}
+			iframe{
+				#map-header{
+					background: none;
+				}
+			}
+		}
+		
+	}
+
+}
+
+#map-header{
+	background: none;
+}

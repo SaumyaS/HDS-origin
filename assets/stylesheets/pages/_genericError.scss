@@ -1,0 +1,12 @@
+._genericError{
+	h1{
+		@include title_bar;
+	}
+
+	hr{
+		@include horizontal_line;
+	}
+	.ad{
+		padding: 5px;
+	}
+}

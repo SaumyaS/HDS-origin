@@ -1,0 +1,100 @@
+._accountSummary{
+	._togglerWidget{
+		padding-top: 3px;
+		text-align: center;
+		background: #ccc;
+		padding-bottom: 5px;
+		._userInfo{
+			@include bars;
+		}
+		.nav-secondary{
+			margin-top: -5px;
+			.group{
+				a{
+					border: 1px solid #aaa;
+					@include subbars;
+				}
+			}
+		}
+		
+		.items{
+			a{
+				@include subbars;
+				background-color: #222;
+				color: #eee;
+				font-weight: bold;
+			}
+		}
+	}
+	.account-col{
+		h2{
+			padding: 5px;
+		}
+		#box{
+			padding-bottom: 0px !important;
+			display: block;
+			.my_account{
+				.main_header{
+					padding-bottom: 0px !important;
+					h1{
+
+						@include title_bar;
+						-webkit-margin-before: 0px;
+						-webkit-margin-after: 0px;
+					}
+					.left{
+						padding-bottom: 0px !important;
+					}
+				}
+				.body{
+					padding: 5px;
+					.checkout-container{
+						overflow: hidden;
+						.content{
+							border: 2px solid #ccc;
+							padding: 10px;
+							margin: 0 15px;
+							.info{
+								a{
+									margin-top: 5px;
+								}
+							}
+						}
+						._shippingContent{
+							border: 2px solid #cccccc;
+							padding: 10px;
+							margin: 0 15px;
+						}
+						.erp-shipping-address-detail{
+							width: 200px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.acct-name {
+	font-weight: bold;
+	color: #ffc623 !important;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	padding: 5px 2px;
+}
+.cart_menu{
+	.MyAccountURLSep{
+		// border-bottom: 2px solid #C3C3C3;
+	    background-color: #000;
+	    position: relative;
+	    padding-top: 5px;
+	    padding-bottom: 5px;
+		a{
+			text-decoration: none;
+			color: #aaa;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 14px;
+			padding: 10px 2px;
+		}
+	}
+}
