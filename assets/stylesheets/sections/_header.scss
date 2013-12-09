@@ -4,7 +4,7 @@
 // 
 
 .dijitTooltipLeft{
-	display: block;
+	display: none;
 	position:absolute;
 	left: 139px !important;
 	background-color: white;
@@ -46,7 +46,7 @@
 }
 
 .dijitTooltipRight{
-	display: none;
+	// display: none;
 }
 
 #pers-nav{

@@ -32,20 +32,40 @@ $(document).ready(function() {
 
 		// $(".dijitTooltipLeft").attr("class", "dijitTooltipBottom");
 
-	$(".btn").on('click',function(){
-		// console.log("this also happened");
-		// $(".dijitTooltipRight").attr("class", "dijitTooltipLeft");
+	$("#WC_UserRegistrationAddForm_links_1").on('click',function(){
 		$(".dijitTooltipRight").hide();
+		$(".dijitTooltipLeft").hide();
 
-
-
-		$("input").one('focus', function(){
-			console.log("this happened");
+		if($("input,text").is("*:focus")){
+			console.log("this was run");
 			alert("Fill out required field correctly.");
-			// alert("Fill out required field.");
-			// $(".dijitTooltipLeft").attr("style", "top: 0px !important; margin-top:-100px !important;");
-		});
+		}
 	});
+
+	$("#WC_UnregisteredCheckout_links_4").click(function(){
+		console.log("this also happened");
+		// $(".dijitTooltipRight").attr("class", "dijitTooltipLeft");
+		$(".dijitTooltipLeft").hide();
+		$(".dijitTooltipRight").hide();
+		$(".dijitTooltip").hide();
+
+		console.log("this also happened again");
+
+		
+	});
+
+	if($("input,text").is("*:focus")){
+			console.log("this was run");
+			alert("Fill out required field correctly.");
+		}
+
+
+	// $("input").one('focus', function(){
+		// 	console.log("this happened");
+			
+		// 	// alert("Fill out required field.");
+		// 	// $(".dijitTooltipLeft").attr("style", "top: 0px !important; margin-top:-100px !important;");
+		// });
 
 	// $("input").on('formError', function(){
 	// 	alert("test");
