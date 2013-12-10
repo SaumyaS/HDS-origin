@@ -1,3 +1,24 @@
 ._ReqListView{
-	padding: 10px;
+	form{
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-bottom: 5px;
+		label{
+			min-width: 50px;
+		}
+		#WC_B2BMyAccountParticipantRole_select_1{
+			width: 200px;
+		}
+	}
+	.checkout-container{
+		padding: 10px;
+	}
+	.bt_pagination {
+		width: 100%;
+		border-top: 1px solid #000;
+		margin-top: 15px;
+		padding: 5px 0px 5px 0px;
+		color: #999;
+		clear: both;
+	}
 }
