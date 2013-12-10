@@ -55,10 +55,10 @@ $(document).ready(function() {
 		
 	// });
 
-	if($("input,text").is("*:focus")){
-		console.log("this was run");
-		alert("Fill out required field correctly.");
-	}
+	// if($("input,text").is("*:focus")){
+	// 	console.log("this was run");
+	// 	alert("Fill out required field correctly.");
+	// }
 
 
 	// $("input").one('focus', function(){
