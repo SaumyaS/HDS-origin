@@ -32,28 +32,28 @@ $(document).ready(function() {
 
 		// $(".dijitTooltipLeft").attr("class", "dijitTooltipBottom");
 
-	$("#WC_UserRegistrationAddForm_links_1").on('click',function(){
-		$(".dijitTooltipRight").hide();
-		$(".dijitTooltipLeft").hide();
+	// $("#WC_UserRegistrationAddForm_links_1").on('click',function(){
+	// 	$(".dijitTooltipRight").hide();
+	// 	$(".dijitTooltipLeft").hide();
 
-		if($("input,text").is("*:focus")){
-			console.log("this was run");
-			alert("Fill out required field correctly.");
-		}
-	});
+	// 	if($("input,text").is("*:focus")){
+	// 		console.log("this was run");
+	// 		alert("Fill out required field correctly.");
+	// 	}
+	// });
 
-	$("#WC_UnregisteredCheckout_links_4").on('click', function(){
-		console.log("this also happened");
-		// $(".dijitTooltipRight").attr("class", "dijitTooltipLeft");
-		$(".dijitTooltipLeft").hide();
-		$(".dijitTooltipRight").hide();
-		$(".dijitTooltip").hide();
+	// $("#WC_UnregisteredCheckout_links_4").on('click', function(){
+	// 	console.log("this also happened");
+	// 	// $(".dijitTooltipRight").attr("class", "dijitTooltipLeft");
+	// 	$(".dijitTooltipLeft").hide();
+	// 	$(".dijitTooltipRight").hide();
+	// 	$(".dijitTooltip").hide();
 		
 
-		console.log("this also happened again");
+	// 	console.log("this also happened again");
 
 		
-	});
+	// });
 
 	if($("input,text").is("*:focus")){
 		console.log("this was run");
