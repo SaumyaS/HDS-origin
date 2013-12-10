@@ -3,18 +3,50 @@
 // }
 // 
 
+// .dijitTooltipLeft{
+// 	display: none;
+// 	position:absolute;
+// 	left: 139px !important;
+// 	background-color: white;
+// 	z-index: 2000;
+// 	border-radius: 5px;
+// 	border: 1px solid #ccc;
+// 	color: red;
+// 	font-size: 14px;
+// 	font-weight: bold;
+// 	width: 50%;
+// }
+
 .dijitTooltipLeft{
-	display: none;
-	position:absolute;
-	left: 139px !important;
-	background-color: white;
+	display: block;
+	position:fixed !important;
 	z-index: 2000;
-	border-radius: 5px;
-	border: 1px solid #ccc;
-	color: red;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: bold;
-	width: 50%;
+	margin-top: 0px;
+	width: 100% !important;
+	top: 0px !important;
+	left: 0px !important;
+	background: rgba(175,0,0,.9);
+	border: 0 !important;
+	border-radius: 0;
+	color: white;
+}
+
+.dijitTooltipRight{
+	display: block;
+	position:fixed !important;
+	z-index: 2000;
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 0px;
+	width: 100% !important;
+	left: 0px !important;
+	top: 0px !important;
+	background: rgba(175,0,0,.9);
+	border: 0 !important;
+	border-radius: 0;
+	color: white;
 }
 
 // .dijitTooltipLeft{
