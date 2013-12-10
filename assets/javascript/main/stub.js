@@ -42,7 +42,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$("#WC_UnregisteredCheckout_links_4").click(function(){
+	$("#WC_UnregisteredCheckout_links_4").on('click', function(){
 		console.log("this also happened");
 		// $(".dijitTooltipRight").attr("class", "dijitTooltipLeft");
 		$(".dijitTooltipLeft").hide();
@@ -56,9 +56,9 @@ $(document).ready(function() {
 	});
 
 	if($("input,text").is("*:focus")){
-			console.log("this was run");
-			alert("Fill out required field correctly.");
-		}
+		console.log("this was run");
+		alert("Fill out required field correctly.");
+	}
 
 
 	// $("input").one('focus', function(){
