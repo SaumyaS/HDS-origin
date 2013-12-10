@@ -29,6 +29,33 @@ $(document).ready(function() {
 	$("div").filter(function(){
 	    return $.trim(this.innerHTML) === "&nbsp;";
 	}).remove();
+	// $("#WC_UserRegistrationAddForm_links_1").on('click',function(){
+	// 	var offset = $(".dijitTooltipLeft").offset().top;
+	// 	$(".dijitTooltipLeft").css("-webkit-transform", "translateY(-" + offset + "px)");
+	// });
+
+	$("#WC_UserRegistrationAddForm_links_1").on('click',function(){
+		var height = $(":focus").outerHeight();
+		var top = $(":focus").offset().top + height;
+		var left = $(":focus").offset().left;
+		$(".dijitTooltip.dijitTooltipLeft").css("top", top);
+		// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
+	});
+
+	$("#WC_UnregisteredCheckout_links_4").on('click',function(){
+		$("input").focus();
+		var height = $(":focus").outerHeight();
+		console.log("height: " + height);
+		var top = $(":focus").offset().top - 1000;
+		var left = $(":focus").offset().left;
+		
+		console.log("top: " + top);
+		console.log("left: "+ left);
+		$(".dijitTooltip.dijitTooltipRight").css("top", top);
+		$(".dijitTooltip.dijitTooltipLeft").css("top", top);
+		// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
+	});
+	
 
 		// $(".dijitTooltipLeft").attr("class", "dijitTooltipBottom");
 
@@ -95,7 +122,7 @@ $(document).ready(function() {
 	// });
 
 	// $("input").keydown(function(){
-	// 	$(".dijitTooltipLeft").attr("class", "dijitTooltipRight");
+	// 	$(".dijitTooltipLeft").hide();
 	// });
 
 
