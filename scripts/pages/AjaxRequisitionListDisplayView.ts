@@ -24,7 +24,25 @@ $$("._ReqListView"){
 			attributes(style: "")
 		}
 	}
-	$("./div[@class='checkout-container']"){
+	$(".//div[@class='checkout-container']"){
+		$(".//div[@class='requisition_list_table']"){
+			$("./div[@class='mw_was_table']/thread"){
+				remove()
+			}
+			$(".//div[@class='mw_was_tbody']"){
+				$("./div[@class='mw_was_tr']"){
+					$("./")
+					$("./div[1]"){
+						insert_before("span", class: "_name", "List Name: " )
+					}
+					$("./div[2]"){
+						insert_before("span", class: "_updated", "Last Updated: " )
+					}
+				}
+
+
+			}
+		}
 
 	}
 }

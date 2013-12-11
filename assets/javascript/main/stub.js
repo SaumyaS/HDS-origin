@@ -25,6 +25,20 @@ $(document).ready(function() {
 
 	$(".category-item:empty").remove();
 	$("._industries:empty").remove();
+	// $("div.color-bg:empty").remove();
+
+	$(".color-bg").each(function() {
+	    var $this = $(this);
+	    if($this.html().replace(/\s|&nbsp;/g, '').length == 0){
+	    	console.log("test");
+	        $this.remove();
+	    }
+	    console.log("length: " + $this.html().length);
+	    if($this.html().length < 300){
+	    	console.log("test2");
+	    	$this.remove();
+	    }
+	});
 
 	$("div").filter(function(){
 	    return $.trim(this.innerHTML) === "&nbsp;";
@@ -51,8 +65,8 @@ $(document).ready(function() {
 		
 		console.log("top: " + top);
 		console.log("left: "+ left);
-		$(".dijitTooltip.dijitTooltipRight").css("top", top);
-		$(".dijitTooltip.dijitTooltipLeft").css("top", top);
+		$(".dijitTooltip.dijitTooltipRight").css("top", 0);
+		$(".dijitTooltip.dijitTooltipLeft").css("top", 0);
 		// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
 	});
 	

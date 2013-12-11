@@ -11,7 +11,22 @@
 		}
 	}
 	.checkout-container{
-		padding: 10px;
+		
+		.mw_was_table{
+			padding: 10px;
+			// background: #ccc;
+			border-top: 1px solid #aaa;
+			border-bottom: 1px solid #aaa;
+			._name{
+				min-width: 100px;
+				float: left;
+			}
+			._updated{
+				min-width: 100px;
+				float: left;
+			}
+		}
+		
 	}
 	.bt_pagination {
 		width: 100%;
