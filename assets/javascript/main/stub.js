@@ -49,14 +49,9 @@ $(document).ready(function() {
 	// });
 
 	$("#WC_UserRegistrationAddForm_links_1").on('click',function(){
-		setTimeOut()
 		var height = $(":focus").outerHeight();
-		var obj = $(":focus");
-		console.log("this is " + height);
 		var top = $(":focus").offset().top + height;
-		var left = $(":focus").offset().left;
 		$(".dijitTooltip.dijitTooltipLeft").css("top", top);
-		// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
 	});
 
 	$("#WC_UnregisteredCheckout_links_4").on('click',function(){
