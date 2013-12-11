@@ -126,6 +126,9 @@ $(".//div[@class='main_container']"){
 							insert_top("label", class: "_totalPriceTitle", "Total Price")
 						}
 						$("./div[@class='mw_was_td']"){
+							$(".."){
+								attributes(class: "test")
+							}
 							$("./a"){
 								attributes(style: "")
 								add_class("expand")

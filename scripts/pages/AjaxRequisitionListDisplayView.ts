@@ -30,8 +30,9 @@ $$("._ReqListView"){
 				remove()
 			}
 			$(".//div[@class='mw_was_tbody']"){
+				attributes(class: "_listContainer")
 				$("./div[@class='mw_was_tr']"){
-					$("./")
+					attributes(class: "_eachList", style: "")
 					$("./div[1]"){
 						insert_before("span", class: "_name", "List Name: " )
 					}
