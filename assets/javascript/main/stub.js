@@ -49,8 +49,7 @@ $(document).ready(function() {
 	// });
 
 	$("#WC_UserRegistrationAddForm_links_1").on('click',function(){
-		var height = $(":focus");
-		console.log("This is" + height);
+		var height = $(":focus").outerHeight();
 		var top = $(":focus").offset().top + height;
 		$(".dijitTooltip.dijitTooltipLeft").css("top", top);
 	});
@@ -60,7 +59,7 @@ $(document).ready(function() {
 			var height = $(":focus").outerHeight();
 			var top = $(":focus").offset().top + height;
 			$(".dijitTooltip.dijitTooltipLeft").css("top", top);
-		}, 1000);
+		}, 200);
 	});
 
 	$("#SubmitButton").on('click',function(){
