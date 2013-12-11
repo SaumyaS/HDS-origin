@@ -60,18 +60,18 @@ $(document).ready(function() {
 	});
 
 	$("#WC_UnregisteredCheckout_links_4").on('click',function(){
-		// $("input").focus();
 		setTimeout(function(){ 
 			var height = $(":focus").outerHeight();
-			console.log("height: " + height);
+			var top = $(":focus").offset().top + height;
+			$(".dijitTooltip.dijitTooltipLeft").css("top", top);
+		}, 1000);
+	});
 
-			var top = $(":focus").offset().top - height;
-			// var left = $(":focus").offset().left;
-		
-			console.log("top: " + top);
-			// console.log("left: "+ left);
-			// $(".dijitTooltip.dijitTooltipRight").css("top", 0);
-			$(".dijitTooltip.dijitTooltipLeft").css("top", 0);
+	$("#SubmitButton").on('click',function(){
+		setTimeout(function(){ 
+			var height = $(":focus").outerHeight();
+			var top = $(":focus").offset().top + height;
+			$(".dijitTooltip.dijitTooltipLeft").css("top", top);
 		}, 1000);
 		
 		// $(".dijitTooltip.dijitTooltipLeft").css("left", left);

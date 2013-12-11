@@ -129,6 +129,9 @@ $(".//div[@class='main_container']"){
 							$(".."){
 								attributes(class: "test")
 							}
+							$("./a[1]"){
+								attributes(id: "SubmitButton")
+							}
 							$("./a"){
 								attributes(style: "")
 								add_class("expand")
