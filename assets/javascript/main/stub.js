@@ -56,15 +56,6 @@ $(document).ready(function() {
 	});
 
 	$("#WC_UnregisteredCheckout_links_4").on('click',function(){
-<<<<<<< HEAD
-		var height = $(":focus");
-		console.log("This is" + height);
-		var top = $(":focus").offset().top + height;
-		console.log("top: " + top);
-		var left = $(":focus").offset().left;
-		$(".dijitTooltip.dijitTooltipLeft").css("top", top);
-
-=======
 		setTimeout(function(){ 
 			var height = $(":focus").outerHeight();
 			var top = $(":focus").offset().top + height;
@@ -78,8 +69,7 @@ $(document).ready(function() {
 			var top = $(":focus").offset().top + height;
 			$(".dijitTooltip.dijitTooltipLeft").css("top", top);
 		}, 1000);
-		
->>>>>>> master
+
 		// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
 	});
 
