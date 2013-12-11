@@ -35,7 +35,8 @@ $(document).ready(function() {
 	// });
 
 	$("#WC_UserRegistrationAddForm_links_1").on('click',function(){
-		var height = $(":focus").outerHeight();
+		var height = $(":focus");
+		console.log("This is" + height);
 		var top = $(":focus").offset().top + height;
 		var left = $(":focus").offset().left;
 		$(".dijitTooltip.dijitTooltipLeft").css("top", top);
@@ -43,18 +44,30 @@ $(document).ready(function() {
 	});
 
 	$("#WC_UnregisteredCheckout_links_4").on('click',function(){
-		$("input").focus();
-		var height = $(":focus").outerHeight();
-		console.log("height: " + height);
-		var top = $(":focus").offset().top - 1000;
-		var left = $(":focus").offset().left;
-		
+		var height = $(":focus");
+		console.log("This is" + height);
+		var top = $(":focus").offset().top + height;
 		console.log("top: " + top);
-		console.log("left: "+ left);
-		$(".dijitTooltip.dijitTooltipRight").css("top", top);
+		var left = $(":focus").offset().left;
 		$(".dijitTooltip.dijitTooltipLeft").css("top", top);
+
 		// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
 	});
+
+
+	// $("#WC_UnregisteredCheckout_links_4").on('click',function(){
+	// 	$("input").focus();
+	// 	var height = $(":focus").outerHeight();
+	// 	console.log("height: " + height);
+	// 	var top = $(":focus").offset().top - 1000;
+	// 	var left = $(":focus").offset().left;
+		
+	// 	console.log("top: " + top);
+	// 	console.log("left: "+ left);
+	// 	$(".dijitTooltip.dijitTooltipRight").css("top", top);
+	// 	$(".dijitTooltip.dijitTooltipLeft").css("top", top);
+	// 	// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
+	// });
 	
 
 		// $(".dijitTooltipLeft").attr("class", "dijitTooltipBottom");
