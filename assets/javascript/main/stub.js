@@ -137,7 +137,9 @@ $("#mainTabContainer_tablist").DOMNodeAppear(function(){
 	$('#mainTabContainer_tablist').hide();
 });
 
-
+// $$("#errormsgDialog_title"){
+// text("")
+// }
 
 
 
