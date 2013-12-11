@@ -59,7 +59,7 @@ $(document).ready(function() {
 			var height = $(":focus").outerHeight();
 			var top = $(":focus").offset().top + height;
 			$(".dijitTooltip.dijitTooltipLeft").css("top", top);
-		}, 1000);
+		}, 200);
 	});
 
 	$("#SubmitButton").on('click',function(){
@@ -68,9 +68,23 @@ $(document).ready(function() {
 			var top = $(":focus").offset().top + height;
 			$(".dijitTooltip.dijitTooltipLeft").css("top", top);
 		}, 1000);
-		
 		// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
 	});
+
+
+	// $("#WC_UnregisteredCheckout_links_4").on('click',function(){
+	// 	$("input").focus();
+	// 	var height = $(":focus").outerHeight();
+	// 	console.log("height: " + height);
+	// 	var top = $(":focus").offset().top - 1000;
+	// 	var left = $(":focus").offset().left;
+		
+	// 	console.log("top: " + top);
+	// 	console.log("left: "+ left);
+	// 	$(".dijitTooltip.dijitTooltipRight").css("top", top);
+	// 	$(".dijitTooltip.dijitTooltipLeft").css("top", top);
+	// 	// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
+	// });
 	
 
 		// $(".dijitTooltipLeft").attr("class", "dijitTooltipBottom");

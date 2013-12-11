@@ -257,6 +257,7 @@ $("./body"){
 		with(/OrderItemPageView/){}
 		with(/AjaxAccountAddressForm/){}
 		with(/OrderStatusTableDetailsDisplay/){}
+		with(/AjaxPromotionCodeDisplayView/){}
 		else (){
 			inner_wrap("div", id: "body-content"){
 				insert_bottom("div", id: "pers-nav-mask")
