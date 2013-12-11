@@ -41,6 +41,7 @@ $("/html"){
 			with(/OrderShippingBillingView/){}
 			with(/SingleShipmentOrderSummaryView/){}
 			with(/OrderShippingBillingConfirmationView/){}
+			with(/AjaxRequisitionListCreateView/){}
 			else(){
 				$$("br"){
 					remove()
@@ -226,7 +227,6 @@ $("./body"){
 		with(/AjaxLogonFormCenterLinksDisplayView/){}
 		with(/AjaxAddressBookForm/){}
 		with(/AjaxRequisitionListDisplayView/){}
-		with(/AjaxRequisitionListCreateView/){}
 		with(/AjaxRequisitionListDetailView/){}
 		with(/AjaxTrackOrderStatus/){}
 		with(/AjaxCouponWallet/){}

@@ -25,6 +25,20 @@ $(document).ready(function() {
 
 	$(".category-item:empty").remove();
 	$("._industries:empty").remove();
+	// $("div.color-bg:empty").remove();
+
+	$(".color-bg").each(function() {
+	    var $this = $(this);
+	    if($this.html().replace(/\s|&nbsp;/g, '').length == 0){
+	    	console.log("test");
+	        $this.remove();
+	    }
+	    console.log("length: " + $this.html().length);
+	    if($this.html().length < 300){
+	    	console.log("test2");
+	    	$this.remove();
+	    }
+	});
 
 	$("div").filter(function(){
 	    return $.trim(this.innerHTML) === "&nbsp;";
@@ -38,12 +52,11 @@ $(document).ready(function() {
 		var height = $(":focus");
 		console.log("This is" + height);
 		var top = $(":focus").offset().top + height;
-		var left = $(":focus").offset().left;
 		$(".dijitTooltip.dijitTooltipLeft").css("top", top);
-		// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
 	});
 
 	$("#WC_UnregisteredCheckout_links_4").on('click',function(){
+<<<<<<< HEAD
 		var height = $(":focus");
 		console.log("This is" + height);
 		var top = $(":focus").offset().top + height;
@@ -51,6 +64,22 @@ $(document).ready(function() {
 		var left = $(":focus").offset().left;
 		$(".dijitTooltip.dijitTooltipLeft").css("top", top);
 
+=======
+		setTimeout(function(){ 
+			var height = $(":focus").outerHeight();
+			var top = $(":focus").offset().top + height;
+			$(".dijitTooltip.dijitTooltipLeft").css("top", top);
+		}, 1000);
+	});
+
+	$("#SubmitButton").on('click',function(){
+		setTimeout(function(){ 
+			var height = $(":focus").outerHeight();
+			var top = $(":focus").offset().top + height;
+			$(".dijitTooltip.dijitTooltipLeft").css("top", top);
+		}, 1000);
+		
+>>>>>>> master
 		// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
 	});
 

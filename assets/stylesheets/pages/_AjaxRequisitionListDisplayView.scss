@@ -1,3 +1,49 @@
 ._ReqListView{
-	padding: 10px;
+	form{
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-bottom: 5px;
+		label{
+			min-width: 50px;
+		}
+		#WC_B2BMyAccountParticipantRole_select_1{
+			width: 200px;
+		}
+	}
+	.checkout-container{
+		
+		.mw_was_table{
+			padding: 10px;
+			// background: #ccc;
+			border-top: 1px solid #aaa;
+			border-bottom: 1px solid #aaa;
+			._listContainer{
+				padding: 2px;
+				border: 2px solid #ccc;
+				._eachList{
+					padding: 3px;
+				}
+				._eachList:nth-child(odd){
+					background: #ddd;
+				}
+			}
+			._name{
+				min-width: 100px;
+				float: left;
+			}
+			._updated{
+				min-width: 100px;
+				float: left;
+			}
+		}
+		
+	}
+	.bt_pagination {
+		width: 100%;
+		border-top: 1px solid #000;
+		margin-top: 15px;
+		padding: 5px 0px 5px 0px;
+		color: #999;
+		clear: both;
+	}
 }

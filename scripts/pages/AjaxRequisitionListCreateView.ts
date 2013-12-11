@@ -1,247 +1,149 @@
-
-
-$(".//label"){
-	attributes(style: "font-weight: bold;display: inline-block; min-width: 100px;")
-	insert_before("br")
-}
-$("//input[@type='text']"){
-	attributes(style: "margin: 5px 0px;padding: 4px;background: #ccc;border: 1px solid #aaa;box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4) inset;")
-	insert_after("br")
+# Moves header icons back to the header
+$$("#ad_17601"){
+	move_here("//div[@id='_icons_bar']")
 }
 
+$(".//div[@class='main_container']"){
+	add_class("_reqListCreateView")
 
-$("//div[@class='checkout-container']"){
-	$("./span[1]"){
-		insert_after("br")
-	}	
-}
-
-# $("/span[1]"){
-# 	insert_after("br")
-# }
-
-$("//div[@class='info_content']"){
-	# insert_after("br")
-}
-$("//p"){
-	attributes(style: "margin-top: 10px;")
-
-}
-
-$$("#requisitionListType"){
-	attributes(style: "width: 172px;")
-}
-
-$$("#WC_RequisitionListDetailsAddForm_div_1"){
-	attributes(style: "width: 345px;")
-	insert_after("hr", class: "test")
-	$("./br"){
-		remove()
-	}
-	remove_text_nodes()
-
-	$("./input[1]"){
-		insert_before("label", "SKU: "){
-			attributes(style: "display: inline-block")
-		}
-		insert_after("br")
-	}
-	$("./input[2]"){
-		insert_after("br")
-		insert_before("label", "QTY: "){
-			attributes(style: "display: inline-block")
-			insert_before("div")
-			insert_before("font", "*"){
-				attributes(style: "color: red;")
-			}
-		}
-	}
-	$("./a"){
-		attributes(style: "width: 150px;margin: 5px auto;")
-		insert_after("br")
-
-	}
-
-	
-
-
-}
-
-$$(".test"){
-	attributes(style: "display: block; background-color: #fc0; height: 2px; border: none; margin: 10px 0px;")
-}
-
-$("//br[1]"){
-	remove()
-}
-
-
-
-$$(".btn-gray"){
-	attributes(style: "float:right")
-}
-
-$$("#RequisitionListDetailTableDisplay_Widget"){
-	$("./div[@class='mw_was_table']"){
-		$("./div[@class='mw_was_thead']"){
-			remove()
-		}
-		$("./div[@class='mw_was_tbody']"){
-			attributes(style: "margin-bottom: 5px;")
-			$("./div"){
-				attributes(style: "background-color: #eee;padding: 5px;")
-				
-
-
+	$(".//div[@id='shopping-list']"){
+		$("./div[@class='mw_was_table']/div[@class='mw_was_tbody']"){
+			$("./div[1]"){
 				$("./div[1]"){
-					attributes(class: "_name", style: "margin-left: 100px;")
-					$("./font/div[2]/div[1]"){
-						remove()
-					}
-					$("./font/div[2]/div[1]"){
-						attributes(style: "width: 90%")
-					}
+					add_class("_poNumber")
 				}
 				$("./div[2]"){
-					attributes(class: "_image")
-				}
-				$("./div[3]"){
-					attributes(class: "_sku", style: "margin-left: 100px;")
-				}
-				$("./div[4]"){
-					attributes(class: "_quantity", style: "margin-left: 100px;")
-				}
-				$("./div[5]"){
-					attributes(class: "_price", style: "margin-left: 100px;")
-				}
-				$("./div[6]"){
-					attributes(class: "_manufacturer", style: "margin-left: 100px;")
-				}
-				$("./div[7]"){
-					attributes(class: "_remove")
-				}
-
-
-				
-
-
-
-
-				insert_top("div", class: "_manufacturerContainer"){
-					attributes(style: "line-height: 1;")
-					move_here("../div[@class='_manufacturer']"){
-						insert_before("label", "Manufacturer:", class: "_manufacturerLabel"){
-					 		attributes(style: "display: inline-block; float: left;")
-					 	}
-					}
-				}
-				insert_top("div", class: "_priceContainer"){
-					move_here("../div[@class='_price']"){
-						insert_before("label", "Price:", class: "_priceLabel"){
-					 		attributes(style: "display: inline-block; float: left;")
-					 	}
-					}
-					
-				}
-				insert_top("div", class: "_quantityContainer"){
-					move_here("../div[@class='_quantity']"){
-						insert_before("label", "Quantity:", class: "_quantityLabel"){
-							attributes(style: "display: inline-block; float: left;")
-						}
-					}
-				}
-				insert_top("div", class: "_skuContainer"){
-					move_here("../div[@class='_sku']"){
-						insert_before("label", "SKU:", class: "_skuLabel"){
-					 		attributes(style: "display: inline-block; float: left;")
-					 	}
-					}
-				}
-				insert_top("div", class: "_nameContainer"){
-					move_here("../div[@class='_name']"){
-						insert_before("label", "Name:", class: "_nameLable"){
-					 		attributes(style: "display: inline-block; float: left;")
-					 	}
-					 	$("./a"){
-					 		attributes(style: "color: #505050; text-decoration: underline;")
-					 	}
-					}
-				}
-				$("./div[@class='_remove']"){
-					insert_after("hr")
-					insert_after("br")
-					insert_before("div", class: "_featureButton", "Features"){
-						wrap("div", class: "_togglerContainer"){
-							//attributes(style: "margin-top:30px;")
-						}
-						attributes(style: "padding: 5px; 
-											border: 1px solid #555; 
-											background-color: #aaa;
-											font-weight: bold;
-											margin-right: 10px;
-											margin-bottom: 0px;
-											text-align: center;
-											width: 100px;")
-						
-						
-						
-						insert_after("div", class: "_featureText"){
-							move_here("../../div[@class='_nameContainer']/div[@class='_name']/font/div[3]/div[2]/div[2]"){
-								attributes(style: "background-color: #bbb; margin-bottom: 10px;")
+					add_class("_selectOption")
+					$(".//div[contains(@class, 'mw_was_tbody')]"){
+						$("./div[1]"){
+							attributes(class: "_option")
+							$("./div[1]"){
+								attributes(class: "_selectTitle")
 							}
-							attributes(style: "background-color: #bbb; margin-bottom: 10px; padding: 10px;")
+							$("./div[2]"){
+								attributes(class: "_select", id: "willCall")
+							}
+							$("./div[3]"){
+								attributes(class: "_select", id: "delivery")
+							}
+						}
+						$("./div[2]"){
+							attributes(class: "_address")
+							# text(){
+							# 	replace(//)
+							# }
 						}
 					}
 				}
-
 				
-
-
-
-
-				
-				
-
-				insert_top("div", class: "_info"){
-					attributes(style: "display: block;margin-left:104px;")
-					move_here("../div[@class='_nameContainer']")
-					move_here("../div[@class='_skuContainer']")
-					move_here("../div[@class='_quantityContainer']")
-					move_here("../div[@class='_priceContainer']")
-					move_here("../div[@class='_manufacturerContainer']")
-					insert_after("br")
-
+				$("./div[3]"){
+					add_class("_contactName")
 				}
-				insert_top("div", class: "testImg"){
-					attributes(style: "float: left; margin-top: 5px;  margin-right: 10px")
-					move_here("../div[@class='_image']"){
-						$(".//img"){
-							attributes(style: "border: 2px solid #777;")
-						}
-					}
-				}
-
-				
+			}
+			$("./div[2]"){
+				add_class("_comments")
 			}
 		}
-	}
-}
-
-
-
-
-$("//div[@class='_togglerContainer']"){
-	$("ancestor::div[@class='mw_was_tbody']"){
-		$("./div[@class='mw_was_tr']"){
-			attributes(data-ur-set: "toggler")
-			$counter = "feature_" + index()
-			$("./div[@class='_togglerContainer']"){
-				
-				$("./div[@class='_featureButton']"){
-					attributes(data-ur-toggler-component: "button", data-ur-id: $counter)
+		$("./div[@id='RequisitionListDetailTableDisplay_Widget']"){
+			$("./div[@id='shoppingdetail-note']"){
+				$("./a"){
+					add_class("expand")
+					attributes(style: "")
 				}
-				$("./div[@class='_featureText']"){
-					attributes(data-ur-toggler-component: "content", data-ur-id: $counter)
+			}
+			$("./div[@id='detailsTable']"){
+				$("./div[@class='mw_was_tbody']"){
+					$("./div[1]"){
+						attributes(class: "_title")
+						remove()
+					}
+					$("./div[contains(@class,'mw_was_tr')]"){
+						# attributes(class: "_items")
+						attributes(class: "color-bg")
+						$("./div[1]/input"){
+							$(".."){
+								attributes(class: "_checkboxContainer")
+							}
+							attributes(class: "_checkbox")
+							insert_before("label", class: "_checkboxTitle", "Select")
+						}
+						$("./div[2]/div[1]"){
+							$(".."){
+								attributes(class: "_productContainer")
+								$("./div[2]"){
+									attributes(class: "_expand")
+									$("./div[1]"){
+										attributes(style: "", class: "_toggle")
+									}
+									$("./div[2]"){
+										attributes(style: "", class: "_content")
+									}
+								}
+								$("./div[3]"){
+									attributes(class: "_collaspe")
+									$("./div[1]"){
+										attributes(style: "", class: "_toggle")
+									}
+									$("./div[2]"){
+										attributes(style: "", class: "_content")
+										$("./div"){
+											attributes(style: "")
+										}
+										$("./br[1]"){
+											remove()
+										}
+									}
+								}
+							}
+							attributes(class: "_productName")
+							insert_before("label", class: "_productNameTitle", "Name")
+							
+						}
+						$("./div[3]"){
+							attributes(class: "_skuContainer")
+							insert_top("label", class: "_skuTitle", "SKU")
+						}
+						$("./div[4]"){
+							attributes(class: "_quantityContainer")
+							insert_top("label", class: "_quantityTitle", "Quantity")
+						}
+						$("./div[5]"){
+							wrap("div"){
+								attributes(class: "_manufacturerContainer")
+								insert_top("label", class: "_manufacturerTitle", "Manufacturer")
+							}
+						}
+						$("./div[6]"){
+							attributes(class: "_imgContainer")
+							insert_top("label", class: "_imgTitle", "Image")
+						}
+						$("./div[7]"){
+							attributes(class: "_priceContainer")
+							insert_top("label", class: "_priceTitle", "Price")
+						}
+						$("./div[8]"){
+							attributes(class: "_totalPriceContainer")
+							insert_top("label", class: "_totalPriceTitle", "Total Price")
+						}
+						$("./div[@class='mw_was_td']"){
+							$(".."){
+								attributes(class: "test")
+							}
+							$("./a[1]"){
+								attributes(id: "SubmitButton")
+							}
+							$("./a"){
+								attributes(style: "")
+								add_class("expand")
+								$(".."){
+									attributes(class: "_buttons")
+								}
+							}
+							$("./span"){
+								attributes(style: "")
+							}
+						}
+					}
 				}
 			}
 		}
