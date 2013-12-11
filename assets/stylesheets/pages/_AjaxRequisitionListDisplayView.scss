@@ -17,6 +17,16 @@
 			// background: #ccc;
 			border-top: 1px solid #aaa;
 			border-bottom: 1px solid #aaa;
+			._listContainer{
+				padding: 2px;
+				border: 2px solid #ccc;
+				._eachList{
+					padding: 3px;
+				}
+				._eachList:nth-child(odd){
+					background: #ddd;
+				}
+			}
 			._name{
 				min-width: 100px;
 				float: left;
