@@ -227,7 +227,6 @@ $("./body"){
 		with(/AjaxLogonFormCenterLinksDisplayView/){}
 		with(/AjaxAddressBookForm/){}
 		with(/AjaxRequisitionListDisplayView/){}
-		with(/AjaxRequisitionListCreateView/){}
 		with(/AjaxRequisitionListDetailView/){}
 		with(/AjaxTrackOrderStatus/){}
 		with(/AjaxCouponWallet/){}
