@@ -73,7 +73,7 @@ $(document).ready(function() {
 	var nua = navigator.userAgent;
 	var is_android = ((nua.indexOf('Android ') > -1));
 	if(is_android){
-		$("#WC_ContentAreaESpot_div_22_1").first().css("height", "100");
+		$("#WC_ContentAreaESpot_div_22_1").first().css("height", "400");
 	}
 
 
