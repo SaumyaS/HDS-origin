@@ -64,99 +64,17 @@ $(document).ready(function() {
 		}, 200);
 	});
 
-	// $("#SubmitButton").on('click',function(){
-	// 	setTimeout(function(){ 
-	// 		var height = $(":focus").outerHeight();
-	// 		var top = $(":focus").offset().top + height;
-	// 		$(".dijitTooltip.dijitTooltipLeft").css("top", top);
-	// 	}, 1000);
-	// 	// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
-	// });
-
-
-	// $("#WC_UnregisteredCheckout_links_4").on('click',function(){
-	// 	$("input").focus();
-	// 	var height = $(":focus").outerHeight();
-	// 	console.log("height: " + height);
-	// 	var top = $(":focus").offset().top - 1000;
-	// 	var left = $(":focus").offset().left;
-		
-	// 	console.log("top: " + top);
-	// 	console.log("left: "+ left);
-	// 	$(".dijitTooltip.dijitTooltipRight").css("top", top);
-	// 	$(".dijitTooltip.dijitTooltipLeft").css("top", top);
-	// 	// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
-	// });
-	
-
-		// $(".dijitTooltipLeft").attr("class", "dijitTooltipBottom");
-
-	// $("#WC_UserRegistrationAddForm_links_1").on('click',function(){
-	// 	$(".dijitTooltipRight").hide();
-	// 	$(".dijitTooltipLeft").hide();
-
-	// 	if($("input,text").is("*:focus")){
-	// 		console.log("this was run");
-	// 		alert("Fill out required field correctly.");
-	// 	}
-	// });
-
-	// $("#WC_UnregisteredCheckout_links_4").on('click', function(){
-	// 	console.log("this also happened");
-	// 	// $(".dijitTooltipRight").attr("class", "dijitTooltipLeft");
-	// 	$(".dijitTooltipLeft").hide();
-	// 	$(".dijitTooltipRight").hide();
-	// 	$(".dijitTooltip").hide();
-		
-
-	// 	console.log("this also happened again");
-
-		
-	// });
-
-	// if($("input,text").is("*:focus")){
-	// 	console.log("this was run");
-	// 	alert("Fill out required field correctly.");
-	// }
-
-
-	// $("input").one('focus', function(){
-		// 	console.log("this happened");
-			
-		// 	// alert("Fill out required field.");
-		// 	// $(".dijitTooltipLeft").attr("style", "top: 0px !important; margin-top:-100px !important;");
-		// });
-
-	// $("input").on('formError', function(){
-	// 	alert("test");
-	// });
-
-
-	// $(".dijitTooltip").bind("DOMSubtreeModified", function(){
-	// 	alert("test");
-	// })
-
-
-	
-
-	// $(".dijitTooltipLeft").click(function(){
-	// 	console.log("i was clicked");
-	// 	$(this).attr("class", "dijitTooltipRight");
-	// });
-
-	// $("#WC_UserRegistrationAddForm_links_1").click(function(){
-	// 	$("input").blur();
-	// });
-	
-
-	// $("input").on('click', function(){
-	// 	$(".dijitTooltipLeft").attr("class", "dijitTooltipRight");
-	// });
-
 	$("input").keydown(function(){
 		$(".dijitTooltipLeft").hide();
 	});
 
+
+
+	var nua = navigator.userAgent;
+	var is_android = ((nua.indexOf('Android ') > -1));
+	if(is_android){
+		$("#WC_ContentAreaESpot_div_22_1").first().css("height", "100");
+	}
 
 
 });
