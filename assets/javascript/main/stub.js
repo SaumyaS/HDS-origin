@@ -69,7 +69,6 @@ $(document).ready(function() {
 			var top = $(":focus").offset().top + height;
 			$(".dijitTooltip.dijitTooltipLeft").css("top", top);
 		}, 1000);
-
 		// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
 	});
 
