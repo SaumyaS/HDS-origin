@@ -4,7 +4,6 @@
 $("/html"){
 
 	$$("#ad_17601"){
-		log("is this happening?")
 		move_here("//div[@id='_icons_bar']")
 	}
 	$$(".topcat_narrow_row"){
