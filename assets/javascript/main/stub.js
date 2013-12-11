@@ -48,28 +48,30 @@ $(document).ready(function() {
 	// 	$(".dijitTooltipLeft").css("-webkit-transform", "translateY(-" + offset + "px)");
 	// });
 
-	$("#WC_UserRegistrationAddForm_links_1").on('click',function(){
-		var height = $(":focus").outerHeight();
-		var top = $(":focus").offset().top + height;
-		$(".dijitTooltip.dijitTooltipLeft").css("top", top);
-	});
+	// $("#WC_UserRegistrationAddForm_links_1").on('click',function(){
+	// 	var height = $(":focus").outerHeight();
+	// 	var top = $(":focus").offset().top + height;
+	// 	$(".dijitTooltip.dijitTooltipLeft").css("top", top);
+	// });
 
-	$("#WC_UnregisteredCheckout_links_4").on('click',function(){
+	$("#WC_UnregisteredCheckout_links_4, #WC_UserRegistrationAddForm_links_1, #SubmitButton").on('click',function(){
 		setTimeout(function(){ 
 			var height = $(":focus").outerHeight();
 			var top = $(":focus").offset().top + height;
+			var left = $(":focus").offset().left;
 			$(".dijitTooltip.dijitTooltipLeft").css("top", top);
+			$(".dijitTooltip.dijitTooltipLeft").css("left", left);
 		}, 200);
 	});
 
-	$("#SubmitButton").on('click',function(){
-		setTimeout(function(){ 
-			var height = $(":focus").outerHeight();
-			var top = $(":focus").offset().top + height;
-			$(".dijitTooltip.dijitTooltipLeft").css("top", top);
-		}, 1000);
-		// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
-	});
+	// $("#SubmitButton").on('click',function(){
+	// 	setTimeout(function(){ 
+	// 		var height = $(":focus").outerHeight();
+	// 		var top = $(":focus").offset().top + height;
+	// 		$(".dijitTooltip.dijitTooltipLeft").css("top", top);
+	// 	}, 1000);
+	// 	// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
+	// });
 
 
 	// $("#WC_UnregisteredCheckout_links_4").on('click',function(){
@@ -151,9 +153,9 @@ $(document).ready(function() {
 	// 	$(".dijitTooltipLeft").attr("class", "dijitTooltipRight");
 	// });
 
-	// $("input").keydown(function(){
-	// 	$(".dijitTooltipLeft").hide();
-	// });
+	$("input").keydown(function(){
+		$(".dijitTooltipLeft").hide();
+	});
 
 
 
