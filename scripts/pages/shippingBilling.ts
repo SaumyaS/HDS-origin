@@ -82,11 +82,25 @@ $$("#PaymentForm1"){
 	$("./br"){
 		remove()
 	}
+
 	$(".//label/img"){
 		$(".."){
-			
+			$(".."){
+				$("./label[2]"){
+					insert_after("br")
+				}
+			}
 			attributes(style:"text-align: center;")
 		}
+	}
+	$(".//br[3]"){
+		remove()
+	}
+	$(".//br[2]"){
+		remove()
+	}
+	$(".//br[1]"){
+		remove()
 	}
 }
 
