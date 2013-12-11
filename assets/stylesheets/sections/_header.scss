@@ -24,50 +24,18 @@
 	font-size: 16px;
 	font-weight: bold;
 	margin-top: 0px;
-	width: 100% !important;
+	width: 50% !important;
 	// top: 0px !important;
-	left: 0px !important;
-	background: rgba(175,0,0,.9);
-	border: 0 !important;
+	// left: 25% !important;
+	background: rgba(255,255,255,.9);
 	border-radius: 4;
-	color: white;
-}
-
-.dijitTooltipRight{
-	display: block;
-	position:absolute !important;
-	z-index: 2000;
-	font-size: 16px;
-	font-weight: bold;
-	margin-top: 0px;
-	width: 100% !important;
-	// top: 0px !important;
-	left: 0 !important;
-	background: rgba(175,0,0,.9);
-	border: 0 !important;
-	border-radius: 4;
-	color: white;
+	color: black;
+	text-align: center;
+	border: 1px solid #008fb2;
+	box-shadow: 3px 3px 5px #888;
 }
 
 div#dijit__MasterTooltip_0.dijitTooltip.dijitTooltipLeft
-
-// .dijitTooltipLeft{
-// 	display: block;
-// 	position:fixed;
-// 	left: 25% !important;
-// 	background-color: white;
-// 	z-index: 2000;
-// 	border-radius: 5px;
-// 	border: 1px solid #ccc;
-// 	color: red;
-// 	font-size: 14px;
-// 	font-weight: bold;
-// 	width: 50%;
-// }
-
-// h1{
-// 	@include title_bar;
-// }
 
 #email_modal_dialog{
 	top: 30% !important;
@@ -77,10 +45,6 @@ div#dijit__MasterTooltip_0.dijitTooltip.dijitTooltipLeft
 	color: red;
 	font-weight: bold;
 	font-size: 14px;
-}
-
-.dijitTooltipRight{
-	// display: none;
 }
 
 #pers-nav{
