@@ -90,6 +90,9 @@ $("/html/body"){
 			}
 		}
 		$("./div[@id='order-total']"){
+			$("./div"){
+				attributes(style: "")
+			}
 			$("./div[1]"){
 				add_class("_taxInfo")
 				insert("br")

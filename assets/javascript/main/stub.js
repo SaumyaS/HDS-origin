@@ -73,8 +73,12 @@ $(document).ready(function() {
 	var nua = navigator.userAgent;
 	var is_android = ((nua.indexOf('Android ') > -1));
 	if(is_android){
-		$("#WC_ContentAreaESpot_div_22_1").first().css("height", document.height);
+		$("#WC_ContentAreaESpot_div_22_1").first().css("height", "400");
 	}
+
+	$("#WC_ShippingAddressSelectSingle_link_2, #WC_ShippingAddressSelectSingle_link_1").on('click', function(){
+		$("#shippingBillingPageNext").removeClass('expand');
+	});
 
 
 });

@@ -58,8 +58,12 @@ $("/html"){
 			remove()
 		}
 
-		$(".//div[@id='MessageArea']"){
-			
+		match($path){
+			with(/AjaxCheckoutDisplayView/){
+				$(".//div[@id='MessageArea']"){
+					remove()
+				}
+			}
 		}
 
 		$(".//div[@class='header_wrapper']"){
