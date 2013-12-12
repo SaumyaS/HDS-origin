@@ -54,14 +54,14 @@ $(document).ready(function() {
 	// 	$(".dijitTooltip.dijitTooltipLeft").css("top", top);
 	// });
 
-	$("#WC_UnregisteredCheckout_links_4, #WC_UserRegistrationAddForm_links_1, #SubmitButton").on('click',function(){
+	$("#WC_UnregisteredCheckout_links_4, #WC_UserRegistrationAddForm_links_1, #SubmitButton, #WC_PromotionCodeDisplay_links_1").on('click',function(){
 		setTimeout(function(){ 
 			var height = $(":focus").outerHeight();
 			var top = $(":focus").offset().top + height;
 			var left = $(":focus").offset().left;
 			$(".dijitTooltip.dijitTooltipLeft").css("top", top);
 			$(".dijitTooltip.dijitTooltipLeft").css("left", left);
-		}, 200);
+		}, 1);
 	});
 
 	$("input").keydown(function(){
