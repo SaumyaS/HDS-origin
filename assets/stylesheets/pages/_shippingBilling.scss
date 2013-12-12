@@ -3,6 +3,12 @@
 		min-width: 120px;
 		display: inline-block;
 	}
+	._guestCheckout{
+		label{
+			min-width: 100px;
+		}
+		
+	}
 	input[type="text"], input[type="password"]{
 		border: 1px solid #aaa;
 		background-color: #ccc;
