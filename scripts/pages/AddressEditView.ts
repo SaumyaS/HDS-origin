@@ -15,7 +15,13 @@ $$("#shopcartAddressForm"){
 		}
 
 	}
+	$("./a[2]"){
+		attributes(class: "btn-gray")
+	}
 	$("./a"){
 		add_class("expand")
+		$href = fetch("./@href")
+		attributes(href: concat($href, ";$(\"#shippingBillingPageNext\").addClass('expand');"))
 	}
+
 }

@@ -319,6 +319,10 @@ match($status) {
 				log("--> Importing AjaxOrderItemDisplayView")
 				@import pages/orderItemDisplay.ts
 			}
+			with(/AjaxCheckoutDisplayView/){
+				log("--> Importing AjaxOrderItemDisplayView")
+				@import pages/orderItemDisplay.ts
+			}
 			with(/OrderProcessServiceOrderPrepare/){
 				log("--> Importing process order")
 				@import pages/orderItemDisplay.ts

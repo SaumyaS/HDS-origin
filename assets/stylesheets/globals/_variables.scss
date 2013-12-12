@@ -174,6 +174,11 @@ $base-line-height: 24px;
 	box-shadow: 0px 1px 3px rgba(0,0,0,.75);
 }
 
+.changePosition{
+	position: fixed !important;
+	top: 20% !important;
+}
+
 .btn-gray{
 	background: url(../../../images/addto_cart_bg-gray.jpg) repeat-x #999999;
 	font-weight: bold;
