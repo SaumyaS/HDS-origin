@@ -49,6 +49,17 @@ $$("#cart-total"){
 	}
 }
 
+$$(".order-product-discount"){
+	$("./div[@class='mw_was_td']"){
+		match(inner()){
+			with(/ /){
+				# remove()
+			}
+		}
+		attributes(class: "_discounts")
+	}
+}
+
 $$(".order-product-info"){
 	$("./div[2]"){
 		add_class("_colTitle")
