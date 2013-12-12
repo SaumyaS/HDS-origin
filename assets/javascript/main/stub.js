@@ -140,3 +140,11 @@ $(".highslide-container").DOMNodeAppear(function(){
 $("#mainTabContainer_tablist").DOMNodeAppear(function(){
 	$('#mainTabContainer_tablist').hide();
 });
+
+$("#errormsgDialog_title").DOMNodeAppear(function(){
+	$('#errormsgDialog_title').hide();
+});
+
+// $("#errormsgDialog_title").remove();
+
+
