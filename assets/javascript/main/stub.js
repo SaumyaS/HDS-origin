@@ -25,37 +25,41 @@ $(document).ready(function() {
 
 	$(".category-item:empty").remove();
 	$("._industries:empty").remove();
-	// $("div.color-bg:empty").remove();
 
 	$(".color-bg").each(function() {
 	    var $this = $(this);
 	    if($this.html().replace(/\s|&nbsp;/g, '').length == 0){
-	    	console.log("test");
 	        $this.remove();
 	    }
 	    console.log("length: " + $this.html().length);
 	    if($this.html().length < 300){
-	    	console.log("test2");
 	    	$this.remove();
 	    }
 	});
 
-	$("div").filter(function(){
-	    return $.trim(this.innerHTML) === "&nbsp;";
-	}).remove();
-	// $("#WC_UserRegistrationAddForm_links_1").on('click',function(){
-	// 	var offset = $(".dijitTooltipLeft").offset().top;
-	// 	$(".dijitTooltipLeft").css("-webkit-transform", "translateY(-" + offset + "px)");
-	// });
+	$.each($('._discount'), function(){
 
-	// $("#WC_UserRegistrationAddForm_links_1").on('click',function(){
-	// 	var height = $(":focus").outerHeight();
-	// 	var top = $(":focus").offset().top + height;
-	// 	$(".dijitTooltip.dijitTooltipLeft").css("top", top);
-	// });
+		setTimeout(function(){ 
+			console.log("length is: ");
+			// if($this.html().replace(/\s|&nbsp;/g, '').length == 0){
+		 //        $this.remove();
+		 //    }
+	    }, 1);
+	});
+
+	$("div").filter(function(){
+	    return $.trim($(this).html()) === "&nbsp;";
+	}).remove();
+
+	$("._discounts").filter(function(){
+		console.log("test");
+	    return $.trim($(this).html()) === "&nbsp;";
+	}).remove();
+	
 
 	$("#WC_UnregisteredCheckout_links_4, #WC_UserRegistrationAddForm_links_1, #SubmitButton, #WC_PromotionCodeDisplay_links_1").on('click',function(){
 		setTimeout(function(){ 
+			console.log("test");
 			var height = $(":focus").outerHeight();
 			var top = $(":focus").offset().top + height;
 			var left = $(":focus").offset().left;
@@ -144,6 +148,16 @@ $("#mainTabContainer_tablist").DOMNodeAppear(function(){
 $("#errormsgDialog_title").DOMNodeAppear(function(){
 	$('#errormsgDialog_title').hide();
 });
+
+function errorMessagePosition(){
+	setTimeout(function(){ 
+		var height = $(":focus").outerHeight();
+		var top = $(":focus").offset().top + height;
+		var left = $(":focus").offset().left;
+		$(".dijitTooltip.dijitTooltipLeft").css("top", top);
+		$(".dijitTooltip.dijitTooltipLeft").css("left", left);
+	}, 1);
+}
 
 
 

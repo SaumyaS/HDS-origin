@@ -23,5 +23,8 @@ $$("#shopcartAddressForm"){
 		$href = fetch("./@href")
 		attributes(href: concat($href, ";$(\"#shippingBillingPageNext\").addClass('expand');"))
 	}
+	$("./a[1]"){
+		attributes(onclick: "errorMessagePosition()")
+	}
 
 }
