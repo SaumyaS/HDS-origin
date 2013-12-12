@@ -23,7 +23,7 @@ $$("body"){
 
 $("./head"){
 	$("./meta[@name='viewport']"){
-		attributes(content: "width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0, target-densityDpi=device-dpi")
+		attributes(content: "width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0, target-densityDpi=device-dpi")
 	}
 	# insert("meta", name: "viewport", content: "width=device-width, height=device-height, initial-scale=1, maximum-scale=2.0, minimum-scale=1, user-scalable=no")
 	insert("link", rel: "apple-touch-icon", sizes: "72x72", href: asset("images/WhiteCap.png"))
