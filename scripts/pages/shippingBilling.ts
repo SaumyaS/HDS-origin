@@ -86,6 +86,7 @@ $$("#PaymentForm1"){
 	$(".//label/img"){
 		$(".."){
 			$(".."){
+				attributes(class: "_guestCheckout")
 				$("./label[2]"){
 					insert_after("br")
 				}
@@ -93,15 +94,18 @@ $$("#PaymentForm1"){
 			attributes(style:"text-align: center;")
 		}
 	}
-	$(".//br[3]"){
-		remove()
+	$("./div[@class='_guestCheckout']"){
+		$(".//br[3]"){
+			remove()
+		}
+		$(".//br[2]"){
+			remove()
+		}
+		$(".//br[1]"){
+			remove()
+		}
 	}
-	$(".//br[2]"){
-		remove()
-	}
-	$(".//br[1]"){
-		remove()
-	}
+	
 }
 
 $$(".card_info"){

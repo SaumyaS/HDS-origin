@@ -93,6 +93,7 @@ $("/html/body"){
 			$("./div[1]"){
 				add_class("_taxInfo")
 				insert("br")
+				attributes(style: "")
 			}
 			$("./div[2]"){
 				add_class("_order_total")

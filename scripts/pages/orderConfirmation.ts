@@ -93,6 +93,7 @@ $("/html/body"){
 			$("./div[1]"){
 				add_class("_order_total")
 				insert("br")
+				attributes(style: "")
 			}
 		}
 		$("./p/a"){
@@ -103,3 +104,4 @@ $("/html/body"){
 		}
 	}
 }
+
