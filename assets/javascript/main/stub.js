@@ -145,6 +145,5 @@ $("#errormsgDialog_title").DOMNodeAppear(function(){
 	$('#errormsgDialog_title').hide();
 });
 
-// $("#errormsgDialog_title").remove();
 
 
