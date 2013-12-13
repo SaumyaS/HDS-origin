@@ -14,6 +14,14 @@ $$(".order-confirm"){
 		$("./a"){
 			add_class("expand")
 		}
+		$("./a[contains(@class, 'btn')]"){
+			$onclick = fetch("./@onclick")
+			attributes(onclick: concat($onclick, ";errorMessagePosition();"))
+		}
+		# $("./a[contains(@class, 'btn')]"){
+		# 	$onclick = fetch("./@onclick")
+		# 	attributes(onclick: concat($onclick, "Ur.setup(\"._togglerBillContainer\");Ur.setup(\"._togglerShipContainer\");Ur.setup(\"._orderSummaryContainer\");"))
+		# }
 
 		$(".//div[contains(@class, 'order-product-info')]"){
 			$("./div[2]"){
@@ -51,6 +59,14 @@ $$(".order-confirm"){
 
 			$$("._colInStock"){
 				insert_after("div", class: "info")
+			}
+		}
+		$$(".order-product-discount"){
+			$("./div[1]"){
+				attributes(class: "_discountPercent")
+			}
+			$("./div[6]"){
+				attributes(class: "_discountPrice")
 			}
 		}
 		$$(".order-product-last"){

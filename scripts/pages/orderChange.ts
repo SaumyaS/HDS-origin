@@ -47,16 +47,29 @@ $$("#cart-total"){
 	$("../a"){
 		add_class("expand")
 	}
+	$("./a[@class='btn']"){
+		attributes(onclick: "errorMessagePosition()")
+	}
 }
 
 $$(".order-product-discount"){
-	$("./div[@class='mw_was_td']"){
-		match(inner()){
-			with(/ /){
-				# remove()
-			}
-		}
-		attributes(class: "_discounts")
+	$("./div[6]"){
+		attributes(class: "_discountPrice")
+	}
+	$("./div[5]"){
+		remove()
+	}
+	$("./div[4]"){
+		remove()
+	}
+	$("./div[3]"){
+		remove()
+	}
+	$("./div[2]"){
+		remove()
+	}
+	$("./div[1]"){
+		attributes(class: "_discountPercent")
 	}
 }
 
