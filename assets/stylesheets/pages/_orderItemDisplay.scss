@@ -114,6 +114,20 @@
 			}
 
 		}
+		.order-product-discount{
+			height: 20px;
+			border-bottom: 1px solid #ccc;
+			padding-top: 1px;
+			div{
+				color: #ff6311;
+			}
+			._discountPrice{
+				float: right;
+			}
+			._discountPercent{
+				float: left;
+			}
+		}
 		.order-product-last{
 			
 			._remove{

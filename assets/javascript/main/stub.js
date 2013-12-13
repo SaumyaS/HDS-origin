@@ -37,25 +37,9 @@ $(document).ready(function() {
 	    }
 	});
 
-	$.each($('._discount'), function(){
-
-		setTimeout(function(){ 
-			console.log("length is: ");
-			// if($this.html().replace(/\s|&nbsp;/g, '').length == 0){
-		 //        $this.remove();
-		 //    }
-	    }, 1);
-	});
-
 	$("div").filter(function(){
 	    return $.trim($(this).html()) === "&nbsp;";
 	}).remove();
-
-	$("._discounts").filter(function(){
-		console.log("test");
-	    return $.trim($(this).html()) === "&nbsp;";
-	}).remove();
-	
 
 	$("#WC_UnregisteredCheckout_links_4, #WC_UserRegistrationAddForm_links_1, #SubmitButton, #WC_PromotionCodeDisplay_links_1").on('click',function(){
 		setTimeout(function(){ 
@@ -153,9 +137,9 @@ function errorMessagePosition(){
 	setTimeout(function(){ 
 		var height = $(":focus").outerHeight();
 		var top = $(":focus").offset().top + height;
-		var left = $(":focus").offset().left;
+		// var left = $(":focus").offset().left;
 		$(".dijitTooltip.dijitTooltipLeft").css("top", top);
-		$(".dijitTooltip.dijitTooltipLeft").css("left", left);
+		// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
 	}, 1);
 }
 
