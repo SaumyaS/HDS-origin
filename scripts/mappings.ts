@@ -146,8 +146,17 @@ match($status) {
 				@import pages/reLogin.ts
 			}
 			with(/AjaxLogonForm/){
+				$$("h1"){
+					match(text()){
+						with(/SpeedBuild/){
+							@import pages/AjaxRequisitionListDisplayView.ts
+						}
+					}
+				}
+
 				log("--> Importing Login")
 				@import pages/login.ts
+
 			}
 			with(/forgetpassword/){
 				log("--> Importing forgetpassword")
@@ -246,6 +255,9 @@ match($status) {
 			}
 			with(/AjaxRequisitionListDetailView/){
 				@import pages/AjaxRequisitionListDetailView.ts
+			}
+			with(/RequisitionListTableView/){
+				@import pages/requisitionListTableView.ts
 			}
 			with(/WillCallModalView/){
 				log("--> Importing WillCallModalView")

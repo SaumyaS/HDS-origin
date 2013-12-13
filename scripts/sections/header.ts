@@ -28,6 +28,11 @@ $("./head"){
 	# insert("meta", name: "viewport", content: "width=device-width, height=device-height, initial-scale=1, maximum-scale=2.0, minimum-scale=1, user-scalable=no")
 	insert("link", rel: "apple-touch-icon", sizes: "72x72", href: asset("images/WhiteCap.png"))
 	insert("link", rel: "apple-touch-icon", sizes: "114x114", href: asset("images/WhiteCap.png"))
+
+    $("./script[contains(@src, 'dojo.js')]") {
+      log($host)
+      insert_after("script", "dojo.config.dojoIframeHistoryUrl = 'https://"+$host+"/wcsstore/dojo15/dojo/resources/iframe_history.html'", type:"text/javascript")
+    }
 }
 
 $("/html"){
@@ -262,6 +267,7 @@ $("./body"){
 		with(/AjaxAccountAddressForm/){}
 		with(/OrderStatusTableDetailsDisplay/){}
 		with(/AjaxPromotionCodeDisplayView/){}
+		with(/RequisitionListTableView/){}
 		else (){
 			inner_wrap("div", id: "body-content"){
 				insert_bottom("div", id: "pers-nav-mask")

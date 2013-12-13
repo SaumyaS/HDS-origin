@@ -22,6 +22,10 @@
 				border: 2px solid #ccc;
 				._eachList{
 					padding: 3px;
+					a{
+						color: #474747;
+						text-decoration: underline;
+					}
 				}
 				._eachList:nth-child(odd){
 					background: #ddd;
