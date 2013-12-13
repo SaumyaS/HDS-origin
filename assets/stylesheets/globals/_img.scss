@@ -1,0 +1,38 @@
+$img-url: url("/_moovweb_local_assets_/images/img.png");
+
+$img-width: 22px;
+$img-height: 45px;
+
+$img-minus-x: 0px;
+$img-minus-y: 0px;
+$img-minus-width: 22px;
+$img-minus-height: 22px;
+
+$img-plus-x: 0px;
+$img-plus-y: -23px;
+$img-plus-width: 22px;
+$img-plus-height: 22px;
+
+@mixin img-minus() {
+  background: url("/_moovweb_local_assets_/images/img.png") no-repeat 0px 0px;
+  width: 22px;
+  height: 22px;
+}
+
+@mixin img-plus() {
+  background: url("/_moovweb_local_assets_/images/img.png") no-repeat 0px -23px;
+  width: 22px;
+  height: 22px;
+}
+
+.img-minus {
+  background: url("/_moovweb_local_assets_/images/img.png") no-repeat 0px 0px;
+  width: 22px;
+  height: 22px;
+}
+
+.img-plus {
+  background: url("/_moovweb_local_assets_/images/img.png") no-repeat 0px -23px;
+  width: 22px;
+  height: 22px;
+}

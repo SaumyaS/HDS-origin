@@ -65,7 +65,7 @@ $(".//div[@class='main_container']"){
 								attributes(class: "_checkboxContainer")
 							}
 							attributes(class: "_checkbox")
-							insert_before("label", class: "_checkboxTitle", "Select")
+							# insert_before("label", class: "_checkboxTitle", "Select")
 						}
 						$("./div[2]/div[1]"){
 							$(".."){
@@ -74,6 +74,9 @@ $(".//div[@class='main_container']"){
 									attributes(class: "_expand")
 									$("./div[1]"){
 										attributes(style: "", class: "_toggle")
+										$(".//img"){
+											attributes(src: asset("images/img/plus.png"))
+										}
 									}
 									$("./div[2]"){
 										attributes(style: "", class: "_content")
@@ -83,6 +86,9 @@ $(".//div[@class='main_container']"){
 									attributes(class: "_collaspe")
 									$("./div[1]"){
 										attributes(style: "", class: "_toggle")
+										$(".//img"){
+											attributes(src: asset("images/img/minus.png"))
+										}
 									}
 									$("./div[2]"){
 										attributes(style: "", class: "_content")
@@ -96,12 +102,12 @@ $(".//div[@class='main_container']"){
 								}
 							}
 							attributes(class: "_productName")
-							insert_before("label", class: "_productNameTitle", "Name")
+							# insert_before("label", class: "_productNameTitle", "Name")
 							
 						}
 						$("./div[3]"){
 							attributes(class: "_skuContainer")
-							insert_top("label", class: "_skuTitle", "SKU")
+							# insert_top("label", class: "_skuTitle", "SKU")
 						}
 						$("./div[4]"){
 							attributes(class: "_quantityContainer")
