@@ -47,9 +47,15 @@ $(document).ready(function() {
 			var height = $(":focus").outerHeight();
 			var top = $(":focus").offset().top + height;
 			var left = $(":focus").offset().left;
-			$(".dijitTooltip.dijitTooltipLeft").css("top", top);
-			$(".dijitTooltip.dijitTooltipLeft").css("left", left);
-		}, 1);
+			// $(".dijitTooltip.dijitTooltipLeft").css("top", top);
+			// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
+			// $(".dijitTooltip.dijitTooltipRight").css("top", top);
+			// $(".dijitTooltip.dijitTooltipRight").css("left", left);
+			$("#dijit__MasterTooltip_0").css("top", top);
+			$("#dijit__MasterTooltip_0").css("left", left);
+			
+
+		}, 200);
 	});
 
 	$("input").keydown(function(){
