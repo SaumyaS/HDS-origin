@@ -35,24 +35,6 @@
 	box-shadow: 3px 3px 5px #888;
 }
 
-.dijitTooltipLeft{
-	display: block;
-	position:absolute !important;
-	z-index: 2000;
-	font-size: 16px;
-	font-weight: bold;
-	margin-top: 0px;
-	width: 100% !important;
-	// top: 0px !important;
-	// left: 25% !important;
-	background: rgba(255,255,255,.9);
-	border-radius: 4;
-	color: black;
-	text-align: center;
-	border: 1px solid #008fb2;
-	box-shadow: 3px 3px 5px #888;
-}
-
 #email_modal_dialog{
 	top: 30% !important;
 }
