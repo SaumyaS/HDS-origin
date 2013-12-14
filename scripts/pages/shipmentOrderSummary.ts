@@ -16,6 +16,9 @@ $("/html/body"){
 		$("./div[@class='col-2']/div[1]"){
 			insert("hr")
 		}
+		$("./div[@class='col-2']/div[2]/label[2]"){
+			insert_before("br")
+		}
 		$("./div[@class='col-2']/div[2]/br[1]"){
 			remove()
 		}
