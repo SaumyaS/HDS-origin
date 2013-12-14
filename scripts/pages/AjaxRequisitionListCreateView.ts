@@ -70,6 +70,8 @@ $(".//div[@class='main_container']"){
 						$("./div[2]/div[1]"){
 							$(".."){
 								attributes(class: "_productContainer")
+								
+								# //*[@id="expand1"]/div[2]
 								$("./div[2]"){
 									attributes(class: "_expand")
 									$("./div[1]"){
@@ -91,6 +93,8 @@ $(".//div[@class='main_container']"){
 										}
 									}
 									$("./div[2]"){
+										remove_text_nodes()
+										insert_top("span", class:"_description", "Description Header")
 										attributes(style: "", class: "_content")
 										$("./div"){
 											attributes(style: "")
@@ -100,8 +104,10 @@ $(".//div[@class='main_container']"){
 										}
 									}
 								}
+								move_here("./div[@class='_expand']/div[2]", "top")
 							}
 							attributes(class: "_productName")
+
 							# insert_before("label", class: "_productNameTitle", "Name")
 							
 						}
@@ -121,7 +127,7 @@ $(".//div[@class='main_container']"){
 						}
 						$("./div[6]"){
 							attributes(class: "_imgContainer")
-							insert_top("label", class: "_imgTitle", "Image")
+							# insert_top("label", class: "_imgTitle", "Image")
 						}
 						$("./div[7]"){
 							attributes(class: "_priceContainer")
@@ -148,6 +154,16 @@ $(".//div[@class='main_container']"){
 							$("./span"){
 								attributes(style: "")
 							}
+						}
+
+
+
+
+						insert_top("div", class: "_bg_top"){
+							move_here("../div[@class='_checkboxContainer']")
+							move_here("../div[@class='_imgContainer']")
+							move_here("../div[@class='_productContainer']/div[@class='_content']")
+							move_here("../div[@class='_skuContainer']")
 						}
 					}
 				}

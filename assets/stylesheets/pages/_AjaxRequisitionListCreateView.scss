@@ -86,7 +86,20 @@
 				.color-bg:nth-child(2n+1){
 					background: #eee;
 				}
+				._bg_top{
+					
+					._content{
+						margin-top: .5em;
+						font-size: 1.5em;
+						line-height: 1;
+					}
+				}
 				._checkboxContainer{
+					width: 30px;
+					margin-left: 5px;
+					margin-top: 12px;
+					float: left;
+					display: inline-block;
 					label{
 						min-width: 50px;
 					}
@@ -111,23 +124,14 @@
 						div{
 							margin-left: 50px;
 						}
-						._toggle{
-							margin-top: -14px;
-						}
-						._content{
-							div{
-								margin-left: 20px;
-							}
-						}
+
 					}
 					._collaspe{
 						div{
 							margin-left: 50px;
 						}
-						._toggle{
-							margin-top: -14px;
-						}
 						._content{
+
 							div{
 								margin-left: 20px;
 							}
@@ -135,6 +139,7 @@
 					}
 				}
 				._skuContainer{
+					margin-left: 100px;
 					label{
 						min-width: 50px;
 					}
@@ -159,12 +164,16 @@
 					}
 				}
 				._imgContainer{
+					float: left;
+					margin-right: 10px;
 					label{
 						float: left;
 						margin-top: 35px;
 					}
 					img{
 						border: 1px solid #777;
+						width: 50px;
+						height: 50px;
 					}
 				}
 				.bt_pagination{
