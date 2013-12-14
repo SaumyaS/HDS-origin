@@ -87,11 +87,12 @@
 					background: #eee;
 				}
 				._bg_top{
-					
+					min-height: 60px;
 					._content{
 						margin-top: .5em;
 						font-size: 1.5em;
 						line-height: 1;
+						margin-left: 100px;
 					}
 				}
 				._checkboxContainer{
@@ -120,18 +121,25 @@
 
 				}
 				._productContainer{
-					._expand{
-						div{
-							margin-left: 50px;
+					._toggle{
+						display: inline-block;
+						padding: 5px;
+						border: 1px solid #777;
+						background: #999;
+						a{
+							img{
+								float: left;
+							}
+							span{
+								color: #505050;
+								font-weight: bold;
+							}
 						}
-
 					}
 					._collaspe{
-						div{
-							margin-left: 50px;
-						}
 						._content{
-
+							background: #999;
+							border: 1px solid #777;
 							div{
 								margin-left: 20px;
 							}
@@ -139,20 +147,28 @@
 					}
 				}
 				._skuContainer{
-					margin-left: 100px;
+					margin-left: 103px;
 					label{
 						min-width: 50px;
 					}
 					font{
+						color: #777;
 						margin-left: -3px;
 					}
 				}
 				._quantityContainer{
+					border-bottom: 1px dashed #999;
 					._quantityTitle {
 						float: left;
+						margin-top: 9px;
+						min-width: 30px;
+					}
+					input{
+						width: 150px;
 					}
 				}
 				._manufacturerContainer{
+					display: none;
 					._manufacturerTitle{
 						float: left;
 					}
@@ -174,6 +190,31 @@
 						border: 1px solid #777;
 						width: 50px;
 						height: 50px;
+					}
+				}
+				._priceHolder{
+					display: block;
+					height: 40px;
+				}
+				._priceContainer{
+					display: inline-block;
+					float: left;
+					span{
+						width: 75px !important;
+						display: block;
+					}
+				}
+				._totalPriceContainer{
+					display: inline-block;
+					float: right;
+					span{
+						width: 75px !important;
+						display: block;
+					}
+				}
+				._buttom{
+					._bg_top{
+						display: none;
 					}
 				}
 				.bt_pagination{
