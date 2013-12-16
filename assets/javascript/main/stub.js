@@ -47,6 +47,7 @@ $(document).ready(function() {
 			var height = $(":focus").outerHeight();
 			var top = $(":focus").offset().top + height;
 			var left = $(":focus").offset().left;
+<<<<<<< HEAD
 			// $(".dijitTooltip.dijitTooltipLeft").css("top", top);
 			// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
 			// $(".dijitTooltip.dijitTooltipRight").css("top", top);
@@ -56,6 +57,11 @@ $(document).ready(function() {
 			
 
 		}, 200);
+=======
+			$(".dijitTooltip.dijitTooltipLeft").css("top", top);
+			// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
+		}, 1);
+>>>>>>> master
 	});
 
 	$("input").keydown(function(){
