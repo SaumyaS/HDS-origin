@@ -8,6 +8,11 @@ $("/html/body"){
 		attributes(style: "background-color: #fff;")
 		add_class("_reviewPage")
 	}
+	$(".//div[@id='QucikBuild_Order_ESpot']"){
+		$(".//div[@class='ad']"){
+			remove()
+		}
+	}
 
 	$(".//div[@id='order-info']"){
 		$("./div[@class='col-1']/div[1]"){
@@ -16,6 +21,13 @@ $("/html/body"){
 
 		$("./div[@class='col-2']/div[1]"){
 			insert("hr")
+		}
+		$("./div[@class='col-2']/div[2]"){
+			move_here("../h3/span", "top")
+			$("./span[1]"){
+				attributes(style: "display:block;")
+				wrap("h3")
+			}
 		}
 	}
 	$(".//div[@id='order-summary']"){

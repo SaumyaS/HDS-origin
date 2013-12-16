@@ -70,12 +70,18 @@ $(".//div[@class='main_container']"){
 						$("./div[2]/div[1]"){
 							$(".."){
 								attributes(class: "_productContainer")
+								
+								# //*[@id="expand1"]/div[2]
 								$("./div[2]"){
 									attributes(class: "_expand")
 									$("./div[1]"){
 										attributes(style: "", class: "_toggle")
+
 										$(".//img"){
 											attributes(src: asset("images/img/plus.png"))
+										}
+										$("./a"){
+											insert("span", class:"_description", "Description")
 										}
 									}
 									$("./div[2]"){
@@ -86,12 +92,19 @@ $(".//div[@class='main_container']"){
 									attributes(class: "_collaspe")
 									$("./div[1]"){
 										attributes(style: "", class: "_toggle")
+										$("./a"){
+											insert("span", class:"_description", "Description")
+										}
 										$(".//img"){
 											attributes(src: asset("images/img/minus.png"))
 										}
 									}
 									$("./div[2]"){
+										remove_text_nodes()
 										attributes(style: "", class: "_content")
+										$("./br"){
+											remove()
+										}
 										$("./div"){
 											attributes(style: "")
 										}
@@ -100,8 +113,10 @@ $(".//div[@class='main_container']"){
 										}
 									}
 								}
+								move_here("./div[@class='_expand']/div[2]", "top")
 							}
 							attributes(class: "_productName")
+
 							# insert_before("label", class: "_productNameTitle", "Name")
 							
 						}
@@ -111,7 +126,8 @@ $(".//div[@class='main_container']"){
 						}
 						$("./div[4]"){
 							attributes(class: "_quantityContainer")
-							insert_top("label", class: "_quantityTitle", "Quantity")
+							insert_top("label", class: "_quantityTitle", "QTY")
+
 						}
 						$("./div[5]"){
 							wrap("div"){
@@ -121,7 +137,7 @@ $(".//div[@class='main_container']"){
 						}
 						$("./div[6]"){
 							attributes(class: "_imgContainer")
-							insert_top("label", class: "_imgTitle", "Image")
+							# insert_top("label", class: "_imgTitle", "Image")
 						}
 						$("./div[7]"){
 							attributes(class: "_priceContainer")
@@ -130,10 +146,18 @@ $(".//div[@class='main_container']"){
 						$("./div[8]"){
 							attributes(class: "_totalPriceContainer")
 							insert_top("label", class: "_totalPriceTitle", "Total Price")
+							insert_after("div", class: "_priceHolder")
+						}
+						$("./div[@class='_priceHolder']"){
+							move_here("../div[@class='_priceContainer']")
+							move_here("../div[@class='_totalPriceContainer']")
+							$(".//span"){
+								attributes(style: "")
+							}
 						}
 						$("./div[@class='mw_was_td']"){
 							$(".."){
-								attributes(class: "test")
+								attributes(class: "_bottom")
 							}
 							$("./a[1]"){
 								attributes(id: "SubmitButton")
@@ -148,6 +172,19 @@ $(".//div[@class='main_container']"){
 							$("./span"){
 								attributes(style: "")
 							}
+
+						}
+
+
+
+
+					}
+					$("./div[contains(@class, 'color-bg')]"){
+						insert_top("div", class: "_bg_top"){
+							move_here("../div[@class='_checkboxContainer']")
+							move_here("../div[@class='_imgContainer']")
+							move_here("../div[@class='_productContainer']/div[@class='_content']")
+							move_here("../div[@class='_skuContainer']")
 						}
 					}
 				}
