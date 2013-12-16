@@ -59,6 +59,11 @@
 		}
 
 	}
+	._companyInfoContainer{
+		label{
+			width: auto;
+		}
+	}
 	._companyInfoTitle{
 		@include toggler;
 	}
