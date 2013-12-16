@@ -31,6 +31,10 @@ match($status) {
 			log("--> Importing Invalid search")
 			@import pages/search.ts
 		}
+		$$(".resetpassword_main_container"){
+			log("fixing menu on reset password")
+			@import pages/resetPasswordPage.ts
+		}
 
 		# Product Subcategories
 		$$(".topcat_header"){
