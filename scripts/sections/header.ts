@@ -121,7 +121,7 @@ $$(".nav_wrapper"){
 
 		$$(".subnav"){
 			attributes(data-ur-toggler-component: "content", data-ur-id: "submenu")
-			$$("a"){
+			$(".//a"){
 				attribute("class", "_sub2")
 			}
 		}
