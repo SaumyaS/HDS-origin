@@ -3,21 +3,43 @@
 // }
 // 
 
-// .dijitTooltipLeft{
-// 	display: none;
-// 	position:absolute;
-// 	left: 139px !important;
-// 	background-color: white;
+// .dijitTooltipRight{
+// 	display: block;
+// 	position:absolute !important;
 // 	z-index: 2000;
-// 	border-radius: 5px;
-// 	border: 1px solid #ccc;
-// 	color: red;
-// 	font-size: 14px;
+// 	font-size: 16px;
 // 	font-weight: bold;
-// 	width: 50%;
+// 	margin-top: 0px;
+// 	width: 100% !important;
+// 	// top: 0px !important;
+// 	left: 0 !important;
+// 	background: rgba(255,255,255,.9);
+// 	border-radius: 4;
+// 	color: black;
+// 	text-align: center;
+// 	border: 1px solid #008fb2;
+// 	box-shadow: 3px 3px 5px #888;
 // }
 
-.dijitTooltipLeft{
+// .dijitTooltipLeft{
+// 	display: block;
+// 	position:absolute !important;
+// 	z-index: 2000;
+// 	font-size: 16px;
+// 	font-weight: bold;
+// 	margin-top: 0px;
+// 	width: 100% !important;
+// 	// top: 0px !important;
+// 	left: 0 !important;
+// 	background: rgba(255,255,255,.9);
+// 	border-radius: 4;
+// 	color: black;
+// 	text-align: center;
+// 	border: 1px solid #008fb2;
+// 	box-shadow: 3px 3px 5px #888;
+// }
+
+#dijit__MasterTooltip_0{
 	display: block;
 	position:absolute !important;
 	z-index: 2000;
@@ -26,7 +48,7 @@
 	margin-top: 0px;
 	width: 100% !important;
 	// top: 0px !important;
-	// left: 25% !important;
+	left: 0 !important;
 	background: rgba(255,255,255,.9);
 	border-radius: 4;
 	color: black;
