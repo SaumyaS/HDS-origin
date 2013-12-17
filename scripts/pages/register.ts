@@ -41,6 +41,9 @@ $$(".register"){
 			$("./label[6]"){
 				insert_before("br")
 			}
+			$("./input[@name='zipCode']"){
+				attributes(type: "tel")
+			}
 		}
 		$("./div[2]"){
 			$("./label[2]"){
@@ -54,6 +57,9 @@ $$(".register"){
 			}
 			$("./input[@id='WC_UserRegistrationUpdateForm_FormInput_phoneNum_In_Register_1']"){
 				insert_after("br")
+			}
+			$("./input[@name='phone1']"){
+				attributes(type: "tel")
 			}
 			$("./input[@name='sendMeEmail']"){
 				insert_before("br")

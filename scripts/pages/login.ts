@@ -14,9 +14,15 @@ $("/html/body"){
 					$("./label[2]"){
 						# insert_before("br")
 					}
-					$("./input") {
-						add_class("expand")
+					$("./input[@type='text']") {
+						wrap("div", class: "test")
 					}
+					# $("./div[@class='test']"){
+					# 	attributes(data-ur-set: "input-clear")
+					# 	$("./input"){
+					# 		attributes(data-ur-input-clear-component: "input")
+					# 	}
+					# }
 					# $("./a[@id='WC_AccountDisplay_links_1']"){
 					# 	insert_before("br")
 					# }
