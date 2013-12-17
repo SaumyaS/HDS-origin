@@ -56,6 +56,12 @@ $(document).ready(function() {
 		}, 200);
 	});
 
+	$("#WC_UnregisteredCheckout_links_4").on('click', function(){
+		setTimeout(function(){
+			$("input[value=Discover]:radio").checked=true;
+		}, 20000);
+	});
+
 	$("input").keydown(function(){
 		$(".dijitTooltipLeft").hide();
 	});
