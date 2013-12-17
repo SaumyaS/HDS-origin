@@ -35,6 +35,8 @@ $("/html/body"){
 			insert_before("div", class: "_userInfo", "My Info"){
 
 			}
+
+
 		}
 		$("./div[@class='_userInfo']"){
 			attributes(data-ur-toggler-component: "button")
@@ -126,6 +128,12 @@ $("//div[@class='body']"){
 		}
 		$("./div[@class='content']"){
 			attributes(data-ur-toggler-component: "content")
+		}
+	}
+	$("./p[@class='myaccount_desc']"){
+		insert_after("div", class: "_speedBuildContainer"){
+			insert_top("h3", class: "_speedBuildTitle", "SpeedBuild")
+			insert("a", href: "javaScript:setCurrentId('requisitionList');MyAccountDisplay.loadContentFromURL('requisitionList', 'https://"+$host+"/webapp/wcs/stores/servlet/AjaxRequisitionListDisplayView?currentSelection=requisitionListSlct&catalogId=11101&langId=-1&storeId=11301');MyAccountDisplay.changeSelection('https://"+$host+"/webapp/wcs/stores/servlet/AjaxRequisitionListDisplayView?currentSelection=requisitionListSlct&catalogId=11101&langId=-1&storeId=11301');", id: "requisitionList", "View Your Lists")
 		}
 	}
 	$("./div[@class='checkout-container']"){

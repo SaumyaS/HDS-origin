@@ -6,6 +6,9 @@ $("//div[@id='email_modal_dialog']"){
 		attributes(style: "text-align: left;")
 	}
 	$(".//div[@class='email_input_box']/form"){
+		$("./span[@class='error_msg']"){
+			insert_after("br")
+		}
 		$("./input"){
 			attributes(style: "width: 140px !important; margin-bottom: 10px;", class: "_popinput")
 		}
