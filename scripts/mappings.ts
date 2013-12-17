@@ -1,5 +1,4 @@
 /*
-<<<<<<< HEAD
 	Mappings
 
 	Mappings are matchers that we use to determine if we should execute a
