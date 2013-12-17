@@ -48,17 +48,12 @@
 				}
 				.body{
 					._speedBuildContainer {
-						height: 60px;
-						margin-left: 10px;
-						margin-right: 10px;
-						._speedBuildTitle{
-							border-bottom: 2px solid #fc0;
-							margin-bottom: 2px;
-						}
 						a{
-							color: #777;
-							text-decoration: underline;
-							padding-left: 10px;
+							@include bars;
+							@include background-image(url(../../../images/menu_go.png), linear-gradient(#333 0, black 100%));
+							background-position: right center;
+							background-repeat: no-repeat;
+							padding-right: 10px;
 						}
 					}
 					padding: 5px;
