@@ -47,6 +47,20 @@
 					}
 				}
 				.body{
+					._speedBuildContainer {
+						height: 60px;
+						margin-left: 10px;
+						margin-right: 10px;
+						._speedBuildTitle{
+							border-bottom: 2px solid #fc0;
+							margin-bottom: 2px;
+						}
+						a{
+							color: #777;
+							text-decoration: underline;
+							padding-left: 10px;
+						}
+					}
 					padding: 5px;
 					.checkout-container{
 						overflow: hidden;
@@ -55,7 +69,12 @@
 							padding: 10px;
 							margin: 0 15px;
 							.info{
-								a{
+								.btn{
+									margin-bottom: 5px;
+								}
+								.myaccount_link{
+									color: #777;
+									text-decoration: underline;
 									margin-top: 5px;
 								}
 							}

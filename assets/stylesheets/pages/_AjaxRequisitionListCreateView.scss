@@ -108,15 +108,11 @@
 						display: none;
 					}
 					._checkbox + label{
-						background: url("/_moovweb_local_assets_/images/checkbox.png") no-repeat 0px -21px;
-						width: 20px;
-						height: 20px;
+						@include Icons-uncheck();
 
 					}
 					._checkbox:checked + label{
-						background: url("/_moovweb_local_assets_/images/checkbox.png") no-repeat 0px 0px;
-						width: 20px;
-						height: 20px;
+						@include Icons-check();
 					}
 
 				}
