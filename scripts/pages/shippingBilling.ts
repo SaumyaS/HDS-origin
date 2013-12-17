@@ -13,6 +13,24 @@ $("/html/body"){
 	
 
 		$("./div[@class='checkout-container']"){
+			$("./div[@class='sub-col']/div[@id='willCallShippingAddressForm']/form"){
+				$("./input[@name='zipCode']"){
+					attributes(type: "tel")
+				}
+				$("./input[@name='phone1']"){
+					attributes(type: "tel")
+				}
+				add_class("test")
+			}
+			$("./div[@class='sub-col']/form"){
+				$("./input[@name='zipCode']"){
+					attributes(type: "tel")
+				}
+				$("./input[@name='phone1']"){
+					attributes(type: "tel")
+				}
+				add_class("test")
+			}
 			$("./br"){
 				remove()
 			}

@@ -41,6 +41,9 @@ $$(".order-confirm"){
 						set("Quantity:")
 					}
 				}
+				$("./input"){
+					attributes(type: "tel")
+				}
 			}
 			$("./div[6]"){
 				add_class("_colEach")
@@ -102,6 +105,7 @@ $$(".order-confirm"){
 				attributes(style: "", class: "_shipping")
 				insert_after("div", class: "_tax")
 				$(".//input[@id='shippingAndTaxZipCode']"){
+					attributes(type: "tel")
 					insert_after("br")
 					insert_before("br")
 				}
