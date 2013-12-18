@@ -152,3 +152,6 @@ function errorMessagePosition(){
 		// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
 	}, 1);
 }
+
+
+
