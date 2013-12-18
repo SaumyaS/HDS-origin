@@ -14,9 +14,15 @@ $("/html/body"){
 					$("./label[2]"){
 						# insert_before("br")
 					}
-					$("./input") {
-						add_class("expand")
+					$("./input[@type='text']") {
+						wrap("div", class: "test")
 					}
+					# $("./div[@class='test']"){
+					# 	attributes(data-ur-set: "input-clear")
+					# 	$("./input"){
+					# 		attributes(data-ur-input-clear-component: "input")
+					# 	}
+					# }
 					# $("./a[@id='WC_AccountDisplay_links_1']"){
 					# 	insert_before("br")
 					# }
@@ -132,8 +138,7 @@ $("//div[@class='body']"){
 	}
 	$("./p[@class='myaccount_desc']"){
 		insert_after("div", class: "_speedBuildContainer"){
-			insert_top("h3", class: "_speedBuildTitle", "SpeedBuild")
-			insert("a", href: "javaScript:setCurrentId('requisitionList');MyAccountDisplay.loadContentFromURL('requisitionList', 'https://"+$host+"/webapp/wcs/stores/servlet/AjaxRequisitionListDisplayView?currentSelection=requisitionListSlct&catalogId=11101&langId=-1&storeId=11301');MyAccountDisplay.changeSelection('https://"+$host+"/webapp/wcs/stores/servlet/AjaxRequisitionListDisplayView?currentSelection=requisitionListSlct&catalogId=11101&langId=-1&storeId=11301');", id: "requisitionList", "View Your Lists")
+			insert("a", href: "javaScript:setCurrentId('requisitionList');MyAccountDisplay.loadContentFromURL('requisitionList', 'https://"+$host+"/webapp/wcs/stores/servlet/AjaxRequisitionListDisplayView?currentSelection=requisitionListSlct&catalogId=11101&langId=-1&storeId=11301');MyAccountDisplay.changeSelection('https://"+$host+"/webapp/wcs/stores/servlet/AjaxRequisitionListDisplayView?currentSelection=requisitionListSlct&catalogId=11101&langId=-1&storeId=11301');", id: "requisitionList", "SpeedBuild")
 		}
 	}
 	$("./div[@class='checkout-container']"){

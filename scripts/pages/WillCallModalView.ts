@@ -12,6 +12,10 @@ $$("#map_canvas"){
 	attributes(style: "display: none;")
 }
 
+$$("#postalcode"){
+	attributes(type: "tel")
+}
+
 $("//a[@title='Cancel']"){
 	$(".."){
 		add_class("_cancelContainer")

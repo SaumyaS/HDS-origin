@@ -1,4 +1,5 @@
 $$(".card_info"){
+
 	$("./div[@id='payment-cc']"){
 		remove_text_nodes()
 		$("./label[@for='expire_month_1']"){
@@ -20,4 +21,11 @@ $$(".card_info"){
 			}
 		}
 	}
+	$(".//input[@name='account1']"){
+		attributes(type: "tel")
+	}
+	$(".//input[@name='cc_cvc']"){
+		attributes(type: "tel")
+	}
+
 }
