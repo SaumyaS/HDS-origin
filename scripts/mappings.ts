@@ -362,6 +362,9 @@ match($status) {
 				log("--> Import Quick Order display")
 				@import pages/quickOrderCartDisplay.ts
 			}
+			with(/OrderCalculate/){
+				@import pages/resetPasswordPage.ts
+			}
 			with(/AjaxAccountAddressForm/){
 				log("--> importing ajax address book")
 				@import pages/ajaxAddressBookForm.ts

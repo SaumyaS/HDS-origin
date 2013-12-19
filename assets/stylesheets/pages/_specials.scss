@@ -26,13 +26,18 @@
 					background-color: #f5f5f5;
 					text-align: center;
 					._carousel{
-						width: 4000px !important;
-						._carouselItem{
-							margin-left: 5px;
-							margin-right: 5px;
+						._scrolls{
+							width: 4000px !important;
+							._carouselItem{
+								// width: 50%;
+								margin-left: 10px;
+								margin-right: 10px;
+								p{
+									width: 70%;
+								}
+							}
 						}
 					}
-					
 				}
 				._specialsBottom{
 					h1{
