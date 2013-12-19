@@ -128,6 +128,10 @@ match($status) {
 				# @import pages/personalInfo.ts
 				@import pages/editRegistration.ts
 			}
+			with(/UserRegistrationAdd/){
+				log("-->  Importing UserRegistrationAdd")
+				@import pages/register.ts
+			}
 			with(/editRegistration/){
 				@import pages/editRegistration.ts
 			}
