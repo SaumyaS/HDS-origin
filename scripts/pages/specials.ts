@@ -17,80 +17,92 @@ $("//*[@id='main_content_wrapper']/div/div"){
 	$(".//div[@id='WC_ContentAreaESpot_div_22_1']/div[1]"){
 		attributes(class: "_specialText", style: "")
 	# Removeing blank rows
-		$("./div[@data-mw-id='mw_dump_tr1']"){
-			remove()
-		}
-		$("./div[@data-mw-id='mw_dump_tr5']"){
-			remove()
-		}
-		$("./div[@data-mw-id='mw_dump_tr24']"){
-			remove()
-		}
-		$("./div[@data-mw-id='mw_dump_tr43']"){
-			remove()
-		}
+		# $("./div[@data-mw-id='mw_dump_tr1']"){
+		# 	remove()
+		# }
+		# $("./div[@data-mw-id='mw_dump_tr5']"){
+		# 	remove()
+		# }
+		# $("./div[@data-mw-id='mw_dump_tr24']"){
+		# 	remove()
+		# }
+		# $("./div[@data-mw-id='mw_dump_tr43']"){
+		# 	remove()
+		# }
 
 		# Restructuring each of the rows
 		# insert_top("div", class: "_carousel4")
-		# insert_top("div", class: "_carousel3")
+		insert_top("div", class: "_carousel", id: "_carousel3")
 		insert_top("div", class: "_carousel", id: "_carousel2")
 		insert_top("div", class: "_carousel", id: "_carousel1")
 
 		$("./div[@id='_carousel1']"){
-			move_here("../div[3]")
-			move_here("../div[3]")
-			move_here("../div[3]")
+			move_here("../div[4]")
 		}
-		$("./div[3]"){
+		$("./div[4]"){
 			move_to("../div[@id='_carousel1']", position("after"))
 		}
 
 		$("./div[@id='_carousel2']"){
-			move_here("../div[4]")
-			move_here("../div[4]")
-			move_here("../div[4]")
+			move_here("../div[5]")
 		}
-		$("./div[4]"){
+		$("./div[5]"){
 			move_to("../div[@id='_carousel2']", position("after"))
 		}
-
-		# Making rows suitable for carousel
+		$("./div[@id='_carousel3']"){
+			move_here("../div[6]")
+		}
+		$("./div[6]"){
+			move_to("../div[@id='_carousel2']", position("after"))
+		}
 		$("./div[@class='_carousel']"){
-			# insert_after("hr")
-			insert("div", class: "_carouselItem"){
-				move_here("../div[1]/div[1]")
-				move_here("../div[2]/div[1]")
-				move_here("../div[3]/div[1]")
-			}
-			insert("div", class: "_carouselItem"){
-				move_here("../div[1]/div[1]")
-				move_here("../div[2]/div[1]")
-				move_here("../div[3]/div[1]")
-			}
-			insert("div", class: "_carouselItem"){
-				move_here("../div[1]/div[1]")
-				move_here("../div[2]/div[1]")
-				move_here("../div[3]/div[1]")
-			}
-			$("./div[@class='mw_was_tr']"){
-				remove()
-			}
-			$("./div[@class='_carouselItem']"){
-				$("./div[2]"){
-					attributes(class: "_text")
+			$("./div"){
+				attributes(class: "_scrolls")
+				$("./div"){
+					attributes(class: "_carouselItem")
+					$("./a[2]"){
+						remove()
+					}
 				}
 			}
-			wrap("div"){
-				attributes(class: "_container")
-			}
 		}
+		# Making rows suitable for carousel
+		# $("./div[@class='_carousel']"){
+		# 	# insert_after("hr")
+		# 	insert("div", class: "_carouselItem"){
+		# 		move_here("../div[1]/div[1]")
+		# 		move_here("../div[2]/div[1]")
+		# 		move_here("../div[3]/div[1]")
+		# 	}
+		# 	insert("div", class: "_carouselItem"){
+		# 		move_here("../div[1]/div[1]")
+		# 		move_here("../div[2]/div[1]")
+		# 		move_here("../div[3]/div[1]")
+		# 	}
+		# 	insert("div", class: "_carouselItem"){
+		# 		move_here("../div[1]/div[1]")
+		# 		move_here("../div[2]/div[1]")
+		# 		move_here("../div[3]/div[1]")
+		# 	}
+		# 	$("./div[@class='mw_was_tr']"){
+		# 		remove()
+		# 	}
+		# 	$("./div[@class='_carouselItem']"){
+		# 		$("./div[2]"){
+		# 			attributes(class: "_text")
+		# 		}
+		# 	}
+		# 	wrap("div"){
+		# 		attributes(class: "_container")
+		# 	}
+		# }
 
 		# Creating the Carousel Attributes
-		$("./div[@class='_container']"){
+		$("./div[@class='_carousel']"){
       		attributes(data-ur-set: "carousel", data-ur-carousel-component: "view_container", data-ur-autoscroll: "disabled", data-ur-center: "enabled", data-ur-infinite: "disabled")
-      		$("./div"){
+      		$("./div[@class='_scrolls']"){
       			attributes(data-ur-carousel-component: "scroll_container")
-      			$("./div"){
+      			$("./div[@class='_carouselItem']"){
       				attributes(data-ur-carousel-component: "item", style: "float: left;")
       			}
       		}
@@ -98,36 +110,36 @@ $("//*[@id='main_content_wrapper']/div/div"){
 		}
 	}
 
-	$(".//div[@id='WC_ContentAreaESpot_div_22_1']/div[3]"){
-		add_class("_specialsBottom")
-		$("div[1]"){
-			remove()
-		}
-		$("div[3]"){
-			remove()
-		}
-		$("./div[2]"){
-			add_class("_specialsTextBottom")
-		}
-	}
-	$(".//div[@id='WC_ContentAreaESpot_div_22_1']/p"){
-		remove()
-	}
+	# $(".//div[@id='WC_ContentAreaESpot_div_22_1']/div[3]"){
+	# 	add_class("_specialsBottom")
+	# 	$("div[1]"){
+	# 		remove()
+	# 	}
+	# 	$("div[3]"){
+	# 		remove()
+	# 	}
+	# 	$("./div[2]"){
+	# 		add_class("_specialsTextBottom")
+	# 	}
+	# }
+	# $(".//div[@id='WC_ContentAreaESpot_div_22_1']/p"){
+	# 	remove()
+	# }
 }
 
-$$("._specialText"){
-	$("./div[@data-ur-set='carousel']"){
-		$("./div/div/div[3]"){
-			$("./a"){
-				attributes(class: "")
-				remove_text_nodes()
-				move_here("../../div[1]/img")
-			}
-		}
-		$(".//div[@class='_carouselItem']"){
-			$("./div[@class='_text']"){
-				move_to("..", position("bottom"))
-			}
-		}
-	}
-}
+# $$("._specialText"){
+# 	$("./div[@data-ur-set='carousel']"){
+# 		$("./div/div"){
+# 			$("./a"){
+# 				attributes(class: "")
+# 				remove_text_nodes()
+# 				move_here("../../div[1]/img")
+# 			}
+# 		}
+# 		$(".//div[@class='_carouselItem']"){
+# 			$("./div[@class='_text']"){
+# 				move_to("..", position("bottom"))
+# 			}
+# 		}
+# 	}
+# }
