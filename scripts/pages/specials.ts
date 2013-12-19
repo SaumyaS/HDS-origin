@@ -32,29 +32,41 @@ $("//*[@id='main_content_wrapper']/div/div"){
 
 		# Restructuring each of the rows
 		# insert_top("div", class: "_carousel4")
-		# insert_top("div", class: "_carousel", id: "_carousel3")
-		# insert_top("div", class: "_carousel", id: "_carousel2")
-		# insert_top("div", class: "_carousel", id: "_carousel1")
+		insert_top("div", class: "_carousel", id: "_carousel3")
+		insert_top("div", class: "_carousel", id: "_carousel2")
+		insert_top("div", class: "_carousel", id: "_carousel1")
 
-		# $("./div[@id='_carousel1']"){
-		# 	move_here("../div[4]")
-		# 	move_here("../div[3]")
-		# 	move_here("../div[3]")
-		# }
-		# $("./div[3]"){
-		# 	move_to("../div[@id='_carousel1']", position("after"))
-		# }
+		$("./div[@id='_carousel1']"){
+			move_here("../div[4]")
+		}
+		$("./div[4]"){
+			move_to("../div[@id='_carousel1']", position("after"))
+		}
 
-		# $("./div[@id='_carousel2']"){
-		# 	move_here("../div[4]")
-		# 	move_here("../div[4]")
-		# 	move_here("../div[4]")
-		# }
-		# $("./div[4]"){
-		# 	move_to("../div[@id='_carousel2']", position("after"))
-		# }
-
-		# # Making rows suitable for carousel
+		$("./div[@id='_carousel2']"){
+			move_here("../div[5]")
+		}
+		$("./div[5]"){
+			move_to("../div[@id='_carousel2']", position("after"))
+		}
+		$("./div[@id='_carousel3']"){
+			move_here("../div[6]")
+		}
+		$("./div[6]"){
+			move_to("../div[@id='_carousel2']", position("after"))
+		}
+		$("./div[@class='_carousel']"){
+			$("./div"){
+				attributes(class: "_scrolls")
+				$("./div"){
+					attributes(class: "_carouselItem")
+					$("./a[2]"){
+						remove()
+					}
+				}
+			}
+		}
+		# Making rows suitable for carousel
 		# $("./div[@class='_carousel']"){
 		# 	# insert_after("hr")
 		# 	insert("div", class: "_carouselItem"){
@@ -86,16 +98,16 @@ $("//*[@id='main_content_wrapper']/div/div"){
 		# }
 
 		# Creating the Carousel Attributes
-		# $("./div[@class='_container']"){
-  #     		attributes(data-ur-set: "carousel", data-ur-carousel-component: "view_container", data-ur-autoscroll: "disabled", data-ur-center: "enabled", data-ur-infinite: "disabled")
-  #     		$("./div"){
-  #     			attributes(data-ur-carousel-component: "scroll_container")
-  #     			$("./div"){
-  #     				attributes(data-ur-carousel-component: "item", style: "float: left;")
-  #     			}
-  #     		}
-  #     		insert_bottom("div", class: "_dots", data-ur-carousel-component: "dots")
-		# }
+		$("./div[@class='_carousel']"){
+      		attributes(data-ur-set: "carousel", data-ur-carousel-component: "view_container", data-ur-autoscroll: "disabled", data-ur-center: "enabled", data-ur-infinite: "disabled")
+      		$("./div[@class='_scrolls']"){
+      			attributes(data-ur-carousel-component: "scroll_container")
+      			$("./div[@class='_carouselItem']"){
+      				attributes(data-ur-carousel-component: "item", style: "float: left;")
+      			}
+      		}
+      		insert_bottom("div", class: "_dots", data-ur-carousel-component: "dots")
+		}
 	}
 
 	# $(".//div[@id='WC_ContentAreaESpot_div_22_1']/div[3]"){
@@ -117,7 +129,7 @@ $("//*[@id='main_content_wrapper']/div/div"){
 
 # $$("._specialText"){
 # 	$("./div[@data-ur-set='carousel']"){
-# 		$("./div/div/div[3]"){
+# 		$("./div/div"){
 # 			$("./a"){
 # 				attributes(class: "")
 # 				remove_text_nodes()
