@@ -69,6 +69,11 @@ $("/html"){
 					remove()
 				}
 			}
+			with(/UserRegistrationAdd/){
+				$(".//div[@id='MessageArea']"){
+					remove()
+				}
+			}
 		}
 
 		$(".//div[@class='header_wrapper']"){
