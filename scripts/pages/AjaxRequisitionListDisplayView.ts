@@ -27,7 +27,7 @@ $("/html"){
 		$(".//div[@class='checkout-container']"){
 			$(".//div[@class='requisition_list_table']"){
 				$("./div[@class='mw_was_table']/thread"){
-					# remove()
+					remove()
 				}
 				$(".//div[@class='mw_was_tbody']"){
 					attributes(class: "_listContainer")

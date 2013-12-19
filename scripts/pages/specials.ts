@@ -53,7 +53,7 @@ $("//*[@id='main_content_wrapper']/div/div"){
 			move_here("../div[6]")
 		}
 		$("./div[6]"){
-			move_to("../div[@id='_carousel2']", position("after"))
+			move_to("../div[@id='_carousel3']", position("after"))
 		}
 		$("./div[@class='_carousel']"){
 			$("./div"){
@@ -99,7 +99,7 @@ $("//*[@id='main_content_wrapper']/div/div"){
 
 		# Creating the Carousel Attributes
 		$("./div[@class='_carousel']"){
-      		attributes(data-ur-set: "carousel", data-ur-carousel-component: "view_container", data-ur-autoscroll: "disabled", data-ur-center: "enabled", data-ur-infinite: "disabled")
+      		attributes(data-ur-set: "carousel", data-ur-carousel-component: "view_container", data-ur-autoscroll: "disabled", data-ur-center: "enabled", data-ur-infinite: "enabled")
       		$("./div[@class='_scrolls']"){
       			attributes(data-ur-carousel-component: "scroll_container")
       			$("./div[@class='_carouselItem']"){
