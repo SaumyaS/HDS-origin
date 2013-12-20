@@ -15,29 +15,38 @@
 		.mw_was_table{
 			padding: 10px;
 			// background: #ccc;
-			border-top: 1px solid #aaa;
-			border-bottom: 1px solid #aaa;
+			//border-top: 1px solid #aaa;
+			//border-bottom: 1px solid #aaa;
 			._listContainer{
 				padding: 2px;
-				border: 2px solid #ccc;
+				//border: 2px solid #ccc;
 				._eachList{
-					padding: 3px;
+					//padding: 3px;
 					a{
 						color: #474747;
-						text-decoration: underline;
+						//text-decoration: underline;
 					}
 				}
-				._eachList:nth-child(odd){
-					background: #ddd;
+				//._eachList:nth-child(odd){
+				//	background: #ddd;
+				// }
+				._eachList{
+					//border: 3px yellow solid;
+					//border-radius:10px;
+					margin-bottom:10px;
 				}
 			}
 			._name{
-				min-width: 100px;
+				// min-width: 100px;
+				width:50%;
+				display: inline;
 				float: left;
 			}
 			._updated{
-				min-width: 100px;
-				float: left;
+				// min-width: 100px;
+				width: auto !important;
+				display: inline;
+				float: right;
 			}
 		}
 		
