@@ -12,7 +12,7 @@ $("/html/body"){
 			$("./div[@class='col-1']"){
 				$("./form"){
 					$("./label[2]"){
-						# insert_before("br")
+						insert_after("br")
 					}
 					$("./input[@type='text']") {
 						wrap("div", class: "test")

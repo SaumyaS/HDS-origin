@@ -47,10 +47,6 @@ $(document).ready(function() {
 			var height = $(":focus").outerHeight();
 			var top = $(":focus").offset().top + height;
 			var left = $(":focus").offset().left;
-			// $(".dijitTooltip.dijitTooltipLeft").css("top", top);
-			// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
-			// $(".dijitTooltip.dijitTooltipRight").css("top", top);
-			// $(".dijitTooltip.dijitTooltipRight").css("left", left);
 			$("#dijit__MasterTooltip_0").css("top", top);
 			$("#dijit__MasterTooltip_0").css("left", left);
 		}, 200);
@@ -65,14 +61,6 @@ $(document).ready(function() {
 	$("input").keydown(function(){
 		$(".dijitTooltipLeft").hide();
 	});
-
-
-
-	var nua = navigator.userAgent;
-	var is_android = ((nua.indexOf('Android ') > -1));
-	if(is_android){
-		$("#WC_ContentAreaESpot_div_22_1").first().css("height", "400");
-	}
 
 	$("#WC_ShippingAddressSelectSingle_link_2, #WC_ShippingAddressSelectSingle_link_1").on('click', function(){
 		$("#shippingBillingPageNext").removeClass('expand');
