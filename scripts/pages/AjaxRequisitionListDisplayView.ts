@@ -28,23 +28,26 @@ $("/html"){
 			$(".//div[@class='requisition_list_table']"){
 				$("./div[@class='mw_was_table']/thread"){
 					# remove()
+					$("./div/div"){
+						remove_text_nodes()
+					}
+					$("./div"){
+						attributes(style: "height:40px")
+					}
+					$("./div/div[1]"){
+						attributes(class: "_name")
+						$("./a"){
+							insert_top("span", "Name")
+						}
+					}
+					$("./div/div[2]"){
+						attributes(class: "_updated")
+						$("./a"){
+							insert_top("span", "Last Updated")
+						}
+					}
 				}
-				$(".//div[@class='mw_was_th'][1]"){
-					remove_text_nodes()
-					attribute("style", "width:50%")
-				}
-				$(".//div[@class='mw_was_th'][1]/a"){
-					remove_text_nodes()
-					insert_top("span", "Name")
-				}
-				$(".//div[@class='mw_was_th'][2]"){
-					remove_text_nodes()
-					attribute("style", "width:50%")
-				}
-				$(".//div[@class='mw_was_th'][2]/a"){
-					remove_text_nodes()
-					insert_top("span", "Last Updated")
-				}
+
 				$(".//div[@class='mw_was_tbody']"){
 					attributes(class: "_listContainer")
 					$("./div[@class='mw_was_tr']"){
