@@ -32,28 +32,49 @@ $("//*[@id='main_content_wrapper']/div/div"){
 
 		# Restructuring each of the rows
 		# insert_top("div", class: "_carousel4")
+		insert_top("div", class: "_carousel", id: "_carousel6")
+		insert_top("div", class: "_carousel", id: "_carousel5")
+		insert_top("div", class: "_carousel", id: "_carousel4")
 		insert_top("div", class: "_carousel", id: "_carousel3")
 		insert_top("div", class: "_carousel", id: "_carousel2")
 		insert_top("div", class: "_carousel", id: "_carousel1")
 
 		$("./div[@id='_carousel1']"){
-			move_here("../div[4]")
+			move_here("../div[7]")
 		}
-		$("./div[4]"){
+		$("./div[7]"){
 			move_to("../div[@id='_carousel1']", position("after"))
 		}
 
 		$("./div[@id='_carousel2']"){
-			move_here("../div[5]")
+			move_here("../div[8]")
 		}
-		$("./div[5]"){
+		$("./div[8]"){
 			move_to("../div[@id='_carousel2']", position("after"))
 		}
 		$("./div[@id='_carousel3']"){
-			move_here("../div[6]")
+			move_here("../div[9]")
 		}
-		$("./div[6]"){
+		$("./div[9]"){
 			move_to("../div[@id='_carousel3']", position("after"))
+		}
+		$("./div[@id='_carousel4']"){
+			move_here("../div[10]")
+		}
+		$("./div[10]"){
+			move_to("../div[@id='_carousel4']", position("after"))
+		}
+		$("./div[@id='_carousel5']"){
+			move_here("../div[11]")
+		}
+		$("./div[11]"){
+			move_to("../div[@id='_carousel5']", position("after"))
+		}
+		$("./div[@id='_carousel6']"){
+			move_here("../div[12]")
+		}
+		$("./div[12]"){
+			move_to("../div[@id='_carousel6']", position("after"))
 		}
 		$("./div[@class='_carousel']"){
 			$("./div"){
