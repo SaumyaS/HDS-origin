@@ -135,6 +135,10 @@ match($status) {
 			with(/editRegistration/){
 				@import pages/editRegistration.ts
 			}
+			with(/UserRegistrationAdd/){
+				log("--> Importing Register code")
+				@import pages/register.ts
+			}
 			with(/UserRegistrationForm/){
 				log("--> Importing Register code")
 				@import pages/register.ts
