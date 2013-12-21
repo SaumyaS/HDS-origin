@@ -13,7 +13,7 @@ $(document).ready(function() {
 		$("._waiting").hide();
 	});
 
-	$("#sessionTimeoutNotifyDiv").attr("style", "width: 800px;height: 250px;display: none;");
+	// $("#sessionTimeoutNotifyDiv").attr("style", "width: 800px;height: 250px;display: none;");
 
 	$("#trackOrderStatus").on('click',function(){
 		$("._prev").show();
