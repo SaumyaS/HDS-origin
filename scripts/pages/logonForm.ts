@@ -11,6 +11,11 @@
 
 $("//div[@class='login-box']"){
 	$(".//form[@id='Logon']"){
+		$("./label"){
+			text(){
+				replace(/::/, ":")
+			}
+		}
 		$("./label[@for='password']"){
 			insert_before("br")
 		}
