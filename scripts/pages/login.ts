@@ -112,6 +112,9 @@ $("/html/body"){
 					$("./div[1]"){
 						attributes(style: "float: left;")
 					}
+					# $(".//a[@id='WC_OrderStatusDisplay_Link_2d_1']"){
+					# 	attributes(href: "javaScript:setCurrentId('WC_OrderStatusDisplay_Link_2d_1'); document.getElementById('OrderHistoryDetailBreadcrumbLink').innerHTML='117599 Details'; document.getElementById('MyAccountBreadcrumbLink').style.display='none';  document.getElementById('OrderHistoryBreadcrumb1').style.display = 'none'; document.getElementById('OrderHistoryBreadcrumb').style.display = 'inline';  MyAccountDisplay.loadContentFromURL('orderdetails', 'https://mlocal.qa-whitecap.ecom.hdsupply.com/webapp/wcs/stores/servlet/AjaxOrderDetail?breadCrumb=117599+DetailsBrcmb&currentSelection=OrderDetailSlct&catalogId=11101&langId=-1&orderId=117599&storeId=11301&orderStatusCode=M');")
+					# }
 					$("./div[2]"){
 						attributes(style: "float: right;")
 					}
