@@ -35,16 +35,24 @@ $("/html/body"){
 		$(".//div[contains(@class, 'order-summary')]"){
 			$(".//div[contains(@class, 'order-product-info')]"){
 				insert_before("hr")
+				$("./div[4]"){
+					match(text()){
+						with(/In-Stock/){
+							remove()
+						}
+					}
+				}
 				$("./div[2]"){
 					add_class("_colTitle")
 				}
 				$("./div[3]"){
 					add_class("_colWeight")
+					add_class("_margin-bottom")
 				}
+				# $("./div[4]"){
+				# 	add_class("_colInStock")
+				# }
 				$("./div[4]"){
-					add_class("_colInStock")
-				}
-				$("./div[5]"){
 					add_class("_colQuantity")
 					wrap("div"){
 						insert_top("label", "Quantity:", class: "_quantity")
@@ -52,14 +60,14 @@ $("/html/body"){
 					}
 					
 				}
-				$("./div[6]"){
+				$("./div[5]"){
 					add_class("_colEach")
 					wrap("div"){
 						attribute("class", "_eachDiv")
 						insert_bottom("div", "Each: ", class: "_each")
 					}
 				}
-				$("./div[7]"){
+				$("./div[6]"){
 					add_class("_colTotal")
 					wrap("div"){
 						attribute("class", "_totalDiv")
