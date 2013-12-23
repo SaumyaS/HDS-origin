@@ -131,7 +131,7 @@ $$(".order-confirm"){
 						insert_before("br")
 					}
 					$("./span[@id='shopCartShipCharge']"){
-						insert_after("br")
+						# insert_after("br")
 					}
 					$("./font"){
 						insert_before("br")

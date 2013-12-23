@@ -4,7 +4,7 @@ $$("#ad_17601"){
 }
 
 $("/html/body"){
-	$("//*[@id='page']/div[4]/div"){
+	$("//div[@class='main_wrapper']"){
 		attributes(style: "background-color: #fff;")
 		add_class("_reviewPage")
 	}
@@ -99,6 +99,14 @@ $("/html/body"){
 			$("./div[1]"){
 				add_class("_taxInfo")
 				insert("br")
+				$(".//div[@class='ad']"){
+					$("./br[2]"){
+						remove()
+					}
+					$("./br[1]"){
+						remove()
+					}
+				}
 			}
 			$("./div[2]"){
 				add_class("_order_total")
