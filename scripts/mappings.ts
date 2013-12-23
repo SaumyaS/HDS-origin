@@ -204,6 +204,10 @@ match($status) {
 				log("--> Importing ResetPassword")
 				@import pages/logon.ts
 			}
+			with(/OrderChangeServiceItemUpdate/){
+				log("--> Importing process order")
+				@import pages/orderItemDisplay.ts
+			}
 			with(/OrderShippingBillingView/){
 				log("--> Importing ShippingBilling")
 				@import pages/shippingBilling.ts

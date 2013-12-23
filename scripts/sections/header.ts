@@ -47,6 +47,7 @@ $("/html"){
 			with(/SingleShipmentOrderSummaryView/){}
 			with(/OrderShippingBillingConfirmationView/){}
 			with(/AjaxRequisitionListCreateView/){}
+			with(/OrderCalculate/){}
 			else(){
 				$$("br"){
 					remove()
