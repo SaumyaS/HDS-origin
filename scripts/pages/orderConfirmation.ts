@@ -79,6 +79,9 @@ $("/html/body"){
 					insert_after("div", class: "info")
 				}
 			}
+			$(".//div[contains(@class, 'order-product-discount')]"){
+				
+			}
 			$(".//div[contains(@class, 'order-product-last')]"){
 				$("./div[1]"){
 					add_class("_sku")

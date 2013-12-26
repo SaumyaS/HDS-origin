@@ -121,12 +121,18 @@
 			div{
 				color: #ff6311;
 			}
-			._discountPrice{
-				float: right;
-			}
-			._discountPercent{
+			div:nth-child(odd){
 				float: left;
 			}
+			div:nth-child(even){
+				float: right;
+			}
+			// ._discountPrice{
+			// 	float: right;
+			// }
+			// ._discountPercent{
+			// 	float: left;
+			// }
 		}
 		.order-product-last{
 			

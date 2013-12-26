@@ -1,0 +1,40 @@
+#discount_details_box{
+	.title{
+		h1{
+			@include title_bar;
+		}
+	}
+	#discount_details_content{
+		#WC_DiscountDetailsDisplay_div_1{
+			h1{
+				background: #fc0;
+				padding: 5px;
+				text-align: center;
+			}
+			
+		}
+		#WC_DiscountDetailsDisplay_div_2{
+			text-align: center;
+		}
+		#WC_DiscountDetailsDisplay_Table_3{
+			padding: 10px;
+			.productName{
+				img{
+					border:1px solid #aaa;
+				}
+			}
+			.listPrice {
+				font-size: 11px;
+				text-decoration: line-through;
+				color: #aaa;
+			}
+			.redPrice {
+				color: rgb(255, 102, 0);
+				font-weight: bold;
+				margin-left: -4px;
+			}
+		}
+	}
+	
+
+}

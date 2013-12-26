@@ -10,6 +10,7 @@ $("/html"){
 	$(".//div[@id='box']/div[@class='my_account']"){
 
 		$("./div[@class='sub-col']"){
+			add_class("_paymentInfo")
 			$("./p"){
 				match(text()){
 					with(/You/){
@@ -27,9 +28,6 @@ $("/html"){
 					with(/Billing/){
 						add_class("_BillingInfo")
 						attributes(style: "")
-						$(".."){
-							add_class("_paymentInfo")
-						}
 					}
 					with(/Shipping/){
 						add_class("_ShippingInfo")
@@ -60,6 +58,7 @@ $$("._paymentInfo"){
 					remove()
 				}
 			}
+			move_here("../../div[2]")
 		}
 	}
 	$("./h3[@class='_ShippingInfo']"){

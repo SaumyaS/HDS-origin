@@ -96,10 +96,10 @@ $$(".register"){
 		move_here("../h1[2]")
 		move_here("../div[4]")
 		$("./h1"){
-			attributes(data-ur-toggler-component: "button")
+			attributes(data-ur-toggler-component: "button", data-ur-id: "info")
 		}
-		$("./div"){
-			attributes(data-ur-toggler-component: "content")
+		$("./div[contains(@class, '_companyInfoForm')]"){
+			attributes(data-ur-toggler-component: "content", data-ur-id: "info")
 		}
 	}
 
