@@ -1,5 +1,3 @@
-
-
 $("/html"){
 
 	# Moves header icons back to the header

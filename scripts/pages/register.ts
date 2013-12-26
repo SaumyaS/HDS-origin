@@ -98,7 +98,7 @@ $$(".register"){
 		$("./h1"){
 			attributes(data-ur-toggler-component: "button")
 		}
-		$("./div"){
+		$("./div[contains(@class, '_companyInfoForm')]"){
 			attributes(data-ur-toggler-component: "content")
 		}
 	}
