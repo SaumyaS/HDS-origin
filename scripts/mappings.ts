@@ -156,14 +156,18 @@ match($status) {
 				log("--> Importing Relogin")
 				@import pages/reLogin.ts
 			}
+			with(/OrganizationSetInSession/){
+				log("--> importing SpeedBuild")
+				@import pages/AjaxRequisitionListDisplayView.ts
+			}
 			with(/AjaxLogonForm/){
-				$$("h1"){
-					match(text()){
-						with(/SpeedBuild/){
-							@import pages/AjaxRequisitionListDisplayView.ts
-						}
-					}
-				}
+				# $$("h1"){
+				# 	match(text()){
+				# 		with(/SpeedBuild/){
+							
+				# 		}
+				# 	}
+				# }
 
 				log("--> Importing Login")
 				@import pages/login.ts
@@ -203,6 +207,10 @@ match($status) {
 			with(/Logon/){
 				log("--> Importing ResetPassword")
 				@import pages/logon.ts
+			}
+			with(/OrderChangeServiceItemUpdate/){
+				log("--> Importing process order")
+				@import pages/orderItemDisplay.ts
 			}
 			with(/OrderShippingBillingView/){
 				log("--> Importing ShippingBilling")
@@ -375,7 +383,12 @@ match($status) {
 				@import pages/ajaxAccountAddressForm.ts
 			}
 			with(/OrderStatusTableDetailsDisplay/){
+				log("--> importing orders pagination")
 				@import pages/processedOrders.ts
+			}
+			with(/DiscountDetailsDisplayView/){
+				log("--> importing discount Page")
+				@import pages/discountPage.ts
 			}
 			else() {
 				log("--> No page match in mappings.ts")

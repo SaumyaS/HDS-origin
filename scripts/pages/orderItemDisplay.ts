@@ -96,19 +96,19 @@ $$(".order-confirm"){
 		$$("#cart-total"){
 			$("./div[1]"){
 				attributes(style: "", class: "_promo")
-				$(".//input[@id='promoCode']"){
-					insert_after("br")
-					insert_before("br")
-				}
+				# $(".//input[@id='promoCode']"){
+				# 	insert_after("br")
+				# 	insert_before("br")
+				# }
 			}
 			$("./div[2]"){
 				attributes(style: "", class: "_shipping")
 				insert_after("div", class: "_tax")
-				$(".//input[@id='shippingAndTaxZipCode']"){
-					attributes(type: "tel")
-					insert_after("br")
-					insert_before("br")
-				}
+				# $(".//input[@id='shippingAndTaxZipCode']"){
+				# 	attributes(type: "tel")
+				# 	insert_after("br")
+				# 	insert_before("br")
+				# }
 				$("./a[@class='btn']"){
 					text(){
 						set("Calculate")
@@ -121,21 +121,21 @@ $$(".order-confirm"){
 				$("./div"){
 					attribute("style", "")
 
-					$("./label[2]"){
-						insert_before("br")
-					}
+					# $("./label[2]"){
+					# 	insert_before("br")
+					# }
 					$("./label[3]"){
 						insert_before("br")
 					}
-					$("./label[4]"){
-						insert_before("br")
-					}
-					$("./span[@id='shopCartShipCharge']"){
-						# insert_after("br")
-					}
-					$("./font"){
-						insert_before("br")
-					}
+					# $("./label[4]"){
+					# 	insert_before("br")
+					# }
+					# $("./span[@id='shopCartShipCharge']"){
+					# 	# insert_after("br")
+					# }
+					# $("./font"){
+					# 	insert_before("br")
+					# }
 
 				}
 			}
