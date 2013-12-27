@@ -40,6 +40,7 @@ $("/html"){
   remove(".//script[contains(@src,'navigation.js')]")
 
   	$("./body"){
+  		
 		# Removes all the breakpoints
 		match($path){
 			with(/Footer_Terms_Conditions/){}
@@ -313,6 +314,10 @@ $("./body"){
 			}
 		}
 	}
+	# $("./div[@id='dijit_DialogUnderlay_0']"){
+	# remove()
+	# }
+	
 }
 
 $$(".checkout_wrapper"){
@@ -322,4 +327,6 @@ $$(".checkout_wrapper"){
 		}
 	}
 }
+
+
 
