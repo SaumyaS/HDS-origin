@@ -73,7 +73,7 @@ $(document).ready(function() {
 				$("input:radio[name='payMethodIdRadio'][value='Discover']").click();
 				setTimeout(function(){
 					$("input:radio[name='payMethodIdRadio'][value='VISA']").click();
-				}, 2000);
+				}, 5000);
 			}, 10000);
 			
 		}
@@ -145,16 +145,23 @@ $("#mainTabContainer_tablist").DOMNodeAppear(function(){
 $("#errormsgDialog_title").DOMNodeAppear(function(){
 	$('#errormsgDialog_title').hide();
 });
+$("#dijit_DialogUnderlay_0").DOMNodeAppear(function(){
+	$("#dijit_DialogUnderlay_0").hide();
+	$(this).addClass("wow");
+	console.log("my new class");
 
-function errorMessagePosition(){
-	setTimeout(function(){ 
-		var height = $(":focus").outerHeight();
-		var top = $(":focus").offset().top + height;
-		// var left = $(":focus").offset().left;
-		$(".dijitTooltip.dijitTooltipLeft").css("top", top);
-		// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
-	}, 1);
-}
+});
+
+
+// function errorMessagePosition(){
+// 	setTimeout(function(){ 
+// 		var height = $(":focus").outerHeight();
+// 		var top = $(":focus").offset().top + height;
+// 		// var left = $(":focus").offset().left;
+// 		$(".dijitTooltip.dijitTooltipLeft").css("top", top);
+// 		// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
+// 	}, 7000);
+// }
 
 // $("#checkoutReceiveEmail").change{
 // 	alert("hi");
