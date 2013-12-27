@@ -153,15 +153,15 @@ $("#dijit_DialogUnderlay_0").DOMNodeAppear(function(){
 });
 
 
-// function errorMessagePosition(){
-// 	setTimeout(function(){ 
-// 		var height = $(":focus").outerHeight();
-// 		var top = $(":focus").offset().top + height;
-// 		// var left = $(":focus").offset().left;
-// 		$(".dijitTooltip.dijitTooltipLeft").css("top", top);
-// 		// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
-// 	}, 7000);
-// }
+function errorMessagePosition(){
+	setTimeout(function(){ 
+		var height = $(":focus").outerHeight();
+		var top = $(":focus").offset().top + height;
+		// var left = $(":focus").offset().left;
+		$(".dijitTooltip.dijitTooltipLeft").css("top", top);
+		// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
+	}, 1);
+}
 
 // $("#checkoutReceiveEmail").change{
 // 	alert("hi");
