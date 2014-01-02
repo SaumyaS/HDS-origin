@@ -15,6 +15,10 @@
 
 // Menu Icons
 @import "globals/_Icons.scss";
+// @import "globals/_reset";
+
+// Import Bourbon
+@import "globals/bourbon/_bourbon.scss";
 
 // Header & Footer
 @import "sections/_header";
@@ -71,3 +75,4 @@
 @import "pages/_safetydealzone";
 @import "pages/_genericError";
 @import "pages/_discount";
+

@@ -1,6 +1,3 @@
-
-# Place holder/example file
-
 # Place holder/example file
 
 #Add our meta tags

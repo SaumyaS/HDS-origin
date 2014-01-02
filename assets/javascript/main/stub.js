@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 
 	$("#image-menu").on('click', function() {
@@ -166,3 +167,4 @@ function errorMessagePosition(){
 // $("#checkoutReceiveEmail").change{
 // 	alert("hi");
 // };
+

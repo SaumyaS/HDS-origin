@@ -39,3 +39,4 @@ match($detected_content_type) {
 		log("Passing through " + $detected_content_type + " unmodified.")
 	}
 }
+
