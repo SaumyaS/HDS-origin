@@ -140,11 +140,11 @@ $("//div[@class='body']"){
 		}
 	}
 	# Commented out for Stage
-	$("./p[@class='myaccount_desc']"){
-		insert_after("div", class: "_speedBuildContainer"){
-			insert("a", href: "javaScript:setCurrentId('requisitionList');MyAccountDisplay.loadContentFromURL('requisitionList', 'https://"+$host+"/webapp/wcs/stores/servlet/AjaxRequisitionListDisplayView?currentSelection=requisitionListSlct&catalogId=11101&langId=-1&storeId=11301');MyAccountDisplay.changeSelection('https://"+$host+"/webapp/wcs/stores/servlet/AjaxRequisitionListDisplayView?currentSelection=requisitionListSlct&catalogId=11101&langId=-1&storeId=11301');", id: "requisitionList", "SpeedBuild")
-		}
-	}
+	# $("./p[@class='myaccount_desc']"){
+	# 	insert_after("div", class: "_speedBuildContainer"){
+	# 		insert("a", href: "javaScript:setCurrentId('requisitionList');MyAccountDisplay.loadContentFromURL('requisitionList', 'https://"+$host+"/webapp/wcs/stores/servlet/AjaxRequisitionListDisplayView?currentSelection=requisitionListSlct&catalogId=11101&langId=-1&storeId=11301');MyAccountDisplay.changeSelection('https://"+$host+"/webapp/wcs/stores/servlet/AjaxRequisitionListDisplayView?currentSelection=requisitionListSlct&catalogId=11101&langId=-1&storeId=11301');", id: "requisitionList", "SpeedBuild")
+	# 	}
+	# }
 	$("./div[@class='checkout-container']"){
 		$("./h3"){
 			text(){
