@@ -119,7 +119,13 @@
 			border-bottom: 1px solid #ccc;
 			padding-top: 1px;
 			div{
-				color: #ff6311;
+				strong{
+					color: #ff6311;
+					a{
+						color: #ff6311;
+					}
+				}
+				
 			}
 			div:nth-child(odd){
 				float: left;
