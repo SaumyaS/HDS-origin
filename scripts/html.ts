@@ -3,6 +3,7 @@
 $("/html") {
   rewrite_links()
   absolutize_srcs()
+
     
   # Add the mobile meta tags 
   clean_mobile_meta_tags()
@@ -13,8 +14,13 @@ $("/html") {
   remove_html_comments()
   
   # Late load all the images on the site
+<<<<<<< HEAD
   #lateload()
   
+=======
+  # lateload()
+
+>>>>>>> master
 
   add_assets()
 

@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 
 	$("#image-menu").on('click', function() {
@@ -67,20 +68,20 @@ $(document).ready(function() {
 	$("#WC_ShippingAddressSelectSingle_link_2, #WC_ShippingAddressSelectSingle_link_1").on('click', function(){
 		$("#shippingBillingPageNext").removeClass('expand');
 	});
-	$("#WC_UnregisteredCheckout_links_4, #WC_UserRegistrationAddForm_links_1, #SubmitButton, #WC_PromotionCodeDisplay_links_1").on('click',function(){
-		if ($("input:radio[name='payMethodIdRadio'][value='VISA']").is(':checked')){
-			setTimeout(function(){
-				$("input:radio[name='payMethodIdRadio'][value='Discover']").click();
-				setTimeout(function(){
-					$("input:radio[name='payMethodIdRadio'][value='VISA']").click();
-				}, 5000);
-			}, 10000);
+	// $("#WC_UnregisteredCheckout_links_4, #WC_UserRegistrationAddForm_links_1, #SubmitButton, #WC_PromotionCodeDisplay_links_1").on('click',function(){
+	// 	if ($("input:radio[name='payMethodIdRadio'][value='VISA']").is(':checked')){
+	// 		setTimeout(function(){
+	// 			$("input:radio[name='payMethodIdRadio'][value='Discover']").click();
+	// 			setTimeout(function(){
+	// 				$("input:radio[name='payMethodIdRadio'][value='VISA']").click();
+	// 			}, 5000);
+	// 		}, 10000);
 			
-		}
-		else {
-			$("input:radio[name='payMethodIdRadio'][value='VISA']").click();
-		}
-	});
+	// 	}
+	// 	else {
+	// 		$("input:radio[name='payMethodIdRadio'][value='VISA']").click();
+	// 	}
+	// });
 
 });
 
@@ -166,3 +167,4 @@ function errorMessagePosition(){
 // $("#checkoutReceiveEmail").change{
 // 	alert("hi");
 // };
+

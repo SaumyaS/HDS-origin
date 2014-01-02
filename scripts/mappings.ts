@@ -6,7 +6,6 @@
 	are on a certain page.
 
 	Example starting code:
-
 */
 
 match($status) {

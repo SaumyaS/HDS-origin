@@ -16,14 +16,17 @@ match($detected_content_type) {
 		# simply remove the "UTF-8" argument.  e.g. html(){ ... }
 		match($path){
 			with(/AjaxAddressDisplayView/){}
+		# 	with(/WCWillCallUpdateShipInfoCmd/){}
 			else(){
-				 html("UTF-8") {
+				html("UTF-8") {
 					@import device_detection.ts  
 					
 					@import html.ts
 				}
 			}
 		}
+		# 
+		 
 
 	 
 
@@ -36,3 +39,4 @@ match($detected_content_type) {
 		log("Passing through " + $detected_content_type + " unmodified.")
 	}
 }
+

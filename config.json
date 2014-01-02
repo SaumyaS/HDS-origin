@@ -2,6 +2,10 @@
 	"host_map": [
 
 		"$.qa-whitecap.ecom.hdsupply.com => qa-whitecap.ecom.hdsupply.com",
-		"$.stg-whitecap.ecom.hdsupply.com => stg-whitecap.ecom.hdsupply.com"
+		"$.stg-whitecap.ecom.hdsupply.com => stg-whitecap.ecom.hdsupply.com",
+		"$.whitecap.com => www.whitecap.com",
+		"$.whitecap.com => whitecap.com",
+		"$.blog.whitecap.com => blog.whitecap.com"
+
 	]
 }
