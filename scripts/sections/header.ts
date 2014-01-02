@@ -132,6 +132,7 @@ $$(".nav_wrapper"){
 			attributes(data-ur-toggler-component: "content", data-ur-id: "submenu")
 			$(".//a"){
 				attribute("class", "_sub2")
+				add_class("test")
 			}
 		}
 	}
