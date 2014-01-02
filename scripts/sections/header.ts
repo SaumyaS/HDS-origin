@@ -48,7 +48,8 @@ $("/html"){
 			with(/SingleShipmentOrderSummaryView/){}
 			with(/OrderShippingBillingConfirmationView/){}
 			with(/AjaxRequisitionListCreateView/){}
-			with(/OrderCalculate/){}
+			# with(/OrderCalculate/){}
+			with(/AjaxOrderDetail/){}
 			else(){
 				$$("br"){
 					remove()
@@ -68,7 +69,7 @@ $("/html"){
 		match($path){
 			with(/AjaxCheckoutDisplayView/){
 				$(".//div[@id='MessageArea']"){
-					remove()
+					attributes(style: "display:none;")
 				}
 			}
 			with(/UserRegistrationAdd/){
@@ -265,7 +266,7 @@ $("./body"){
 		with(/AddressEditView/){}
 		with(/POSnippetDisplay/){}
 		with(/ShopCartPageView/){}
-		with(/OrderProcessServiceOrderPrepare/){}
+		# with(/OrderProcessServiceOrderPrepare/){}
 		with(/ShippingAddressDisplayView/){}
 		with(/AjaxAddressDisplayView/){}
 		with(/AjaxOrderChangeServiceShipInfoUpdate/){}

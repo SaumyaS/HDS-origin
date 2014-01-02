@@ -12,6 +12,21 @@
 			border: 1px solid #aaa;
 			margin: 5px;
 		}
+		._paymentInfo{
+			padding: 5px;
+			._BillingInfo{
+				border-bottom: 1px solid #ccc;
+			}
+			.title{
+				border-bottom: 1px solid #777;
+			}
+			.title:nth-child(odd) {
+				margin-top: 13px;
+			}
+			._ShippingInfo{
+				border-bottom: 1px solid #ccc;
+			}
+		}
 		._content{
 			padding: 5px;
 			border: 2px solid #ccc;

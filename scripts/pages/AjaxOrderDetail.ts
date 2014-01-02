@@ -20,9 +20,9 @@ $("/html"){
 					}
 				}
 			}
-			$("./label[2]"){
-				insert_before("br")
-			}
+			# $("./label[2]"){
+			# 	insert_before("br")
+			# }
 			$("./h3"){
 				match(text()){
 					with(/Billing/){
@@ -43,40 +43,43 @@ $$("._paymentInfo"){
 	$("./hr"){
 		remove()
 	}
+	$("./p[@class='title']"){
+
+	}
 
 	$("./h3[@class='_BillingInfo']"){
-		wrap("div"){
-			attributes(class: "_togglerBillContainer")
-		}
-		insert_after("div", class: "_content"){
-			move_here("../../div[2]")
-			move_here("../../div[2]"){
-				$("./label"){
-					insert_before("br")
-				}
-				$("./br[1]"){
-					remove()
-				}
-			}
-			move_here("../../div[2]")
-		}
+		# wrap("div"){
+		# 	attributes(class: "_togglerBillContainer")
+		# }
+		# insert_after("div", class: "_content"){
+			# move_here("../../div[2]")
+			# move_here("../../div[2]"){
+			# 	$("./label"){
+			# 		insert_before("br")
+			# 	}
+			# 	$("./br[1]"){
+			# 		remove()
+			# 	}
+			# }
+			# move_here("../../div[2]")
+		# }
 	}
-	$("./h3[@class='_ShippingInfo']"){
-		wrap("div"){
-			attributes(class: "_togglerShipContainer")
-		}
-		insert_after("div", class: "_content"){
-			move_here("../../div[3]")
-			move_here("../../div[3]"){
-				$("./label"){
-					insert_before("br")
-				}
-				$("./br[1]"){
-					remove()
-				}
-			}
-		}
-	}
+	# $("./h3[@class='_ShippingInfo']"){
+	# 	wrap("div"){
+	# 		attributes(class: "_togglerShipContainer")
+	# 	}
+	# 	insert_after("div", class: "_content"){
+	# 		move_here("../../div[3]")
+	# 		move_here("../../div[3]"){
+	# 			$("./label"){
+	# 				insert_before("br")
+	# 			}
+	# 			$("./br[1]"){
+	# 				remove()
+	# 			}
+	# 		}
+	# 	}
+	# }
 	$("./div[@class='_togglerBillContainer']"){
 		attributes(data-ur-set: "toggler", data-ur-id: "bill")
 		$("./h3[@class='_BillingInfo']"){
@@ -183,15 +186,18 @@ $$(".checkout-container"){
 	$(".//div[@id='order-total']"){
 		$("./div[1]"){
 			attributes(style: "")
-			$("./label"){
+			# $("./label"){
+			# 	insert_before("br")
+			# }
+			$("./label[@id='WC_SingleShipmentOrderTotalsSummary_td_11']"){
 				insert_before("br")
 			}
 			$("./br[1]"){
 				remove()
 			}
-			$("./font"){
-				insert_before("br")
-			}
+			# $("./font"){
+			# 	insert_before("br")
+			# }
 		}
 	}
 	$("./a[@id='WC_OrderDetailDisplay_Print_Link']"){
