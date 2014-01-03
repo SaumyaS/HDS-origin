@@ -86,6 +86,7 @@ $("/html/body"){
 				move_to("../div[5]", position ("after"))
 			}
 			$("./div[10]"){
+				add_class("_statusname")
 				move_to("../div[7]", position("after"))
 			}
 
