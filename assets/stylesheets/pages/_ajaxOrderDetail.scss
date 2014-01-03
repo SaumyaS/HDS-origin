@@ -104,6 +104,29 @@
 				}
 
 			}
+			.order-product-discount{
+				width: 100%;
+				display: inline-block;
+				border-bottom: 1px solid #ccc;
+				padding-top: 1px;
+				div{
+					strong{
+						color: #ff6311;
+						a{
+							margin-left: 0;
+							color: #ff6311;
+						}
+					}
+					
+				}
+				div:nth-child(odd){
+					float: left;
+					width: 50%;
+				}
+				div:nth-child(even){
+					float: right;
+				}
+			}
 			.order-product-last{
 				
 				._remove{
@@ -145,5 +168,8 @@
 				margin-bottom: 10px;
 			}
 		}
+	}
+	.text{
+		text-align: right;
 	}
 }
