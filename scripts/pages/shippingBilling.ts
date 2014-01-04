@@ -1,4 +1,19 @@
 $("/html/body"){
+		attributes(onload: "var is_safari = navigator.userAgent.indexOf(\"Safari\") > -1;
+						
+						if(is_safari){
+							if( window.localStorage ){
+							    if( !localStorage.getItem( 'firstLoad' ) )
+							    {
+							      localStorage[ 'firstLoad' ] = true;
+							      window.location.reload();
+							      
+							    }  
+							    else
+							      localStorage.removeItem( 'firstLoad' );
+						  	}
+						}")
+
 	$(".//span[@class='breadcrumbs']"){
 		remove()
 	}
