@@ -1,14 +1,12 @@
 $("/html/body"){
-		attributes(onload: "var is_safari = navigator.userAgent.indexOf(\"Safari\") > -1;
-						
-						if(is_safari){
+		attributes(onload: "var is_iPhone = navigator.userAgent.match( /(iPod|iPhone|iPad)/ );
+						if(is_iPhone){
 							if( window.localStorage ){
 							    if( !localStorage.getItem( 'firstLoad' ) )
 							    {
 							      localStorage[ 'firstLoad' ] = true;
 							      window.location.reload();
-							      
-							    }  
+							    }
 							    else
 							      localStorage.removeItem( 'firstLoad' );
 						  	}
