@@ -126,8 +126,6 @@ $("._companyInfoContainer2").DOMNodeAppear(function() {
 });
 
 $("._orderDetails").DOMNodeAppear(function() {
-	// Ur.setup("._togglerBillContainer");
-	// Ur.setup("._togglerShipContainer");
 	Ur.setup("._orderSummaryContainer");
 });
 
