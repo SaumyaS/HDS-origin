@@ -121,6 +121,10 @@ $("._ajaxCalledAccount").DOMNodeAppear(function() {
 	Ur.setup("._togglerInitialize");
 });
 
+$("._companyInfoContainer2").DOMNodeAppear(function() {
+	Ur.setup("._companyInfoContainer2");
+});
+
 $("._orderDetails").DOMNodeAppear(function() {
 	// Ur.setup("._togglerBillContainer");
 	// Ur.setup("._togglerShipContainer");
