@@ -142,9 +142,6 @@ $("#errormsgDialog_title").DOMNodeAppear(function(){
 });
 $("#dijit_DialogUnderlay_0").DOMNodeAppear(function(){
 	$("#dijit_DialogUnderlay_0").hide();
-	$(this).addClass("wow");
-	console.log("my new class");
-
 });
 
 
@@ -157,6 +154,10 @@ function errorMessagePosition(){
 			$("#dijit__MasterTooltip_0").css("left", left);
 	}, 1);
 }
+
+var showProgressBar = function(){
+	console.log("this is a test");
+};
 
 // $("#checkoutReceiveEmail").change{
 // 	alert("hi");
