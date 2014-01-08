@@ -62,7 +62,7 @@ $(document).ready(function() {
 	// });
 
 	$("input").keydown(function(){
-		$(".dijitTooltipLeft").hide();
+		$("#dijit__MasterTooltip_0").hide();
 	});
 
 	$("#WC_ShippingAddressSelectSingle_link_2, #WC_ShippingAddressSelectSingle_link_1").on('click', function(){
@@ -121,9 +121,11 @@ $("._ajaxCalledAccount").DOMNodeAppear(function() {
 	Ur.setup("._togglerInitialize");
 });
 
+$("._companyInfoContainer2").DOMNodeAppear(function() {
+	Ur.setup("._companyInfoContainer2");
+});
+
 $("._orderDetails").DOMNodeAppear(function() {
-	// Ur.setup("._togglerBillContainer");
-	// Ur.setup("._togglerShipContainer");
 	Ur.setup("._orderSummaryContainer");
 });
 
@@ -149,10 +151,10 @@ $("#dijit_DialogUnderlay_0").DOMNodeAppear(function(){
 function errorMessagePosition(){
 	setTimeout(function(){ 
 		var height = $(":focus").outerHeight();
-		var top = $(":focus").offset().top + height;
-		// var left = $(":focus").offset().left;
-		$(".dijitTooltip.dijitTooltipLeft").css("top", top);
-		// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
+			var top = $(":focus").offset().top + height;
+			var left = $(":focus").offset().left;
+			$("#dijit__MasterTooltip_0").css("top", top);
+			$("#dijit__MasterTooltip_0").css("left", left);
 	}, 1);
 }
 
