@@ -60,7 +60,7 @@ $$("#Register"){
 
 	#checkout container 3
 	$("./div[3]"){
-		insert_before("div", class: "_companyInfoContainer")
+		insert_before("div", class: "_companyInfoContainer2")
 		add_class("_companyInfoForm")
 		$("./ol"){
 			$("./li"){
@@ -74,7 +74,7 @@ $$("#Register"){
 			}
 		}
 	}
-	$("./div[@class='_companyInfoContainer']"){
+	$("./div[@class='_companyInfoContainer2']"){
 		attributes(data-ur-set: "toggler")
 		insert("div", "Comapany Info", class: "_companyInfoButton")
 		move_here("../div[contains(@class,'_companyInfoForm')]")

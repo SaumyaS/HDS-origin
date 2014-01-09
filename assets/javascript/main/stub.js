@@ -85,10 +85,6 @@ $(document).ready(function() {
 
 });
 
-$("#createdBy").DOMNodeAppear(function() {
-	Ur.setup("._togglerContainer");
-});
-
 $(".cart_check_btn").DOMNodeAppear(function () {
 
 	var str = $(".cart_check_btn").text();
@@ -125,13 +121,11 @@ $("._ajaxCalledAccount").DOMNodeAppear(function() {
 	Ur.setup("._togglerInitialize");
 });
 
-$("._companyInfoContainer").DOMNodeAppear(function() {
-	Ur.setup("._companyInfoContainer");
+$("._companyInfoContainer2").DOMNodeAppear(function() {
+	Ur.setup("._companyInfoContainer2");
 });
 
 $("._orderDetails").DOMNodeAppear(function() {
-	Ur.setup("._togglerBillContainer");
-	Ur.setup("._togglerShipContainer");
 	Ur.setup("._orderSummaryContainer");
 });
 
