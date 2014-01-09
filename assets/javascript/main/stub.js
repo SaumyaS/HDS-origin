@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 
 	$("#image-menu").on('click', function() {
@@ -43,7 +42,7 @@ $(document).ready(function() {
 	    return $.trim($(this).html()) === "&nbsp;";
 	}).remove();
 
-	$("#WC_UnregisteredCheckout_links_4, #WC_UserRegistrationAddForm_links_1, #SubmitButton, #WC_PromotionCodeDisplay_links_1").on('click',function(){
+	$("#WC_UnregisteredCheckout_links_4, #WC_UserRegistrationAddForm_links_1, #SubmitButton, #WC_PromotionCodeDisplay_links_1, #Update").on('click',function(){
 		setTimeout(function(){ 
 			var height = $(":focus").outerHeight();
 			var top = $(":focus").offset().top + height;
@@ -152,4 +151,6 @@ function errorMessagePosition(){
 			$("#dijit__MasterTooltip_0").css("left", left);
 	}, 1);
 }
+
+
 

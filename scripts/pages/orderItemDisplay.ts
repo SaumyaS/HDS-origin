@@ -4,6 +4,13 @@ $$("#ad_17601"){
 	move_here("//div[@id='_icons_bar']")
 }
 
+
+$$("body"){
+	insert_top("script", type: "text/Javascript", "$(document).ready(function() {
+		showProgressBar = function(){}
+		});")
+}
+
 $("//*[@id='order_details']/div[1]"){
 	remove()
 }

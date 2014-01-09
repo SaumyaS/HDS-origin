@@ -142,6 +142,10 @@ match($status) {
 				log("--> Importing Register code")
 				@import pages/register.ts
 			}
+			with(/showReqList=true/){
+				log("--> Importing showReqList")
+				@import pages/AjaxRequisitionListDisplayView_with_info_toggle.ts
+			}
 
 			with(/AjaxCatalogSearchView/){
 				log("--> Importing AdvancedSearch")
@@ -157,7 +161,7 @@ match($status) {
 			}
 			with(/OrganizationSetInSession/){
 				log("--> importing SpeedBuild")
-				@import pages/AjaxRequisitionListDisplayView.ts
+				@import pages/AjaxRequisitionListDisplayView_with_info_toggle.ts
 			}
 			with(/AjaxLogonForm/){
 				# $$("h1"){
@@ -263,6 +267,9 @@ match($status) {
 			with(/AjaxTrackOrderStatus/){
 				log("--> Importing processed Orders")
 				@import pages/processedOrders.ts
+			}
+			with(/RequisitionListDetailTableView/){
+				@import pages/RequisitionListDetailTableView.ts
 			}
 			with(/AjaxRequisitionListDisplayView/){
 				log("--> Importing ReQListDisplay")
