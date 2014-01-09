@@ -30,8 +30,7 @@ $("./head"){
 	insert("link", rel: "apple-touch-icon", sizes: "114x114", href: asset("images/WhiteCap.png"))
 
     $("./script[contains(@src, 'dojo.js')]") {
-      log($host)
-      insert_after("script", "dojo.config.dojoIframeHistoryUrl = 'https://"+$host+"/wcsstore/dojo15/dojo/resources/iframe_history.html'", type:"text/javascript")
+      insert_after("script", "dojo.config.dojoIframeHistoryUrl = 'http://"+$host+"/wcsstore/dojo15/dojo/resources/iframe_history.html'", type:"text/javascript")
     }
  #    insert_top("script", "<script type=\"text/javascript\">
 
@@ -150,9 +149,9 @@ $$(".nav_wrapper"){
 			attributes(class: "_accordian")
 		}
 		# Commented out for Stage
-		# $("./li[@id='menu6']"){
-		# 	attributes(class: "_accordian")
-		# }
+		$("./li[@id='menu6']"){
+			attributes(class: "_accordian")
+		}
 	}
 
 	$$("#menu1"){
@@ -169,19 +168,19 @@ $$(".nav_wrapper"){
 		}
 	}
 	# Commented out of Stage
-	# $(".//li[@id='menu6']"){
-	# 	attribute("data-ur-set", "toggler")
-	# 	$$(">a"){
-	# 	  attributes(data-ur-toggler-component: "button", data-ur-id: "submenu2")
-	# 	}
+	$(".//li[@id='menu6']"){
+		attribute("data-ur-set", "toggler")
+		$$(">a"){
+		  attributes(data-ur-toggler-component: "button", data-ur-id: "submenu2")
+		}
 
-	# 	$$(".subnav"){
-	# 		attributes(data-ur-toggler-component: "content", data-ur-id: "submenu2")
-	# 		$$("a"){
-	# 			attribute("class", "_sub2")
-	# 		}
-	# 	}
-	# }
+		$$(".subnav"){
+			attributes(data-ur-toggler-component: "content", data-ur-id: "submenu2")
+			$$("a"){
+				attribute("class", "_sub2")
+			}
+		}
+	}
 }
 
 $$("#msgpopup1_x"){
