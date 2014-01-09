@@ -34,7 +34,6 @@ $(document).ready(function() {
 	    if($this.html().replace(/\s|&nbsp;/g, '').length == 0){
 	        $this.remove();
 	    }
-	    console.log("length: " + $this.html().length);
 	    if($this.html().length < 300){
 	    	$this.remove();
 	    }
@@ -46,7 +45,6 @@ $(document).ready(function() {
 
 	$("#WC_UnregisteredCheckout_links_4, #WC_UserRegistrationAddForm_links_1, #SubmitButton, #WC_PromotionCodeDisplay_links_1").on('click',function(){
 		setTimeout(function(){ 
-			console.log("test");
 			var height = $(":focus").outerHeight();
 			var top = $(":focus").offset().top + height;
 			var left = $(":focus").offset().left;
@@ -154,12 +152,4 @@ function errorMessagePosition(){
 			$("#dijit__MasterTooltip_0").css("left", left);
 	}, 1);
 }
-
-var showProgressBar = function(){
-	console.log("this is a test");
-};
-
-// $("#checkoutReceiveEmail").change{
-// 	alert("hi");
-// };
 
