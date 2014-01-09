@@ -62,7 +62,7 @@ $(document).ready(function() {
 	// });
 
 	$("input").keydown(function(){
-		$(".dijitTooltipLeft").hide();
+		$("#dijit__MasterTooltip_0").hide();
 	});
 
 	$("#WC_ShippingAddressSelectSingle_link_2, #WC_ShippingAddressSelectSingle_link_1").on('click', function(){
@@ -142,21 +142,22 @@ $("#errormsgDialog_title").DOMNodeAppear(function(){
 });
 $("#dijit_DialogUnderlay_0").DOMNodeAppear(function(){
 	$("#dijit_DialogUnderlay_0").hide();
-	$(this).addClass("wow");
-	console.log("my new class");
-
 });
 
 
 function errorMessagePosition(){
 	setTimeout(function(){ 
 		var height = $(":focus").outerHeight();
-		var top = $(":focus").offset().top + height;
-		// var left = $(":focus").offset().left;
-		$(".dijitTooltip.dijitTooltipLeft").css("top", top);
-		// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
+			var top = $(":focus").offset().top + height;
+			var left = $(":focus").offset().left;
+			$("#dijit__MasterTooltip_0").css("top", top);
+			$("#dijit__MasterTooltip_0").css("left", left);
 	}, 1);
 }
+
+var showProgressBar = function(){
+	console.log("this is a test");
+};
 
 // $("#checkoutReceiveEmail").change{
 // 	alert("hi");
