@@ -115,14 +115,21 @@
 
 		}
 		.order-product-discount{
-			height: 20px;
+			display: inline-block;
 			border-bottom: 1px solid #ccc;
 			padding-top: 1px;
 			div{
-				color: #ff6311;
+				strong{
+					color: #ff6311;
+					a{
+						color: #ff6311;
+					}
+				}
+				
 			}
 			div:nth-child(odd){
 				float: left;
+				width: 50%;
 			}
 			div:nth-child(even){
 				float: right;
@@ -143,12 +150,6 @@
 					color: #ff6311;
 				}
 
-			}
-			.showHazardous{
-				color: red;
-			}
-			.showBulky {
-				color: red;
 			}
 		}
 

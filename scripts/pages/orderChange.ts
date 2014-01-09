@@ -28,15 +28,18 @@ $$("#cart-total"){
 		move_here("../div[@class='_shipping']/div")
 		$("./div"){
 			attribute("style", "")
-
-			$("./label[2]"){
-				insert_before("br")
-			}
-			$("./label[3]"){
-				insert_before("br")
-			}
-			$("./label[4]"){
-				insert_before("br")
+			$("./label"){
+				match(text()){
+					with(/Estimated/){
+						insert_before("br")
+					}
+					with(/Shipping/){
+						insert_before("br")
+					}
+					with(/Discount/){
+						insert_before("br")
+					}
+				}
 			}
 			$("./font"){
 				insert_before("br")
