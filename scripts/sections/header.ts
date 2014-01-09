@@ -50,8 +50,12 @@ $("./head"){
 
 	# </script>")
 	
-	$("./script[11]"){
-		remove()
+	$("./script"){
+		match(text()){
+			with(/_gaq/){
+				remove()
+			}
+		}
 	}
 	$("./script[10]"){
 		insert_after("script", type: "text/javascript", "  var _gaq = _gaq || [];
