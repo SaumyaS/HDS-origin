@@ -3,6 +3,13 @@
   :input_directory: main
   :input_files:
   - host_map.js
+  # - http://www.whitecap.com/wcsstore/dojo15/dojo/dojo.js
+  # - http://www.whitecap.com/wcsstore/HDSEnterpriseStorefrontAssetStore/javascript/ServicesEventMapping.js
+  # - http://www.whitecap.com/wcsstore/HDSEnterpriseStorefrontAssetStore/javascript/CommonContextsDeclarations.js
+  # - http://www.whitecap.com/wcsstore/HDSEnterpriseStorefrontAssetStore/javascript/CommonControllersDeclaration.js
+  # - http://www.whitecap.com/wcsstore/HDSEnterpriseStorefrontAssetStore/javascript/CatalogArea/CategoryDisplay.js
+  # - http://www.whitecap.com/wcsstore/HDSEnterpriseStorefrontAssetStore/javascript/MessageHelper.js
+  # - http://www.whitecap.com/wcsstore/HDSEnterpriseStorefrontAssetStore/javascript/ServicesDeclaration.js
   - http://downloads.moovweb.com/uranium/0.1.104/uranium-pretty.js
   - http://downloads.moovweb.com/plutonium/0.1.73/gsub.js
   - http://downloads.moovweb.com/plutonium/0.1.73/passthrough_ajax.js

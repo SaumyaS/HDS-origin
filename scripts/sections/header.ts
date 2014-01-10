@@ -57,14 +57,17 @@ $("./head"){
 $("/html"){
   # remove(".//script[contains(@src,'jcarousel.min.js')]")
   remove(".//script[contains(@src,'navigation.js')]")
-  # remove(".//script[contains(@src,'CommonContextsDeclarations.js')]")
-  # remove(".//script[contains(@src,'CommonControllersDeclaration.js')]")
-  # remove(".//script[contains(@src,'CategoryDisplay.js')]")
-  # remove(".//script[contains(@src,'MessageHelper.js')]")
-  # remove(".//script[contains(@src,'ServicesDeclaration.js')]")
-  # remove(".//script[contains(@src,'dojo.js')]")
-  # remove(".//script[contains(@src,'ServicesEventMapping.js')]")
+
+
+  
   	$("./body"){
+		move_here("//script[contains(@src,'CommonContextsDeclarations.js')]", "top")
+		move_here("//script[contains(@src,'CommonControllersDeclaration.js')]", "top")
+		move_here("//script[contains(@src,'CategoryDisplay.js')]", "top")
+		move_here("//script[contains(@src,'MessageHelper.js')]", "top")
+		move_here("//script[contains(@src,'ServicesDeclaration.js')]", "top")
+		move_here("//script[contains(@src,'dojo.js')]", "top")
+		move_here("//script[contains(@src,'ServicesEventMapping.js')]", "top")
 
 
 		# Removes all the breakpoints
