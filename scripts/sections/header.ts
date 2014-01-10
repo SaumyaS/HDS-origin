@@ -57,11 +57,11 @@ $("./head"){
 $("/html"){
   # remove(".//script[contains(@src,'jcarousel.min.js')]")
   remove(".//script[contains(@src,'navigation.js')]")
-  # remove(".//script[contains(@src,'Common')]")
-  # remove(".//script[contains(@src,'CategoryDisplay.js')]")
-  # remove(".//script[contains(@src,'MessageHelper.js')]")
-  # remove(".//script[contains(@src,'ServicesDeclaration.js')]")
-  # remove(".//script[contains(@src,'dojo.js')]")
+  remove(".//script[contains(@src,'Common')]")
+  remove(".//script[contains(@src,'CategoryDisplay.js')]")
+  remove(".//script[contains(@src,'MessageHelper.js')]")
+  remove(".//script[contains(@src,'ServicesDeclaration.js')]")
+  remove(".//script[contains(@src,'dojo.js')]")
   	$("./body"){
 
 
