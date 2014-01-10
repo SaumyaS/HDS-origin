@@ -1,4 +1,9 @@
 $("/html/body"){
+
+	insert_top("script", type: "text/Javascript", "$(document).ready(function() {
+		showProgressBar = function(){}
+		});")
+
 		attributes(onload: "var is_iPhone = navigator.userAgent.match( /(iPod|iPhone|iPad)/ );
 						if(is_iPhone){
 							if( window.localStorage ){

@@ -25,22 +25,46 @@ $("./head"){
 	$("./meta[@name='viewport']"){
 		attributes(content: "width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0")
 	}
-	
+
 	insert("link", rel: "apple-touch-icon", sizes: "72x72", href: asset("images/WhiteCap.png"))
 	insert("link", rel: "apple-touch-icon", sizes: "114x114", href: asset("images/WhiteCap.png"))
 
     $("./script[contains(@src, 'dojo.js')]") {
-      log($host)
-      insert_after("script", "dojo.config.dojoIframeHistoryUrl = 'https://"+$host+"/wcsstore/dojo15/dojo/resources/iframe_history.html'", type:"text/javascript")
+      insert_after("script", "dojo.config.dojoIframeHistoryUrl = 'http://"+$host+"/wcsstore/dojo15/dojo/resources/iframe_history.html'", type:"text/javascript")
     }
+
+	$("./script"){
+		match(text()){
+			with(/_gaq/){
+				remove()
+			}
+		}
+	}
+	$("./script[10]"){
+		insert_after("script", type: "text/javascript", "  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-10289527-4']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		")
+	}
 }
 
 $("/html"){
   # remove(".//script[contains(@src,'jcarousel.min.js')]")
   remove(".//script[contains(@src,'navigation.js')]")
-
+  remove(".//script[contains(@src,'Common')]")
+  remove(".//script[contains(@src,'CategoryDisplay.js')]")
+  remove(".//script[contains(@src,'MessageHelper.js')]")
+  remove(".//script[contains(@src,'ServicesDeclaration.js')]")
+  remove(".//script[contains(@src,'dojo.js')]")
   	$("./body"){
-  		
+
+
 		# Removes all the breakpoints
 		match($path){
 			with(/Footer_Terms_Conditions/){}
@@ -266,7 +290,7 @@ $("./body"){
 		with(/AddressEditView/){}
 		with(/POSnippetDisplay/){}
 		with(/ShopCartPageView/){}
-		# with(/OrderProcessServiceOrderPrepare/){}
+		with(/RequisitionListDetailTableView/){}
 		with(/ShippingAddressDisplayView/){}
 		with(/AjaxAddressDisplayView/){}
 		with(/AjaxOrderChangeServiceShipInfoUpdate/){}
@@ -321,7 +345,7 @@ $("./body"){
 	# $("./div[@id='dijit_DialogUnderlay_0']"){
 	# remove()
 	# }
-	
+
 }
 
 $$(".checkout_wrapper"){
