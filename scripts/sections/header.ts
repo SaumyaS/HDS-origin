@@ -56,7 +56,7 @@ $("./head"){
 
 $("/html"){
   # remove(".//script[contains(@src,'jcarousel.min.js')]")
-  # remove(".//script[contains(@src,'navigation.js')]")
+  remove(".//script[contains(@src,'navigation.js')]")
   # remove(".//script[contains(@src,'CommonContextsDeclarations.js')]")
   # remove(".//script[contains(@src,'CommonControllersDeclaration.js')]")
   # remove(".//script[contains(@src,'CategoryDisplay.js')]")
