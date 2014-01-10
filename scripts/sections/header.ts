@@ -25,31 +25,14 @@ $("./head"){
 	$("./meta[@name='viewport']"){
 		attributes(content: "width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0")
 	}
-	
+
 	insert("link", rel: "apple-touch-icon", sizes: "72x72", href: asset("images/WhiteCap.png"))
 	insert("link", rel: "apple-touch-icon", sizes: "114x114", href: asset("images/WhiteCap.png"))
 
     $("./script[contains(@src, 'dojo.js')]") {
       insert_after("script", "dojo.config.dojoIframeHistoryUrl = 'http://"+$host+"/wcsstore/dojo15/dojo/resources/iframe_history.html'", type:"text/javascript")
     }
- #    insert_top("script", "<script type=\"text/javascript\">
 
-	# 	// Add a script element as a child of the body
-	# 	function downloadJSAtOnload() {
-	# 	var element = document.createElement(\"script\");
-	# 	element.src = \"deferredfunctions.js\";
-	# 	document.body.appendChild(element);
-	# 	}
-
-	# 	// Check for browser support of event handling capability
-	# 	if (window.addEventListener)
-	# 	window.addEventListener(\"load\", downloadJSAtOnload, false);
-	# 	else if (window.attachEvent)
-	# 	window.attachEvent(\"onload\", downloadJSAtOnload);
-	# 	else window.onload = downloadJSAtOnload;
-
-	# </script>")
-	
 	$("./script"){
 		match(text()){
 			with(/_gaq/){
@@ -74,9 +57,14 @@ $("./head"){
 $("/html"){
   # remove(".//script[contains(@src,'jcarousel.min.js')]")
   remove(".//script[contains(@src,'navigation.js')]")
-
+  remove(".//script[contains(@src,'Common')]")
+  remove(".//script[contains(@src,'CategoryDisplay.js')]")
+  remove(".//script[contains(@src,'MessageHelper.js')]")
+  remove(".//script[contains(@src,'ServicesDeclaration.js')]")
+  remove(".//script[contains(@src,'dojo.js')]")
   	$("./body"){
-  		
+
+
 		# Removes all the breakpoints
 		match($path){
 			with(/Footer_Terms_Conditions/){}
@@ -153,9 +141,9 @@ $$(".nav_wrapper"){
 			attributes(class: "_accordian")
 		}
 		# Commented out for Stage
-		$("./li[@id='menu6']"){
-			attributes(class: "_accordian")
-		}
+		# $("./li[@id='menu6']"){
+		# 	attributes(class: "_accordian")
+		# }
 	}
 
 	$$("#menu1"){
@@ -172,19 +160,19 @@ $$(".nav_wrapper"){
 		}
 	}
 	# Commented out of Stage
-	$(".//li[@id='menu6']"){
-		attribute("data-ur-set", "toggler")
-		$$(">a"){
-		  attributes(data-ur-toggler-component: "button", data-ur-id: "submenu2")
-		}
+	# $(".//li[@id='menu6']"){
+	# 	attribute("data-ur-set", "toggler")
+	# 	$$(">a"){
+	# 	  attributes(data-ur-toggler-component: "button", data-ur-id: "submenu2")
+	# 	}
 
-		$$(".subnav"){
-			attributes(data-ur-toggler-component: "content", data-ur-id: "submenu2")
-			$$("a"){
-				attribute("class", "_sub2")
-			}
-		}
-	}
+	# 	$$(".subnav"){
+	# 		attributes(data-ur-toggler-component: "content", data-ur-id: "submenu2")
+	# 		$$("a"){
+	# 			attribute("class", "_sub2")
+	# 		}
+	# 	}
+	# }
 }
 
 $$("#msgpopup1_x"){
@@ -357,7 +345,7 @@ $("./body"){
 	# $("./div[@id='dijit_DialogUnderlay_0']"){
 	# remove()
 	# }
-	
+
 }
 
 $$(".checkout_wrapper"){
