@@ -52,11 +52,11 @@ $(document).ready(function() {
 		}, 200);
 	});
 
-	// $("#WC_UnregisteredCheckout_links_4").on('click', function(){
-	// 	setTimeout(function(){
-	// 		$("input[value=Discover]:radio").checked=true;
-	// 	}, 20000);
-	// });
+	$("._checkbox:disabled").each(function(){
+		console.log("test1");
+		$(this).removeAttr("checked");
+		console.log("test2");
+	});
 
 	$("input").keydown(function(){
 		$("#dijit__MasterTooltip_0").hide();
@@ -65,20 +65,6 @@ $(document).ready(function() {
 	$("#WC_ShippingAddressSelectSingle_link_2, #WC_ShippingAddressSelectSingle_link_1").on('click', function(){
 		$("#shippingBillingPageNext").removeClass('expand');
 	});
-	// $("#WC_UnregisteredCheckout_links_4, #WC_UserRegistrationAddForm_links_1, #SubmitButton, #WC_PromotionCodeDisplay_links_1").on('click',function(){
-	// 	if ($("input:radio[name='payMethodIdRadio'][value='VISA']").is(':checked')){
-	// 		setTimeout(function(){
-	// 			$("input:radio[name='payMethodIdRadio'][value='Discover']").click();
-	// 			setTimeout(function(){
-	// 				$("input:radio[name='payMethodIdRadio'][value='VISA']").click();
-	// 			}, 5000);
-	// 		}, 10000);
-			
-	// 	}
-	// 	else {
-	// 		$("input:radio[name='payMethodIdRadio'][value='VISA']").click();
-	// 	}
-	// });
 
 });
 
