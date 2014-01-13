@@ -22,6 +22,9 @@ $$("body"){
 }
 
 $("./head"){
+
+
+	
 	$("./meta[@name='viewport']"){
 		attributes(content: "width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0")
 	}
@@ -55,22 +58,13 @@ $("./head"){
 }
 
 $("/html"){
-  # remove(".//script[contains(@src,'jcarousel.min.js')]")
   remove(".//script[contains(@src,'navigation.js')]")
-
-
-	# remove(".//script[contains(@src,'CommonContextsDeclarations.js')]")
-	# remove(".//script[contains(@src,'CommonControllersDeclaration.js')]")
-	# remove(".//script[contains(@src,'CategoryDisplay.js')]")
-	# remove(".//script[contains(@src,'MessageHelper.js')]")
-	# remove(".//script[contains(@src,'ServicesDeclaration.js')]")
-	# remove(".//script[contains(@src,'dojo.js')]")
-	# remove(".//script[contains(@src,'ServicesEventMapping.js')]")
   	$("./body"){
+
   		move_here("//script", "bottom")
-  		# $("./script[contains(@src, 'main.js']"){
-  		# 	move_to("//head")
-  		# }
+  		$("./script[contains(@src, 'main.js')]"){
+			move_to("../../head")
+		}
 
 		# Removes all the breakpoints
 		match($path){
@@ -362,3 +356,6 @@ $$(".checkout_wrapper"){
 		}
 	}
 }
+
+
+
