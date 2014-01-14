@@ -53,9 +53,8 @@ $(document).ready(function() {
 	});
 
 	$("._checkbox:disabled").each(function(){
-		console.log("test1");
 		$(this).removeAttr("checked");
-		console.log("test2");
+		$(this).prop('checked', false);
 	});
 
 	$("input").keydown(function(){
