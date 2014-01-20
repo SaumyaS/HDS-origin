@@ -62,6 +62,10 @@ match($status) {
 		}
 
 		match($path) {
+			with(/www.whitecap.com/){
+				add_cookie("avoid_redirect", $path, "www.whitecap.com")
+				redirect_temporary("www.whitecap.com")
+			}
 			with(/TopCategoriesDisplay/){
 				log("--> Importing pages/new.ts in mapping.ts")
 				log("--> Importing pages/home.ts in mappring.ts")

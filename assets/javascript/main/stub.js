@@ -52,10 +52,11 @@ $(document).ready(function() {
 		}, 200);
 	});
 
-	$("._checkbox:disabled").each(function(){
-		$(this).removeAttr("checked");
-		$(this).prop('checked', false);
-	});
+	// $("._checkbox:disabled").each(function(){
+	// 	$(this).removeAttr("checked");
+	// 	$(this).prop('checked', false);
+	// 	$(this).addClass("_diabled");
+	// });
 
 	$("input").keydown(function(){
 		$("#dijit__MasterTooltip_0").hide();
