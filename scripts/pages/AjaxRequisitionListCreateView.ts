@@ -182,6 +182,12 @@ $(".//div[@class='main_container']"){
 
 
 					}
+					$("./div[contains(@id, 'zrow')]"){
+						attributes(class: "")
+						$("./div[@class='_quantityContainer']"){
+							remove()
+						}
+					}
 					$("./div[contains(@class, 'color-bg')]"){
 						insert_top("div", class: "_bg_top"){
 							move_here("../div[@class='_checkboxContainer']")

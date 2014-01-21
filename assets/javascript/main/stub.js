@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+	$("a[href*='http://www.whitecap.com']").click(function() {
+		document.cookie = 'mw_mobile_site=false' + '; domain=.whitecap.com; path=/';
+	});
+
+
 	$("#image-menu").on('click', function() {
 		$("#pers-nav, #pers-nav-mask, #body-content").toggleClass("pers-nav-active");
 	});
