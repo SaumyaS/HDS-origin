@@ -35,7 +35,7 @@
 			insert_top("span", "|")
 			insert_top("a", "Terms & Conditions", href: "/webapp/wcs/stores/servlet/ContentDisplayView?catalogId=11101&langId=-1&storeId=11301&page=Footer_Terms_Conditions")
 			insert_top("span", "|")
-			insert_top("a",  "Full Site", href: "http://www.whitecap.com")
+			insert_top("a",  "Full Site", href: "http://www.whitecap.com", class: "_fullSite")
 		}
 		insert_bottom("div", class: "_bottom_footer"){
 			move_here("../h3")

@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	$("a[href*='http://www.whitecap.com']").click(function() {
+	$("._fullSite").click(function() {
 		document.cookie = 'mw_mobile_site=false' + '; domain=.whitecap.com; path=/';
 	});
 
