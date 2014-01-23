@@ -153,7 +153,6 @@ $("//div[@class='body']"){
 			}
 			match(text()){
 				with(/Shipping/){
-					log("this is a test")
 					attributes(data-ur-toggler-component: "button")
 					insert_after("div", class: "_shippingContent")
 					$("../div[@class='_shippingContent']"){

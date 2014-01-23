@@ -3,9 +3,7 @@ $("/html"){
 	$("//label[1]"){
 		attributes(style: "display: inline-block;padding-left: 5px;")
 	}
-	log("this is a test")
 	$$("h1"){
-		log("this is a test")
 		match(text()){
 			with(/SpeedBuild/){
 				$(".."){
