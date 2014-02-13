@@ -1,3 +1,3 @@
 $$(".nav-primary"){
-	attribute("data-ur-state", "enabled")
+	attributes(style: "display:block;")
 }

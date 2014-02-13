@@ -201,3 +201,9 @@ $(".//div[@class='main_container']"){
 		}
 	}
 }
+
+$("/html"){
+	$("./body"){
+		move_here("//img[contains(@src, 'expand_icon.gif')]", "bottom")
+	}
+}
