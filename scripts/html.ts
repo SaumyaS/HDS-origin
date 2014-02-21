@@ -16,14 +16,14 @@ $("/html") {
   # Late load all the images on the site
   #lateload()
 
-  add_assets()
+  # add_assets()
 
-  @import sections/header.ts
-  @import sections/footer.ts
+  # @import sections/header.ts
+  # @import sections/footer.ts
 
-  @import sections/pagination.ts
+  # @import sections/pagination.ts
 
-  @import mappings.ts
+  # @import mappings.ts
 
 }
 
