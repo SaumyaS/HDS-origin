@@ -18,12 +18,12 @@ $("/html") {
 
   add_assets()
 
-  # @import sections/header.ts
-  # @import sections/footer.ts
+  @import sections/header.ts
+  @import sections/footer.ts
 
-  # @import sections/pagination.ts
+  @import sections/pagination.ts
 
-  # @import mappings.ts
+  @import mappings.ts
 
 }
 
