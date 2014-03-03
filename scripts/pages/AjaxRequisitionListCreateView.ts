@@ -59,7 +59,14 @@ $(".//div[@class='main_container']"){
 					}
 					$("./div[contains(@class,'mw_was_tr')]"){
 						# attributes(class: "_items")
-						attributes(class: "color-bg")
+						match($host){
+							with(/m.whitecap.com/){
+								
+							}
+							else(){
+								attributes(class: "color-bg disable")
+							}
+						}
 						$("./div[1]/input"){
 							$(".."){
 								attributes(class: "_checkboxContainer")
