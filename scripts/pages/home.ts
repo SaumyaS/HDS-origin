@@ -79,6 +79,9 @@ $$("#page"){
 			  		insert_after("div", class: "_dots", data-ur-carousel-component: "dots")
 			  		$("./li"){
 						attributes(data-ur-carousel-component: "item", class: "_item")
+						$(".//span[@class='orig-price']"){
+							remove()
+						}
 					}
 		  		}
 			}
