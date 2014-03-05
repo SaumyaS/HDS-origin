@@ -38,7 +38,7 @@ $("/html/body"){
 
 
 		$("./div[@class='nav-secondary']"){
-			insert_before("div", class: "_userInfo", "My Info"){
+			insert_before("div", class: "_userInfo", "My Account"){
 
 			}
 

@@ -71,6 +71,12 @@ $(document).ready(function() {
 		$("#shippingBillingPageNext").removeClass('expand');
 	});
 
+	$("._quantity").click(function(){
+		var input = this;
+		input.focus();
+		input.setSelectionRange(0,999);
+	})
+
 });
 
 $(".cart_check_btn").DOMNodeAppear(function () {

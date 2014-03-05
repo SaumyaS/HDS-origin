@@ -60,6 +60,10 @@ match($status) {
 				}
 			}
 		}
+		# Contact Us from Speedbuild
+		$(".//h1[contains(text(),'Contact Us')]"){
+			@import /pages/contactus.ts
+		}
 
 		match($path) {
 			with(/TopCategoriesDisplay/){

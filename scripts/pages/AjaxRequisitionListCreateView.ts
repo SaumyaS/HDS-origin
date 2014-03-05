@@ -135,7 +135,7 @@ $(".//div[@class='main_container']"){
 							attributes(class: "_quantityContainer")
 							insert_top("label", class: "_quantityTitle", "QTY")
 							$("./div/input[contains(@id, 'quantity')]"){
-								attributes(type: "tel")
+								attributes(type: "tel", class: "_quantity")
 							}
 
 						}

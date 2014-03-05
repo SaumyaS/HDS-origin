@@ -41,12 +41,23 @@
 				width:50%;
 				display: inline;
 				float: left;
+				a{
+					border: 1px solid #ccc;
+					border-radius: 7px;
+					padding: 10px;
+				}
 			}
 			._updated{
 				// min-width: 100px;
 				width: auto !important;
 				display: inline;
 				float: right;
+				color: #000;
+				a{
+					border: 1px solid #ccc;
+					border-radius: 7px;
+					padding: 10px;
+				}
 			}
 		}
 		
