@@ -15,18 +15,18 @@ $("//img") {
 
 
 
-$("//script[@src]") {
-	$src = fetch("@src")
-	log($src)
-	match($src){
-		with(/main.js/){
+# $("//script[@src]") {
+# 	$src = fetch("@src")
+# 	log($src)
+# 	match($src){
+# 		with(/main.js/){
 
-		}
-		else(){
-			perf.defer_js()
-		}
-	}
-}
+# 		}
+# 		else(){
+# 			perf.defer_js()
+# 		}
+# 	}
+# }
 
 
 # Replace the logo with one without a tagline:
@@ -132,10 +132,10 @@ $("/html"){
   remove(".//script[contains(@src,'navigation.js')]")
   	$("./body"){
 
-  # 		move_here("//script", "bottom")
-  # 		$("./script[contains(@src, 'main.js')]"){
-		# 	move_to("../../head")
-		# }
+  		move_here("//script", "bottom")
+  		$("./script[contains(@src, 'main.js')]"){
+			move_to("../../head")
+		}
 
 		# Removes all the breakpoints
 		match($path){

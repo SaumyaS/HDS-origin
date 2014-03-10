@@ -124,6 +124,9 @@ $$("#page"){
 						$("./div[2]/ul[@class='add_wishlist']"){
 				 			remove()
 						}
+						$(".//span[@class='orig-price']"){
+							remove()
+						}
 			  		}
 				}
 		  	}
