@@ -4,6 +4,12 @@ $$("#ad_17601"){
 	move_here("//div[@id='_icons_bar']")
 }
 
+# perf.optimize_all_js()
+# $("//script[@src]") {
+# 	attribute("data-mw_keep", "true")
+# }
+
+
 $("/html/body"){
 	$("//div[@class='main_container']"){
 		add_class("_accountSummary")

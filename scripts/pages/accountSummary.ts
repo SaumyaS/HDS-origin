@@ -7,6 +7,15 @@ $("//*[@id='account-col']"){
 	}
 }
 
+# It leaves inline scripts alone
+# So scripts with "src" attributes are concatenated and replaced
+# with a single script.
+
+# perf.optimize_all_js()
+# $("//script[@src]") {
+# 	attribute("data-mw_keep", "true")
+# }
+
 $$(".body"){
 	add_class("_ajaxCalledAccount")
 

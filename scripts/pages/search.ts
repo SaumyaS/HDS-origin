@@ -1,4 +1,7 @@
 $("/html"){
+
+
+
 	# Moves header icons back to the header
 	$$("#ad_17601"){
 		move_here("//div[@id='_icons_bar']")
@@ -79,6 +82,22 @@ $("/html"){
 			}
 		}
 		$(".//div[@class='search-main']"){
+			$(".//div[contains(@class,'grid')]"){
+				$(".//img") {
+					perf.optimize_image("src") {
+						# Change image formats: jpeg, png, and webp!
+						perf.format("jpeg")
+
+						# # Resize the pixels
+						perf.width("120")
+						perf.height("120")
+
+						# Change the image quality: 0 - 100
+						# This affects the image resolution
+						perf.quality("70")
+					}
+				}
+			}
 			$(".//div[@class='search_based']/span[@class='fright']"){
 				$("./select[@id='sizeBy']/option"){
 					attribute("value"){

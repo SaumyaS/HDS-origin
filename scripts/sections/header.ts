@@ -1,3 +1,34 @@
+$("//img") {
+  perf.optimize_image("src") {
+    # Change image formats: jpeg, png, and webp!
+    perf.format("jpeg")
+   
+   # # Resize the pixels
+   #  perf.width("120")
+   #  perf.height("120")
+
+    # Change the image quality: 0 - 100
+    # This affects the image resolution
+    perf.quality("70")
+  }
+}
+
+
+
+$("//script[@src]") {
+	$src = fetch("@src")
+	log($src)
+	match($src){
+		with(/main.js/){
+
+		}
+		else(){
+			perf.defer_js()
+		}
+	}
+}
+
+
 # Replace the logo with one without a tagline:
 $$(".logo #WC_ContentAreaESpot_links_7_1") {
 	$("./img"){
@@ -101,10 +132,10 @@ $("/html"){
   remove(".//script[contains(@src,'navigation.js')]")
   	$("./body"){
 
-  		move_here("//script", "bottom")
-  		$("./script[contains(@src, 'main.js')]"){
-			move_to("../../head")
-		}
+  # 		move_here("//script", "bottom")
+  # 		$("./script[contains(@src, 'main.js')]"){
+		# 	move_to("../../head")
+		# }
 
 		# Removes all the breakpoints
 		match($path){

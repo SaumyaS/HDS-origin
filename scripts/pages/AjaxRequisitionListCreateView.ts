@@ -147,6 +147,21 @@ $(".//div[@class='main_container']"){
 						}
 						$("./div[6]"){
 							attributes(class: "_imgContainer")
+							# Reduce image size, optimize
+							$(".//img") {
+								perf.optimize_image("src") {
+									# Change image formats: jpeg, png, and webp!
+									perf.format("jpeg")
+
+									# # Resize the pixels
+									perf.width("52")
+									perf.height("52")
+
+									# Change the image quality: 0 - 100
+									# This affects the image resolution
+									perf.quality("70")
+								}
+							}
 							# insert_top("label", class: "_imgTitle", "Image")
 						}
 						$("./div[7]"){

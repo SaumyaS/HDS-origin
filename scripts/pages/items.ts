@@ -1,5 +1,5 @@
 $("/html"){
-	# Moves header icons back to the header
+		# Moves header icons back to the header
 	$$("#ad_17601"){
 		move_here("//div[@id='_icons_bar']")
 	}
@@ -42,6 +42,22 @@ $("/html"){
 
 		$("./div[@class='gallery']"){
 			insert_before("div", class: "_mainInfo")
+
+			# Reduce image size, optimize
+			$(".//img") {
+				perf.optimize_image("src") {
+					# Change image formats: jpeg, png, and webp!
+					perf.format("jpeg")
+
+					# # Resize the pixels
+					perf.width("149")
+					perf.height("149")
+
+					# Change the image quality: 0 - 100
+					# This affects the image resolution
+					perf.quality("70")
+				}
+			}
 		}
 		$("./div[@class='_mainInfo']"){
 			move_here("../div[@class='gallery']")
@@ -59,6 +75,11 @@ $("/html"){
 			move_here("../div[@class='product-info']/input[@type='text']")
 			insert("br")
 			move_here("../div[@class='product-info']/a[@id='productPageAdd2Cart']")
+
+
+
+
+
 		}
 
 		$("./div[@class='_top-info']"){
@@ -106,6 +127,11 @@ $("/html"){
 		}
 		$("./a[@id='login_modal_link']"){
 			attributes(href: "/webapp/wcs/stores/servlet/AjaxLogonForm?catalogId=11101&myAcctMain=1&langId=-1&storeId=11301")
+		}
+		$("./div[@class='sub-col']"){
+			$("./label"){
+				insert_after("br")
+			}
 		}
 	}
 }
