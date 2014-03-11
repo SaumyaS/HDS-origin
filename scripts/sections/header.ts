@@ -13,7 +13,10 @@ $("//img") {
   }
 }
 
-
+# optimize_all_js()
+# $("//script[@src]") {
+# 	attribute("data-mw_keep", "true")
+# }
 
 # $("//script[@src]") {
 # 	$src = fetch("@src")
