@@ -12,8 +12,8 @@ $$("#ad_17601"){
 
 $("/html"){
 	# Removing unneccesary JS Calls
-	remove(".//script[contains(@src,'CategoryDisplay.js')]")
-	remove(".//script[contains(@src,'jcarousel.min.js')]")
+	# remove(".//script[contains(@src,'CategoryDisplay.js')]")
+	# remove(".//script[contains(@src,'jcarousel.min.js')]")
 	remove(".//script[contains(@src,'tabs.slideshow.js')]")
 	remove(".//script[contains(@src,'tabs.js')]")
 	remove(".//script[contains(@src, 'HDSEnterpriseStorefrontAssetStore/javascript/MessageHelper.j')]")
