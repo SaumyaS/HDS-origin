@@ -94,7 +94,7 @@ $("/html"){
 
 						# Change the image quality: 0 - 100
 						# This affects the image resolution
-						perf.quality("70")
+						perf.quality("100")
 					}
 				}
 			}

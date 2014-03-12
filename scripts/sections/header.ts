@@ -1,36 +1,3 @@
-$("//img") {
-  perf.optimize_image("src") {
-    # Change image formats: jpeg, png, and webp!
-    perf.format("jpeg")
-   
-   # # Resize the pixels
-   #  perf.width("120")
-   #  perf.height("120")
-
-    # Change the image quality: 0 - 100
-    # This affects the image resolution
-    perf.quality("70")
-  }
-}
-
-# optimize_all_js()
-# $("//script[@src]") {
-# 	attribute("data-mw_keep", "true")
-# }
-
-# $("//script[@src]") {
-# 	$src = fetch("@src")
-# 	log($src)
-# 	match($src){
-# 		with(/main.js/){
-
-# 		}
-# 		else(){
-# 			perf.defer_js()
-# 		}
-# 	}
-# }
-
 
 # Replace the logo with one without a tagline:
 $$(".logo #WC_ContentAreaESpot_links_7_1") {
@@ -215,7 +182,7 @@ $$(".nav_wrapper"){
 		$("./li[@id='menu1']"){
 			attributes(class: "_accordian")
 		}
-		# Commented out for Stage
+
 		$("./li[@id='menu6']"){
 			attributes(class: "_accordian")
 		}
@@ -234,7 +201,7 @@ $$(".nav_wrapper"){
 			}
 		}
 	}
-	# Commented out of Stage
+
 	$(".//li[@id='menu6']"){
 		attribute("data-ur-set", "toggler")
 		$$(">a"){

@@ -14,7 +14,7 @@ $("//img") {
 
     # Change the image quality: 0 - 100
     # This affects the image resolution
-    perf.quality("70")
+    perf.quality("100")
   }
 }
 
@@ -33,8 +33,12 @@ $$("#page"){
 	# Move Banner_Wrapper and Smallbox into the Header_Widget
 	$("./div[@class='header_widget']/div[@class='nav_wrapper']"){
 		insert_before("div", class: "__banner"){
-			move_here("../../div/div[@id='content_wrapper_box']/div[3]")
-			move_here("../../div/div[@id='content_wrapper_box']/div[3]/div/ul")
+			move_here("../../div/div[@id='content_wrapper_box']/div[3]"){
+				remove()
+			}
+			move_here("../../div/div[@id='content_wrapper_box']/div[3]/div/ul"){
+				remove()
+			}
 		}
 	}
 
