@@ -29,6 +29,7 @@ $("//div[@class='login-box']"){
 			$(".."){
 				attributes(style: "")
 			}
+			move_to("../../../div[@class='col-1']")
 		}
 	}
 }

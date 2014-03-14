@@ -80,6 +80,16 @@ $(document).ready(function() {
 	$("input").click(function(){
 		$("[id^=zrow]").attr("class", "");
 	});
+
+	$('#WC_AccountDisplay_FormInput_logonPassword_In_Logon_1').live('keyup', function(e){
+		var p = e.which;
+		if(p === 13){
+			var url = document.location.origin;
+			//console.log(url + '/webapp/wcs/stores/servlet/AjaxLogonForm?catalogId=11101&amp;myAcctMain=1&amp;langId=-1&amp;storeId=11301');
+			Login2.submitSpecifiedForm(document.Logon, url + '/webapp/wcs/stores/servlet/AjaxLogonForm?catalogId=11101&amp;myAcctMain=1&amp;langId=-1&amp;storeId=11301')
+		}
+	});
+
 	
 });
 
