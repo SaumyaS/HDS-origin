@@ -103,6 +103,9 @@ $("/html"){
   	$("./body"){
 
   		move_here("//script", "bottom")
+  		$("./script[contains(@src, 'jquery-1.7.2.min.js')]"){
+  			move_to("../../head")
+  		}
   		$("./script[contains(@src, 'main.js')]"){
 			move_to("../../head")
 		}
@@ -139,6 +142,11 @@ $("/html"){
 				}
 			}
 			with(/UserRegistrationAdd/){
+				$(".//div[@id='MessageArea']"){
+					remove()
+				}
+			}
+			with(/AjaxOrderItemDisplayView/){
 				$(".//div[@id='MessageArea']"){
 					remove()
 				}

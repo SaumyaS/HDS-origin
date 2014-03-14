@@ -77,6 +77,10 @@ $(document).ready(function() {
 		input.setSelectionRange(0,999);
 	})
 
+	$("input").click(function(){
+		$("[id^=zrow]").attr("class", "");
+	});
+	
 });
 
 $(".cart_check_btn").DOMNodeAppear(function () {

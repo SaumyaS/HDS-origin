@@ -13,10 +13,24 @@ $$("#ad_17601"){
 $("/html"){
 	# Removing unneccesary JS Calls
 	# remove(".//script[contains(@src,'CategoryDisplay.js')]")
-	# remove(".//script[contains(@src,'jcarousel.min.js')]")
+	remove(".//script[contains(@src,'jcarousel.min.js')]")
 	remove(".//script[contains(@src,'tabs.slideshow.js')]")
 	remove(".//script[contains(@src,'tabs.js')]")
 	remove(".//script[contains(@src, 'HDSEnterpriseStorefrontAssetStore/javascript/MessageHelper.j')]")
+	remove(".//script[contains(@src,'highslide-with-html.js')]")
+	remove(".//script[contains(@src,'trunk8.js')]")
+	remove(".//script[contains(@src,'LoginModalDialog.js')]")
+	remove(".//script[contains(@src,'overlay.js')]")
+	$(".//script"){
+		match(text()){
+			with(/trunk/){
+				remove()
+			}
+			with(/graphicsDir/){
+				remove()
+			}
+		}
+	}
 	$(".//body"){
 		# attributes(onload: "LoginModalDialog.openLoginModalDialog({'storeId':11301,'catalogId':11101,'langId':-1,'MyAccountURL':'https://www.whitecap.com/webapp/wcs/stores/servlet/AjaxLogonForm?catalogId=11101&amp;myAcctMain=1&amp;langId=-1&amp;storeId=11301'})")
 		$("//div[@class='main_container']"){

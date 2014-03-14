@@ -187,7 +187,12 @@
 				}
 				._priceHolder{
 					display: block;
-					height: 40px;
+					min-height: 40px;
+					.product-discount{
+						border-top: 1px dashed gray;
+						color: green;
+						font-weight: bold;
+					}
 				}
 				._priceContainer{
 					display: inline-block;
