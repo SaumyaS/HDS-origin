@@ -135,6 +135,21 @@ $$("#detailsTable"){
 
 
 		}
+		$("./div[contains(@id, 'zrowB')]"){
+			remove()
+		}
+		$("./div[contains(@id, 'zrow')]"){
+			$(".//br"){
+				remove()
+			}
+			$("./div[contains(@class, 'product-discount')]"){
+				move_to("../preceding::div[1]")
+			}
+			attributes(class: "")
+			$("./div[@class='_quantityContainer']"){
+				remove()
+			}
+		}
 		$("./div[contains(@class, 'color-bg')]"){
 			insert_top("div", class: "_bg_top"){
 				move_here("../div[@class='_checkboxContainer']")
@@ -142,6 +157,16 @@ $$("#detailsTable"){
 				move_here("../div[@class='_productContainer']/div[@class='_content']")
 				move_here("../div[@class='_skuContainer']")
 			}
+			$(".//div[contains(@class, 'product-discount')]"){
+				move_to("../../../../div[@class='_priceHolder']")
+				insert_before("br")
+				insert_before("br")
+			}
 		}
+	}
+}
+$("/html"){
+	$("./body"){
+		move_here("//img[contains(@src, 'expand_icon.gif')]", "bottom")
 	}
 }
