@@ -7,6 +7,15 @@ $("//*[@id='account-col']"){
 	}
 }
 
+# It leaves inline scripts alone
+# So scripts with "src" attributes are concatenated and replaced
+# with a single script.
+
+# perf.optimize_all_js()
+# $("//script[@src]") {
+# 	attribute("data-mw_keep", "true")
+# }
+
 $$(".body"){
 	add_class("_ajaxCalledAccount")
 
@@ -54,12 +63,12 @@ $$(".body"){
 		}
 
 	}
-	# Commented out for Stage
-	# $("./p[@class='myaccount_desc']"){
-	# 	insert_after("div", class: "_speedBuildContainer"){
-	# 		insert("a", href: "javaScript:setCurrentId('requisitionList');MyAccountDisplay.loadContentFromURL('requisitionList', 'https://"+$host+"/webapp/wcs/stores/servlet/AjaxRequisitionListDisplayView?currentSelection=requisitionListSlct&catalogId=11101&langId=-1&storeId=11301');MyAccountDisplay.changeSelection('https://"+$host+"/webapp/wcs/stores/servlet/AjaxRequisitionListDisplayView?currentSelection=requisitionListSlct&catalogId=11101&langId=-1&storeId=11301');", id: "requisitionList", "SpeedBuild")
-	# 	}
-	# }
+	
+	$("./p[@class='myaccount_desc']"){
+		insert_after("div", class: "_speedBuildContainer"){
+			insert("a", href: "javaScript:setCurrentId('requisitionList');MyAccountDisplay.loadContentFromURL('requisitionList', 'https://"+$host+"/webapp/wcs/stores/servlet/AjaxRequisitionListDisplayView?currentSelection=requisitionListSlct&catalogId=11101&langId=-1&storeId=11301');MyAccountDisplay.changeSelection('https://"+$host+"/webapp/wcs/stores/servlet/AjaxRequisitionListDisplayView?currentSelection=requisitionListSlct&catalogId=11101&langId=-1&storeId=11301');", id: "requisitionList", "SpeedBuild")
+		}
+	}
 }
 
 $("//div[@id='OrderStatusTableDisplay_div_1']"){

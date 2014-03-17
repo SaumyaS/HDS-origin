@@ -59,7 +59,14 @@ $(".//div[@class='main_container']"){
 					}
 					$("./div[contains(@class,'mw_was_tr')]"){
 						# attributes(class: "_items")
-						attributes(class: "color-bg")
+						match($host){
+							with(/m.whitecap.com/){
+								
+							}
+							else(){
+								attributes(class: "color-bg disable")
+							}
+						}
 						$("./div[1]/input"){
 							$(".."){
 								attributes(class: "_checkboxContainer")
@@ -128,7 +135,7 @@ $(".//div[@class='main_container']"){
 							attributes(class: "_quantityContainer")
 							insert_top("label", class: "_quantityTitle", "QTY")
 							$("./div/input[contains(@id, 'quantity')]"){
-								attributes(type: "tel")
+								attributes(type: "tel", class: "_quantity")
 							}
 
 						}
@@ -140,6 +147,21 @@ $(".//div[@class='main_container']"){
 						}
 						$("./div[6]"){
 							attributes(class: "_imgContainer")
+							# Reduce image size, optimize
+							$(".//img") {
+								perf.optimize_image("src") {
+									# Change image formats: jpeg, png, and webp!
+									perf.format("jpeg")
+
+									# # Resize the pixels
+									perf.width("52")
+									perf.height("52")
+
+									# Change the image quality: 0 - 100
+									# This affects the image resolution
+									perf.quality("100")
+								}
+							}
 							# insert_top("label", class: "_imgTitle", "Image")
 						}
 						$("./div[7]"){
@@ -182,6 +204,22 @@ $(".//div[@class='main_container']"){
 
 
 					}
+					$("./div[contains(@id, 'zrowB')]"){
+						remove()
+					}
+					$("./div[contains(@id, 'zrow')]"){
+						$(".//br"){
+							remove()
+						}
+						$("./div[contains(@class, 'product-discount')]"){
+							move_to("../preceding::div[1]")
+						}
+						attributes(class: "")
+						$("./div[@class='_quantityContainer']"){
+							remove()
+						}
+					}
+
 					$("./div[contains(@class, 'color-bg')]"){
 						insert_top("div", class: "_bg_top"){
 							move_here("../div[@class='_checkboxContainer']")
@@ -189,9 +227,20 @@ $(".//div[@class='main_container']"){
 							move_here("../div[@class='_productContainer']/div[@class='_content']")
 							move_here("../div[@class='_skuContainer']")
 						}
+						$(".//div[contains(@class, 'product-discount')]"){
+							move_to("../../../../div[@class='_priceHolder']")
+							insert_before("br")
+							insert_before("br")
+						}
 					}
 				}
 			}
 		}
+	}
+}
+
+$("/html"){
+	$("./body"){
+		move_here("//img[contains(@src, 'expand_icon.gif')]", "bottom")
 	}
 }

@@ -4,6 +4,13 @@ $$("#ad_17601"){
 	move_here("//div[@id='_icons_bar']")
 }
 
+
+$$("body"){
+	insert_top("script", type: "text/Javascript", "$(document).ready(function() {
+		showProgressBar = function(){}
+		});")
+}
+
 $("//*[@id='order_details']/div[1]"){
 	remove()
 }
@@ -14,9 +21,10 @@ $$(".order-confirm"){
 		$("./a"){
 			add_class("expand")
 		}
-		$("./a[contains(@class, 'btn')]"){
-			$onclick = fetch("./@onclick")
-			attributes(onclick: concat($onclick, ";errorMessagePosition();"))
+		$("./a[contains(@class, 'btn')][1]"){
+			attributes(id: "Update")
+			# $onclick = fetch("./@onclick")
+			# attributes(onclick: concat($onclick, ";errorMessagePosition();"))
 		}
 		# $("./a[contains(@class, 'btn')]"){
 		# 	$onclick = fetch("./@onclick")

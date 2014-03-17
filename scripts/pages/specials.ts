@@ -84,6 +84,9 @@ $("//*[@id='main_content_wrapper']/div/div"){
 					$("./a[2]"){
 						remove()
 					}
+					$("./a[2]"){
+						add_class("_shopNow")
+					}
 				}
 			}
 		}

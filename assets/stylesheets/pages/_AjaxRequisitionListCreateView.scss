@@ -58,9 +58,6 @@
 					font-style: italic;
 					margin: 2px 0;
 				}
-				strong{
-					text-align: center;
-				}
 			}
 			#detailsTable{
 				label{
@@ -160,7 +157,7 @@
 						min-width: 30px;
 					}
 					input{
-						width: 150px;
+						width: 50px;
 					}
 				}
 				._manufacturerContainer{
@@ -190,7 +187,12 @@
 				}
 				._priceHolder{
 					display: block;
-					height: 40px;
+					min-height: 40px;
+					.product-discount{
+						border-top: 1px dashed gray;
+						color: green;
+						font-weight: bold;
+					}
 				}
 				._priceContainer{
 					display: inline-block;

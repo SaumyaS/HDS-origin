@@ -119,12 +119,25 @@ $("/html/body"){
 				attributes(style: "")
 			}
 		}
-		$("./p/a"){
-			add_class("expand")
+		$("./p"){
+			match($path){
+				with(/qbOrder=true/){
+					log("test")
+					insert_top("a", class: "_sbList btn", "Back to SpeedBuild"){
+						attributes(href: "https://"+$host+"/webapp/wcs/stores/servlet/AjaxLogonForm?catalogId=11101&myAcctMain=1&langId=-1&storeId=11301&showReqList=true", id: "requisitionList")
+					}
+				}
+			}
+			
+			$("./a"){
+				add_class("expand")
+			}
+			
+			$("./a[@id='WC_OrderShippingBillingConfirmationPage_Print_Link']"){
+				remove()
+			}
 		}
-		$("./p/a[@id='WC_OrderShippingBillingConfirmationPage_Print_Link']"){
-			remove()
-		}
+		
 	}
 }
 

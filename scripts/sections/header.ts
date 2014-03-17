@@ -1,3 +1,4 @@
+
 # Replace the logo with one without a tagline:
 $$(".logo #WC_ContentAreaESpot_links_7_1") {
 	$("./img"){
@@ -22,25 +23,93 @@ $$("body"){
 }
 
 $("./head"){
+
+
+	
 	$("./meta[@name='viewport']"){
 		attributes(content: "width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0")
 	}
-	
+
 	insert("link", rel: "apple-touch-icon", sizes: "72x72", href: asset("images/WhiteCap.png"))
 	insert("link", rel: "apple-touch-icon", sizes: "114x114", href: asset("images/WhiteCap.png"))
 
     $("./script[contains(@src, 'dojo.js')]") {
-      log($host)
-      insert_after("script", "dojo.config.dojoIframeHistoryUrl = 'https://"+$host+"/wcsstore/dojo15/dojo/resources/iframe_history.html'", type:"text/javascript")
+      insert_after("script", "dojo.config.dojoIframeHistoryUrl = 'http://"+$host+"/wcsstore/dojo15/dojo/resources/iframe_history.html'", type:"text/javascript")
     }
+
+	$("./script"){
+		match(text()){
+			with(/_gaq/){
+				remove()
+			}
+		}
+	}
+	$("./script[10]"){
+
+		match($host){
+			with(/m.whitecap.com/){
+				# Prod
+				insert_after("script", type: "text/javascript", "  var _gaq = _gaq || [];
+					_gaq.push(['_setAccount', 'UA-10289527-4']);
+					_gaq.push(['_trackPageview']);
+
+					(function() {
+					var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+					})();
+				")
+			}
+			with(/stg-whitecap/){
+				# STG
+				insert_after("script", type: "text/javascript", "  var _gaq = _gaq || [];
+					_gaq.push(['_setAccount', 'UA-10289527-6']);
+					_gaq.push(['_trackPageview']);
+
+					(function() {
+					var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+					})();
+
+				")
+			}
+			with(/qa-whitecap/){
+				# QA
+				insert_after("script", type: "text/javascript", "  var _gaq = _gaq || [];
+					_gaq.push(['_setAccount', 'UA-10289527-5']);
+					_gaq.push(['_trackPageview']);
+
+					(function() {
+					var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+					})();
+
+				")
+			}
+		}
+		
+
+		
+
+		
+
+	}
 }
 
 $("/html"){
-  # remove(".//script[contains(@src,'jcarousel.min.js')]")
   remove(".//script[contains(@src,'navigation.js')]")
-
   	$("./body"){
-  		
+
+  		move_here("//script", "bottom")
+  		$("./script[contains(@src, 'jquery-1.7.2.min.js')]"){
+  			move_to("../../head")
+  		}
+  		$("./script[contains(@src, 'main.js')]"){
+			move_to("../../head")
+		}
+
 		# Removes all the breakpoints
 		match($path){
 			with(/Footer_Terms_Conditions/){}
@@ -77,6 +146,11 @@ $("/html"){
 					remove()
 				}
 			}
+			with(/AjaxOrderItemDisplayView/){
+				$(".//div[@id='MessageArea']"){
+					remove()
+				}
+			}
 		}
 
 		$(".//div[@class='header_wrapper']"){
@@ -105,7 +179,7 @@ $$(".nav_wrapper"){
 	}
 
 	$$(".nav-primary"){
-		attributes(data-ur-toggler-component: "content")
+		attributes(style: "display:none;")
 		$$(">li"){
 			attribute("class", "col")
 
@@ -116,10 +190,10 @@ $$(".nav_wrapper"){
 		$("./li[@id='menu1']"){
 			attributes(class: "_accordian")
 		}
-		# Commented out for Stage
-		# $("./li[@id='menu6']"){
-		# 	attributes(class: "_accordian")
-		# }
+
+		$("./li[@id='menu6']"){
+			attributes(class: "_accordian")
+		}
 	}
 
 	$$("#menu1"){
@@ -135,20 +209,23 @@ $$(".nav_wrapper"){
 			}
 		}
 	}
-	# Commented out of Stage
-	# $(".//li[@id='menu6']"){
-	# 	attribute("data-ur-set", "toggler")
-	# 	$$(">a"){
-	# 	  attributes(data-ur-toggler-component: "button", data-ur-id: "submenu2")
-	# 	}
 
-	# 	$$(".subnav"){
-	# 		attributes(data-ur-toggler-component: "content", data-ur-id: "submenu2")
-	# 		$$("a"){
-	# 			attribute("class", "_sub2")
-	# 		}
-	# 	}
-	# }
+	$(".//li[@id='menu6']"){
+		attribute("data-ur-set", "toggler")
+		$$(">a"){
+		  attributes(data-ur-toggler-component: "button", data-ur-id: "submenu2")
+		}
+
+		$$(".subnav"){
+			attributes(data-ur-toggler-component: "content", data-ur-id: "submenu2")
+			$(".//a"){
+				attribute("class", "_sub2")
+			}
+			$(".//a[contains(text(),'Coupons')]"){
+				remove()
+			}
+		}
+	}
 }
 
 $$("#msgpopup1_x"){
@@ -266,7 +343,7 @@ $("./body"){
 		with(/AddressEditView/){}
 		with(/POSnippetDisplay/){}
 		with(/ShopCartPageView/){}
-		# with(/OrderProcessServiceOrderPrepare/){}
+		with(/RequisitionListDetailTableView/){}
 		with(/ShippingAddressDisplayView/){}
 		with(/AjaxAddressDisplayView/){}
 		with(/AjaxOrderChangeServiceShipInfoUpdate/){}
@@ -290,6 +367,7 @@ $("./body"){
 			}
 			$("./div[@id='pers-nav']"){
 				$(".//ul[@class='nav-primary']"){
+					attributes(style: "display:block;")
 					attributes(data-ur-state: "enabled")
 					$("./li"){
 						$("./a"){
@@ -321,7 +399,7 @@ $("./body"){
 	# $("./div[@id='dijit_DialogUnderlay_0']"){
 	# remove()
 	# }
-	
+
 }
 
 $$(".checkout_wrapper"){
@@ -331,3 +409,8 @@ $$(".checkout_wrapper"){
 		}
 	}
 }
+
+
+
+
+

@@ -25,6 +25,30 @@ $("/html"){
 					set("li")
 				}
 				attributes(class: "_catType", data-ur-carousel-component: "item")
+				$(".//img"){
+				perf.optimize_image("src") {
+					# Change image formats: jpeg, png, and webp!
+					perf.format("jpeg")
+
+					# # Resize the pixels
+					perf.width("175")
+					perf.height("111")
+				}
+
+			}
+			}
+		}
+		$(".//div[@class='topcat_promo1']"){
+			$(".//img"){
+				perf.optimize_image("src") {
+					# Change image formats: jpeg, png, and webp!
+					perf.format("jpeg")
+
+					# # Resize the pixels
+					perf.width("310")
+					perf.height("84")
+				}
+
 			}
 		}
 	}

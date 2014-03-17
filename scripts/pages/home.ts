@@ -3,6 +3,22 @@
 #Add our meta tags
 
 
+$("//img") {
+  perf.optimize_image("src") {
+    # Change image formats: jpeg, png, and webp!
+    perf.format("jpeg")
+   
+   # # Resize the pixels
+    perf.width("120")
+    perf.height("120")
+
+    # Change the image quality: 0 - 100
+    # This affects the image resolution
+    perf.quality("100")
+  }
+}
+
+
 # Moves header icons back to the header
 $$("#ad_17601"){
 	move_here("//div[@id='_icons_bar']")
@@ -17,8 +33,12 @@ $$("#page"){
 	# Move Banner_Wrapper and Smallbox into the Header_Widget
 	$("./div[@class='header_widget']/div[@class='nav_wrapper']"){
 		insert_before("div", class: "__banner"){
-			move_here("../../div/div[@id='content_wrapper_box']/div[3]")
-			move_here("../../div/div[@id='content_wrapper_box']/div[3]/div/ul")
+			move_here("../../div/div[@id='content_wrapper_box']/div[3]"){
+				remove()
+			}
+			move_here("../../div/div[@id='content_wrapper_box']/div[3]/div/ul"){
+				remove()
+			}
 		}
 	}
 
@@ -79,6 +99,9 @@ $$("#page"){
 			  		insert_after("div", class: "_dots", data-ur-carousel-component: "dots")
 			  		$("./li"){
 						attributes(data-ur-carousel-component: "item", class: "_item")
+						$(".//span[@class='orig-price']"){
+							remove()
+						}
 					}
 		  		}
 			}
@@ -104,6 +127,9 @@ $$("#page"){
 						}
 						$("./div[2]/ul[@class='add_wishlist']"){
 				 			remove()
+						}
+						$(".//span[@class='orig-price']"){
+							remove()
 						}
 			  		}
 				}

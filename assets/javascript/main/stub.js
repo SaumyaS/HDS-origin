@@ -1,5 +1,9 @@
-
 $(document).ready(function() {
+
+	$("._fullSite").click(function() {
+		document.cookie = 'mw_mobile_site=false' + '; domain=.whitecap.com; path=/';
+	});
+
 
 	$("#image-menu").on('click', function() {
 		$("#pers-nav, #pers-nav-mask, #body-content").toggleClass("pers-nav-active");
@@ -34,7 +38,6 @@ $(document).ready(function() {
 	    if($this.html().replace(/\s|&nbsp;/g, '').length == 0){
 	        $this.remove();
 	    }
-	    console.log("length: " + $this.html().length);
 	    if($this.html().length < 300){
 	    	$this.remove();
 	    }
@@ -44,9 +47,8 @@ $(document).ready(function() {
 	    return $.trim($(this).html()) === "&nbsp;";
 	}).remove();
 
-	$("#WC_UnregisteredCheckout_links_4, #WC_UserRegistrationAddForm_links_1, #SubmitButton, #WC_PromotionCodeDisplay_links_1").on('click',function(){
+	$("#WC_UnregisteredCheckout_links_4, #WC_UserRegistrationAddForm_links_1, #SubmitButton, #WC_PromotionCodeDisplay_links_1, #Update").on('click',function(){
 		setTimeout(function(){ 
-			console.log("test");
 			var height = $(":focus").outerHeight();
 			var top = $(":focus").offset().top + height;
 			var left = $(":focus").offset().left;
@@ -55,34 +57,40 @@ $(document).ready(function() {
 		}, 200);
 	});
 
-	// $("#WC_UnregisteredCheckout_links_4").on('click', function(){
-	// 	setTimeout(function(){
-	// 		$("input[value=Discover]:radio").checked=true;
-	// 	}, 20000);
+	// $("._checkbox:disabled").each(function(){
+	// 	$(this).removeAttr("checked");
+	// 	$(this).prop('checked', false);
+	// 	$(this).addClass("_diabled");
 	// });
 
 	$("input").keydown(function(){
-		$(".dijitTooltipLeft").hide();
+		$("#dijit__MasterTooltip_0").hide();
 	});
 
 	$("#WC_ShippingAddressSelectSingle_link_2, #WC_ShippingAddressSelectSingle_link_1").on('click', function(){
 		$("#shippingBillingPageNext").removeClass('expand');
 	});
-	// $("#WC_UnregisteredCheckout_links_4, #WC_UserRegistrationAddForm_links_1, #SubmitButton, #WC_PromotionCodeDisplay_links_1").on('click',function(){
-	// 	if ($("input:radio[name='payMethodIdRadio'][value='VISA']").is(':checked')){
-	// 		setTimeout(function(){
-	// 			$("input:radio[name='payMethodIdRadio'][value='Discover']").click();
-	// 			setTimeout(function(){
-	// 				$("input:radio[name='payMethodIdRadio'][value='VISA']").click();
-	// 			}, 5000);
-	// 		}, 10000);
-			
-	// 	}
-	// 	else {
-	// 		$("input:radio[name='payMethodIdRadio'][value='VISA']").click();
-	// 	}
-	// });
 
+	$("._quantity").click(function(){
+		var input = this;
+		input.focus();
+		input.setSelectionRange(0,999);
+	})
+
+	$("input").click(function(){
+		$("[id^=zrow]").attr("class", "");
+	});
+
+	$('#WC_AccountDisplay_FormInput_logonPassword_In_Logon_1').live('keyup', function(e){
+		var p = e.which;
+		if(p === 13){
+			var url = document.location.origin;
+			//console.log(url + '/webapp/wcs/stores/servlet/AjaxLogonForm?catalogId=11101&amp;myAcctMain=1&amp;langId=-1&amp;storeId=11301');
+			Login2.submitSpecifiedForm(document.Logon, url + '/webapp/wcs/stores/servlet/AjaxLogonForm?catalogId=11101&amp;myAcctMain=1&amp;langId=-1&amp;storeId=11301')
+		}
+	});
+
+	
 });
 
 $(".cart_check_btn").DOMNodeAppear(function () {
@@ -142,23 +150,19 @@ $("#errormsgDialog_title").DOMNodeAppear(function(){
 });
 $("#dijit_DialogUnderlay_0").DOMNodeAppear(function(){
 	$("#dijit_DialogUnderlay_0").hide();
-	$(this).addClass("wow");
-	console.log("my new class");
-
 });
 
 
 function errorMessagePosition(){
 	setTimeout(function(){ 
 		var height = $(":focus").outerHeight();
-		var top = $(":focus").offset().top + height;
-		// var left = $(":focus").offset().left;
-		$(".dijitTooltip.dijitTooltipLeft").css("top", top);
-		// $(".dijitTooltip.dijitTooltipLeft").css("left", left);
+			var top = $(":focus").offset().top + height;
+			var left = $(":focus").offset().left;
+			$("#dijit__MasterTooltip_0").css("top", top);
+			$("#dijit__MasterTooltip_0").css("left", left);
 	}, 1);
 }
 
-// $("#checkoutReceiveEmail").change{
-// 	alert("hi");
-// };
+
+
 
