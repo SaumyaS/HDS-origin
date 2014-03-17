@@ -62,6 +62,7 @@ $("/html"){
 							insert_before("br")
 							add_class("expand")
 							move_to("../../../div[@class='col-1']")
+							
 						}
 					}
 				}
