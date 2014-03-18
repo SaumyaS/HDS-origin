@@ -21,6 +21,7 @@ $("/html"){
 	remove(".//script[contains(@src,'trunk8.js')]")
 	remove(".//script[contains(@src,'LoginModalDialog.js')]")
 	remove(".//script[contains(@src,'overlay.js')]")
+	remove(".//script[contains(text(), 'first-and-second-carousel')]")
 	$(".//script"){
 		match(text()){
 			with(/trunk/){
@@ -32,32 +33,23 @@ $("/html"){
 		}
 	}
 	$(".//body"){
-		# attributes(onload: "LoginModalDialog.openLoginModalDialog({'storeId':11301,'catalogId':11101,'langId':-1,'MyAccountURL':'https://www.whitecap.com/webapp/wcs/stores/servlet/AjaxLogonForm?catalogId=11101&amp;myAcctMain=1&amp;langId=-1&amp;storeId=11301'})")
 		$("//div[@class='main_container']"){
 			add_class("_accountSummary")
-
-
 
 			$("./div[@class='login-box']"){
 				$("./div[@class='col-1']"){
 					$("./form"){
+						$url = "https://"+$host+"/webapp/wcs/stores/servlet/AjaxLogonForm?catalogId=11101&amp;myAcctMain=1&amp;langId=-1&amp;storeId=11301"
 						$("./label[2]"){
 							insert_after("br")
 						}
 						$("./input[@type='text']") {
 							wrap("div", class: "test")
 						}
-						# $("./div[@class='test']"){
-						# 	attributes(data-ur-set: "input-clear")
-						# 	$("./input"){
-						# 		attributes(data-ur-input-clear-component: "input")
-						# 	}
-						# }
-						# $("./a[@id='WC_AccountDisplay_links_1']"){
-						# 	insert_before("br")
-						# }
+						$("./input[@id='WC_AccountDisplay_FormInput_logonPassword_In_Logon_1']"){
+							attributes(onkeypress: "if(event.keyCode==13) Login2.submitSpecifiedForm(document.Logon, '"+$url+"');")
+						}
 						$("./a"){
-							$url = "https://"+$host+"/webapp/wcs/stores/servlet/AjaxLogonForm?catalogId=11101&amp;myAcctMain=1&amp;langId=-1&amp;storeId=11301"
 							attributes(onclick: "Login2.submitSpecifiedForm(document.Logon,'"+$url+"');return false;")
 							insert_before("br")
 							add_class("expand")
@@ -72,11 +64,7 @@ $("/html"){
 
 
 			$("./div[@class='nav-secondary']"){
-				insert_before("div", class: "_userInfo", "My Account"){
-
-				}
-
-
+				insert_before("div", class: "_userInfo", "My Account")
 			}
 			$("./div[@class='_userInfo']"){
 				attributes(data-ur-toggler-component: "button")
