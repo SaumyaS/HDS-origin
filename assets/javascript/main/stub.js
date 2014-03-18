@@ -18,8 +18,6 @@ $(document).ready(function() {
 		$("._waiting").hide();
 	});
 
-	// $("#sessionTimeoutNotifyDiv").attr("style", "width: 800px;height: 250px;display: none;");
-
 	$("#trackOrderStatus").on('click',function(){
 		$("._prev").show();
 		$("._waiting").hide();
@@ -57,12 +55,6 @@ $(document).ready(function() {
 		}, 200);
 	});
 
-	// $("._checkbox:disabled").each(function(){
-	// 	$(this).removeAttr("checked");
-	// 	$(this).prop('checked', false);
-	// 	$(this).addClass("_diabled");
-	// });
-
 	$("input").keydown(function(){
 		$("#dijit__MasterTooltip_0").hide();
 	});
@@ -80,17 +72,6 @@ $(document).ready(function() {
 	$("input").click(function(){
 		$("[id^=zrow]").attr("class", "");
 	});
-
-	$('#WC_AccountDisplay_FormInput_logonPassword_In_Logon_1').live('keyup', function(e){
-		var p = e.which;
-		if(p === 13){
-			var url = document.location.origin;
-			//console.log(url + '/webapp/wcs/stores/servlet/AjaxLogonForm?catalogId=11101&amp;myAcctMain=1&amp;langId=-1&amp;storeId=11301');
-			Login2.submitSpecifiedForm(document.Logon, url + '/webapp/wcs/stores/servlet/AjaxLogonForm?catalogId=11101&amp;myAcctMain=1&amp;langId=-1&amp;storeId=11301')
-		}
-	});
-
-	
 });
 
 $(".cart_check_btn").DOMNodeAppear(function () {
