@@ -59,10 +59,8 @@ $(".//div[@class='main_container']"){
 					}
 					$("./div[contains(@class,'mw_was_tr')]"){
 						# attributes(class: "_items")
-						match($host){
-							else(){
-								attributes(class: "color-bg disable")
-							}
+						attributes(class: "color-bg disable")
+							
 						}
 						$("./div[1]/input"){
 							$(".."){
