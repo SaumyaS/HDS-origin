@@ -11,6 +11,9 @@ $$("#ad_17601"){
 
 
 $("/html"){
+	$(".//span[@id='ErrorMessageText']"){
+		remove()
+	}
 	# Removing unneccesary JS Calls
 	# remove(".//script[contains(@src,'CategoryDisplay.js')]")
 	remove(".//script[contains(@src,'jcarousel.min.js')]")
