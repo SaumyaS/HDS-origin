@@ -160,6 +160,23 @@ $(".//div[@class='main_container']"){
 						$("./div[7]"){
 							attributes(class: "_priceContainer")
 							insert_top("label", class: "_priceTitle", "Price")
+							$("./span"){
+								match(text()){
+									with(/SKU/){
+										attributes(style: "width: auto !important")
+										$(".."){
+											attributes(style: "float: none;")
+											$("./label[@class='_priceTitle']"){
+												remove()
+											}
+										}
+									}
+								}
+							}
+
+							# $("./span[contains(text(), 'SKU is inactive')]"){
+								
+							# }
 						}
 						$("./div[8]"){
 							attributes(class: "_totalPriceContainer")
