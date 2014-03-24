@@ -10,6 +10,10 @@
   	}
   }
 
+$("//span[@id='ErrorMessageText']"){
+	remove()
+}
+
 $("//div[@class='login-box']"){
 	$(".//form[@id='Logon']"){
 		$url = "https://"+$host+"/webapp/wcs/stores/servlet/AjaxLogonForm?catalogId=11101&amp;myAcctMain=1&amp;langId=-1&amp;storeId=11301"
