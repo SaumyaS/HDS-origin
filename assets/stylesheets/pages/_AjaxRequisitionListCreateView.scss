@@ -67,21 +67,7 @@
 					padding: 5px;
 					border: 1px solid #777;
 					margin: 5px 0;
-					.mw_was_td{
-						a{
-
-						}
-					}
-				}
-				.disable {
-					opacity: 0.4;
-					cursor: not-allowed;
-				}
-				.color-bg:nth-child(2n){
-					background: #ccc;
-				}
-				.color-bg:nth-child(2n+1){
-					background: #eee;
+					background: #F3F3F3;
 				}
 				._bg_top{
 					min-height: 60px;
@@ -118,7 +104,7 @@
 						display: inline-block;
 						padding: 5px;
 						border: 1px solid #777;
-						background: #999;
+						background: #AAA;
 						a{
 							img{
 								float: left;
@@ -131,7 +117,7 @@
 					}
 					._collaspe{
 						._content{
-							background: #999;
+							background: #CFCFCF;
 							border: 1px solid #777;
 							div{
 								margin-left: 20px;
