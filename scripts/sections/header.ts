@@ -42,7 +42,7 @@ $("./head"){
     			insert_after("script", "dojo.config.dojoIframeHistoryUrl = 'http://"+$host+"/wcsstore/dojo15/dojo/resources/iframe_history.html'", type:"text/javascript")
     		}
     	}
-      
+      //comment
     }
 
 	$("./script"){
