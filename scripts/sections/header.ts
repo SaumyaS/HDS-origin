@@ -34,9 +34,8 @@ $("./head"){
 	insert("link", rel: "apple-touch-icon", sizes: "114x114", href: asset("images/WhiteCap.png"))
 
     $("./script[contains(@src, 'dojo.js')]") {
-    	log("log: " + $host_hh)
-    	match($path){
-    		with(/AjaxLogonForm/){
+    	match($secure){
+    		with(/true/){
     			insert_after("script", "dojo.config.dojoIframeHistoryUrl = 'https://"+$host+"/wcsstore/dojo15/dojo/resources/iframe_history.html'", type:"text/javascript")
     		}
     		else(){
