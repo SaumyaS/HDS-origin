@@ -12,7 +12,7 @@ $$("#detailsTable"){
 		}
 		$("./div[contains(@class,'mw_was_tr')]"){
 			# attributes(class: "_items")
-			attributes(class: "color-bg")
+			attributes(class: "color-bg disable")
 			$("./div[1]/input"){
 				$(".."){
 					attributes(class: "_checkboxContainer")
@@ -23,7 +23,6 @@ $$("#detailsTable"){
 			$("./div[2]/div[1]"){
 				$(".."){
 					attributes(class: "_productContainer")
-					
 					# //*[@id="expand1"]/div[2]
 					$("./div[2]"){
 						attributes(class: "_expand")
@@ -94,10 +93,37 @@ $$("#detailsTable"){
 			$("./div[6]"){
 				attributes(class: "_imgContainer")
 				# insert_top("label", class: "_imgTitle", "Image")
+				$(".//img") {
+					perf.optimize_image("src") {
+						# Change image formats: jpeg, png, and webp!
+						perf.format("jpeg")
+
+						# # Resize the pixels
+						perf.width("52")
+						perf.height("52")
+
+						# Change the image quality: 0 - 100
+						# This affects the image resolution
+						perf.quality("100")
+					}
+				}
 			}
 			$("./div[7]"){
 				attributes(class: "_priceContainer")
 				insert_top("label", class: "_priceTitle", "Price")
+				$("./span"){
+					match(text()){
+						with(/SKU/){
+							attributes(style: "width: auto !important")
+							$(".."){
+								attributes(style: "float: none;")
+								$("./label[@class='_priceTitle']"){
+									remove()
+								}
+							}
+						}
+					}
+				}
 			}
 			$("./div[8]"){
 				attributes(class: "_totalPriceContainer")
