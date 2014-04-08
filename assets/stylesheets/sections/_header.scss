@@ -314,6 +314,10 @@
 #Add_To_Cart_modal_dialog{
 	width: 200px !important;
 	text-align: center;
+	margin-top: 200px !important;
+	.dijitDialogPaneContent{
+		height: auto !important;
+	}
 	.Add_To_Cart_modal_dialog_container{
 
 		float: none !important;
