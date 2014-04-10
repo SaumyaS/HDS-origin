@@ -23,7 +23,6 @@ $$("#detailsTable"){
 			$("./div[2]/div[1]"){
 				$(".."){
 					attributes(class: "_productContainer")
-					
 					# //*[@id="expand1"]/div[2]
 					$("./div[2]"){
 						attributes(class: "_expand")

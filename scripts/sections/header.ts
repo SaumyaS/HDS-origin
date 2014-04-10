@@ -34,7 +34,15 @@ $("./head"){
 	insert("link", rel: "apple-touch-icon", sizes: "114x114", href: asset("images/WhiteCap.png"))
 
     $("./script[contains(@src, 'dojo.js')]") {
-      insert_after("script", "dojo.config.dojoIframeHistoryUrl = 'http://"+$host+"/wcsstore/dojo15/dojo/resources/iframe_history.html'", type:"text/javascript")
+    	match($secure){
+    		with(/true/){
+    			insert_after("script", "dojo.config.dojoIframeHistoryUrl = 'https://"+$host+"/wcsstore/dojo15/dojo/resources/iframe_history.html'", type:"text/javascript")
+    		}
+    		else(){
+    			insert_after("script", "dojo.config.dojoIframeHistoryUrl = 'http://"+$host+"/wcsstore/dojo15/dojo/resources/iframe_history.html'", type:"text/javascript")
+    		}
+    	}
+      //comment
     }
 
 	$("./script"){
