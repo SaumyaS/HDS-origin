@@ -2,12 +2,17 @@
 	position: absolute;
 	top: 0px !important;
 	left: 0px !important;
-	margin-left: 2%;
-	margin-right: 2%;
+	margin-left: 5%;
+	margin-right: 5%;
 	margin-top: 100px;
+	width: 90% !important;
 	.dijitDialogPaneContent{
 		overflow: hidden;
 		height: auto !important;
+		width: 100% !important;
+		div{
+			padding: 3px !important;
+		}
 	}
 }
 
@@ -57,7 +62,7 @@
 				display: block;
 				span{
 					display: block;
-					width: 131x;
+					width: 160px;
 					float: left;
 				}
 
