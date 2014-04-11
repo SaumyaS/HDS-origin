@@ -8,6 +8,22 @@
 
 # //*[@id="will_call_modal_dialog"]/div[2]/div/div[1]/a
 
+$("/html"){
+	$(".//div[@id='will_call_modal_dialog']"){
+		$(".//div[@class='will_call_form_border']/form"){
+			$("./input[@id='cityMarker']"){
+				insert_after("br")
+			}
+			$("./span[2]"){
+				insert_after("br")
+			}
+			$("./a"){
+				insert_before("br")
+			}
+		}
+	}
+}
+
 $$("#map_canvas"){
 	attributes(style: "display: none;")
 }
