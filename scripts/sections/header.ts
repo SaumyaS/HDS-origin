@@ -34,7 +34,15 @@ $("./head"){
 	insert("link", rel: "apple-touch-icon", sizes: "114x114", href: asset("images/WhiteCap.png"))
 
     $("./script[contains(@src, 'dojo.js')]") {
-      insert_after("script", "dojo.config.dojoIframeHistoryUrl = 'http://"+$host+"/wcsstore/dojo15/dojo/resources/iframe_history.html'", type:"text/javascript")
+    	match($secure){
+    		with(/true/){
+    			insert_after("script", "dojo.config.dojoIframeHistoryUrl = 'https://"+$host+"/wcsstore/dojo15/dojo/resources/iframe_history.html'", type:"text/javascript")
+    		}
+    		else(){
+    			insert_after("script", "dojo.config.dojoIframeHistoryUrl = 'http://"+$host+"/wcsstore/dojo15/dojo/resources/iframe_history.html'", type:"text/javascript")
+    		}
+    	}
+      //comment
     }
 
 	$("./script"){
@@ -110,7 +118,7 @@ $("/html"){
 			move_to("../../head")
 		}
 
-		# Removes all the breakpoints
+# 		# Removes all the breakpoints
 		match($path){
 			with(/Footer_Terms_Conditions/){}
 			with(/OrderShippingBillingView/){}
@@ -126,7 +134,7 @@ $("/html"){
 			}
 		}
 
-		# Removes breadcrumbs
+# 		# Removes breadcrumbs
 		$$("#breadcrumb"){
 			attributes(style: "display: none;")
 		}
@@ -148,7 +156,7 @@ $("/html"){
 			}
 			with(/AjaxOrderItemDisplayView/){
 				$(".//div[@id='MessageArea']"){
-					remove()
+					attributes(style: "display: none;")
 				}
 			}
 		}

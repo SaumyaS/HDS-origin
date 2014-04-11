@@ -2,9 +2,11 @@
 	position: absolute;
 	top: 0px !important;
 	left: 0px !important;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-top: 100px;
 	.dijitDialogPaneContent{
 		overflow: hidden;
-		width: 320px !important;
 		height: auto !important;
 	}
 }
@@ -12,9 +14,7 @@
 
 
 .will_call_form_border{
-	border: 1px solid #ddd;
 	overflow: hidden;
-	padding: 5px 10px;
 	form{
 		#cityMarker{
 			width: 70%;
@@ -27,6 +27,9 @@
 		#postalcode{
 			width: 70%;
 		}
+	}
+	a{
+		margin: 5px;
 	}
 }
 
@@ -50,11 +53,11 @@
 			height: 405px;
 			p{
 				float: left;
-				width: 160px;
+				width: 131px;
 				display: block;
 				span{
 					display: block;
-					width: 160px;
+					width: 131x;
 					float: left;
 				}
 

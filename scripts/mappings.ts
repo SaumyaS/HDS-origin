@@ -180,6 +180,9 @@ match($status) {
 				@import pages/login.ts
 
 			}
+			with(/Logoff/){
+				@import pages/logonForm.ts
+			}
 			with(/forgetpassword/){
 				log("--> Importing forgetpassword")
 				@import pages/forgetpassword.ts
