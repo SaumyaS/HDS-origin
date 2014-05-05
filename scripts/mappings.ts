@@ -250,6 +250,10 @@ match($status) {
 				log("--> Importing Confirmation View Page")
 				@import pages/orderConfirmation.ts
 			}
+			with(/pr-trader/){
+				log("--> importing monthly Trader Specials")
+				@import pages/pr-trader.ts
+			}
 			with(/home/){
 				log("--> Importing pages/new.ts in mapping.ts")
 				@import pages/new.ts
@@ -403,6 +407,8 @@ match($status) {
 				log("--> importing discount Page")
 				@import pages/discountPage.ts
 			}
+			
+
 			else() {
 				log("--> No page match in mappings.ts")
 			}
