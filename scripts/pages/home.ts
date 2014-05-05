@@ -3,20 +3,20 @@
 #Add our meta tags
 
 
-$("//img") {
-  perf.optimize_image("src") {
-    # Change image formats: jpeg, png, and webp!
-    perf.format("jpeg")
+# $("//img") {
+#   perf.optimize_image("src") {
+#     # Change image formats: jpeg, png, and webp!
+#     perf.format("jpeg")
    
-   # # Resize the pixels
-    perf.width("120")
-    perf.height("120")
+#    # # Resize the pixels
+#     perf.width("120")
+#     perf.height("120")
 
-    # Change the image quality: 0 - 100
-    # This affects the image resolution
-    perf.quality("100")
-  }
-}
+#     # Change the image quality: 0 - 100
+#     # This affects the image resolution
+#     perf.quality("100")
+#   }
+# }
 
 
 # Moves header icons back to the header
