@@ -11,6 +11,11 @@ $("/html"){
 		# 		attributes(width: "", height: "")
 		# 	}
 		# }
+		$(".//div[@class='brand-splash']"){
+			$(".//img"){
+				attributes(height: "40px")
+			}
+		}
 		$(".//div[@class='brand-promos']"){
 			$("./div"){
 				$("./h1"){
