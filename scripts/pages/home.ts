@@ -2,7 +2,6 @@
 
 #Add our meta tags
 
-
 # $("//img") {
 #   perf.optimize_image("src") {
 #     # Change image formats: jpeg, png, and webp!
@@ -17,7 +16,6 @@
 #     perf.quality("100")
 #   }
 # }
-
 
 # Moves header icons back to the header
 $$("#ad_17601"){
