@@ -13,7 +13,7 @@ $("/html"){
 		# }
 		$(".//div[@class='brand-splash']"){
 			$(".//img"){
-				attributes(height: "40px")
+				attributes(height:"40px", max-width:"100%")
 			}
 		}
 		$(".//div[@class='brand-promos']"){
