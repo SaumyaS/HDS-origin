@@ -2,7 +2,7 @@
 
 $$("#ad_17601"){
 		$("./img"){
-			attributes(style: "width: 74%;padding-left: 10px;margin-top: -6px;margin-bottom: -11px;")
+			attributes(style: "max-width: 74%;padding-left: 10px;margin-top: -6px;margin-bottom: -11px;")
 		}
 		# insert("div", class: "Icons-white-cap-logo-no-tagline", )
 	move_here("//div[@id='_icons_bar']")
