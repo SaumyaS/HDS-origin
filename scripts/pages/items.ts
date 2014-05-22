@@ -28,6 +28,9 @@ $("/html"){
 					with(/Call/){
 						add_class("_callForPrice")
 					}
+					with(/800/){
+						add_class("_phone")
+					}
 				}
 			}
 			$("./hr[3]"){
@@ -68,6 +71,7 @@ $("/html"){
 			insert_top("div", class: "_info-title", "Product Info")
 			move_here("../div[@class='product-info']/div[@class='_discount-Price']")
 			move_here("../div[@class='product-info']/h1[@class='_callForPrice']")
+			move_here("../div[@class='product-info']/h1[@class='_phone']")
 			move_here("../div[@class='product-info']/span[1]")
 			move_here("../div[@class='product-info']/h4[1]")
 			move_here("../div[@class='product-info']/h2[1]")
@@ -75,11 +79,6 @@ $("/html"){
 			move_here("../div[@class='product-info']/input[@type='text']")
 			insert("br")
 			move_here("../div[@class='product-info']/a[@id='productPageAdd2Cart']")
-
-
-
-
-
 		}
 
 		$("./div[@class='_top-info']"){

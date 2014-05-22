@@ -119,16 +119,7 @@ $("/html/body"){
 				attributes(style: "")
 			}
 		}
-		$("./p"){
-			match($path){
-				with(/qbOrder=true/){
-					log("test")
-					insert_top("a", class: "_sbList btn", "Back to SpeedBuild"){
-						attributes(href: "https://"+$host+"/webapp/wcs/stores/servlet/AjaxLogonForm?catalogId=11101&myAcctMain=1&langId=-1&storeId=11301&showReqList=true", id: "requisitionList")
-					}
-				}
-			}
-			
+		$("./p"){			
 			$("./a"){
 				add_class("expand")
 			}
