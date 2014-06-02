@@ -8,7 +8,9 @@ $$("#ad_17601"){
 # $("//script[@src]") {
 # 	attribute("data-mw_keep", "true")
 # }
-
+$$("#progress_bar"){
+	attributes(style: "display:none !important;")
+}
 
 $("/html"){
 	$(".//span[@id='ErrorMessageText']"){

@@ -167,6 +167,11 @@ match($status) {
 				log("--> importing SpeedBuild")
 				@import pages/AjaxRequisitionListDisplayView_with_info_toggle.ts
 			}
+			with(/Login/){
+
+				log("--> Importing Login")
+				@import pages/login.ts
+			}
 			with(/AjaxLogonForm/){
 				# $$("h1"){
 				# 	match(text()){
