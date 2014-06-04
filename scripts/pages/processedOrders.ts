@@ -1,4 +1,4 @@
-$(".//div[@class='checkout-container']"){
+	$(".//div[@class='checkout-container']"){
 	add_class("_myOrders")
 	$("./h3"){
 		match(text()){
@@ -66,4 +66,11 @@ $(".//div[@class='mw_was_tbody']/div"){
 	insert_after("hr")
 
 
+}
+
+$(".//div[@id='ProcessedOrdersStatusDisplay']"){
+	$("./div[2]"){
+		add_class("_SpeedbuildInd")
+		attributes(style: "")
+	}
 }

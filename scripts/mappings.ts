@@ -185,6 +185,10 @@ match($status) {
 				@import pages/login.ts
 
 			}
+			with(/MyAccount/){
+				log("--> Importing Login")
+				@import pages/login.ts
+			}
 			with(/Logoff/){
 				@import pages/logonForm.ts
 			}
@@ -392,7 +396,7 @@ match($status) {
 				log("--> importing paginated summary page")
 				@import pages/orderItemPageView.ts
 			}
-			with(/QuickOrderCartDisplayView/){
+			with(/quickorder/){
 				log("--> Import Quick Order display")
 				@import pages/quickOrderCartDisplay.ts
 			}
