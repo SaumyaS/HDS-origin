@@ -413,6 +413,10 @@ match($status) {
 				log("--> importing orders pagination")
 				@import pages/processedOrders.ts
 			}
+			with(/OrderStatusTableDetailsHelper/){
+				log("--> importing witing for approval")
+				@import pages/waitingForApproval.ts
+			}
 			with(/DiscountDetailsDisplayView/){
 				log("--> importing discount Page")
 				@import pages/discountPage.ts

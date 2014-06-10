@@ -7,6 +7,7 @@
 			}
 			with(/Waiting/){
 				add_class("_waiting")
+				attributes(style: "display: none;")
 			}
 		}
 	}
@@ -60,6 +61,9 @@ $(".//div[@class='mw_was_tbody']/div"){
 			}
 			$("./div[2]"){
 				attributes(style: "float: right;")
+				$("img"){
+					add_class("_sbInd")
+				}
 			}
 		}
 	}
@@ -74,3 +78,4 @@ $(".//div[@id='ProcessedOrdersStatusDisplay']"){
 		attributes(style: "")
 	}
 }
+
