@@ -168,7 +168,7 @@ $("/html"){
 	$(".//li[@class='MyAccountURLSep']"){
 		move_to("../../ul[@class='cart_menu']", position("top"))
 		$("./a[1]"){
-		  attributes(onclick: "", href: "https://" + $host + "/webapp/wcs/stores/servlet/wc/Login")
+		  attributes(onclick: "", href: "/webapp/wcs/stores/servlet/AjaxLogonForm?catalogId=11101&myAcctMain=1&langId=-1&storeId=11301")
 		}
 	}
   }
