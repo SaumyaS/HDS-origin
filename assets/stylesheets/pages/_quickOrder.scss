@@ -35,11 +35,16 @@
 			}
 		}
 		._addressQO{
-			float: right;
 			width: 300px;
+			.erp-shipping-address{
+				font-weight: bold;
+			}
 			.erp-shipping-address-detail{
 				width: 200px;
 			}
+		}
+		._textQO{
+			padding-bottom: 5px;
 		}
 		#WC_ContentAreaESpot_div_1_18351{
 			display: none;
@@ -54,7 +59,10 @@
 		width: 100%;
 		background-color: #ddd;
 		>div{
-			padding: 10px;
+			padding-left: 10px;
+		}
+		ul{
+			padding-left: 10px;
 		}
 		h3{
 			display: block;

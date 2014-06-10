@@ -133,6 +133,9 @@ $("#dijit_DialogUnderlay_0").DOMNodeAppear(function(){
 	$("#dijit_DialogUnderlay_0").hide();
 });
 
+$("#progress_bar").DOMNodeAppear(function(){
+	$("#progress_bar").attr("style", "display:none !important;");
+});
 
 function errorMessagePosition(){
 	setTimeout(function(){ 

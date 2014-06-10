@@ -66,6 +66,10 @@ match($status) {
 		}
 
 		match($path) {
+			with(/ReLogonFormView/){
+				log("--> Importing Relogin")
+				@import pages/reLogin.ts
+			}
 			with(/TopCategoriesDisplay/){
 				log("--> Importing pages/new.ts in mapping.ts")
 				log("--> Importing pages/home.ts in mappring.ts")
@@ -122,7 +126,7 @@ match($status) {
 				log("--> Importing specials")
 				@import pages/specials.ts
 			}
-			with(/QuickOrderView/){
+			with(/quickorder/){
 				log("--> Importing Quick Order")
 				@import pages/quickOrder.ts
 			}
@@ -159,10 +163,7 @@ match($status) {
 				log("--> Importing Account Summary")
 				@import pages/accountSummary.ts
 			}
-			with(/ReLogonFormView/){
-				log("--> Importing Relogin")
-				@import pages/reLogin.ts
-			}
+			
 			with(/OrganizationSetInSession/){
 				log("--> importing SpeedBuild")
 				@import pages/AjaxRequisitionListDisplayView_with_info_toggle.ts
@@ -396,7 +397,7 @@ match($status) {
 				log("--> importing paginated summary page")
 				@import pages/orderItemPageView.ts
 			}
-			with(/quickorder/){
+			with(/QuickOrderCartDisplayView/){
 				log("--> Import Quick Order display")
 				@import pages/quickOrderCartDisplay.ts
 			}
