@@ -38,11 +38,7 @@
 			width: 300px;
 			.erp-shipping-address{
 				font-weight: bold;
-			}
-			.erp-shipping-address-detail{
-				width: 200px;
-			}
-		}
+			}		}
 		._textQO{
 			padding-bottom: 5px;
 		}
@@ -60,9 +56,11 @@
 		background-color: #ddd;
 		>div{
 			padding-left: 10px;
+			padding-right: 10px;
 		}
 		ul{
 			padding-left: 10px;
+			padding-right: 10px;
 		}
 		h3{
 			display: block;
