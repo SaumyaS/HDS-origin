@@ -145,6 +145,9 @@ $("/html"){
 						# }
 						$("./div[2]"){
 							attributes(style: "float: right;")
+							$("img"){
+								add_class("_sbInd")
+							}
 						}
 					}
 				}

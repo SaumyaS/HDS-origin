@@ -121,6 +121,9 @@ $("//div[@id='OrderStatusTableDisplay_div_1']"){
 				}
 				$("./div[2]"){
 					attributes(style: "float: right;")
+					$("img"){
+						add_class("_sbInd")
+					}
 				}
 			}
 		}

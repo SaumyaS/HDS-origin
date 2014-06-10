@@ -73,9 +73,11 @@ $(".//div[@class='mw_was_tbody']/div"){
 }
 
 $(".//div[@id='ProcessedOrdersStatusDisplay']"){
-	$("./div[2]"){
-		add_class("_SpeedbuildInd")
-		attributes(style: "")
+	$("./div/img"){
+		$(".."){
+			add_class("_SpeedbuildInd")
+			attributes(style: "")
+		}
 	}
 }
 
