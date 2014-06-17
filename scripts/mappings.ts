@@ -61,7 +61,7 @@ match($status) {
 			}
 		}
 		# Contact Us from Speedbuild
-		$(".//h1[contains(text(),'Contact Us')]"){
+		$(".//h1[contains(text(),'Help')]"){
 			@import /pages/contactus.ts
 		}
 
@@ -118,9 +118,13 @@ match($status) {
 				log("--> Importing Store_Locations")
 				@import pages/location.ts
 			}
-			with(/Navigation_Contact_Us/){
+			with(/Navigation_Help/){
 				log("--> Importing contact us")
 				@import pages/contactus.ts
+			}
+			with(/Navigation_Resources/){
+				log("--> Importing Resources")
+				@import pages/resources.ts
 			}
 			with(/Navigation_Specials/){
 				log("--> Importing specials")
