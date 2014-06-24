@@ -61,11 +61,15 @@ match($status) {
 			}
 		}
 		# Contact Us from Speedbuild
-		$(".//h1[contains(text(),'Contact Us')]"){
+		$(".//h1[contains(text(),'Help')]"){
 			@import /pages/contactus.ts
 		}
 
 		match($path) {
+			with(/ReLogonFormView/){
+				log("--> Importing Relogin")
+				@import pages/reLogin.ts
+			}
 			with(/TopCategoriesDisplay/){
 				log("--> Importing pages/new.ts in mapping.ts")
 				log("--> Importing pages/home.ts in mappring.ts")
@@ -114,15 +118,19 @@ match($status) {
 				log("--> Importing Store_Locations")
 				@import pages/location.ts
 			}
-			with(/Navigation_Contact_Us/){
+			with(/Navigation_Help/){
 				log("--> Importing contact us")
 				@import pages/contactus.ts
+			}
+			with(/Resources_mHome/){
+				log("--> Importing Resources")
+				@import pages/resources.ts
 			}
 			with(/Navigation_Specials/){
 				log("--> Importing specials")
 				@import pages/specials.ts
 			}
-			with(/QuickOrderView/){
+			with(/quickorder/){
 				log("--> Importing Quick Order")
 				@import pages/quickOrder.ts
 			}
@@ -159,13 +167,15 @@ match($status) {
 				log("--> Importing Account Summary")
 				@import pages/accountSummary.ts
 			}
-			with(/ReLogonFormView/){
-				log("--> Importing Relogin")
-				@import pages/reLogin.ts
-			}
+			
 			with(/OrganizationSetInSession/){
 				log("--> importing SpeedBuild")
 				@import pages/AjaxRequisitionListDisplayView_with_info_toggle.ts
+			}
+			with(/Login/){
+
+				log("--> Importing Login")
+				@import pages/login.ts
 			}
 			with(/AjaxLogonForm/){
 				# $$("h1"){
@@ -179,6 +189,10 @@ match($status) {
 				log("--> Importing Login")
 				@import pages/login.ts
 
+			}
+			with(/MyAccount/){
+				log("--> Importing Login")
+				@import pages/login.ts
 			}
 			with(/Logoff/){
 				@import pages/logonForm.ts
@@ -402,6 +416,10 @@ match($status) {
 			with(/OrderStatusTableDetailsDisplay/){
 				log("--> importing orders pagination")
 				@import pages/processedOrders.ts
+			}
+			with(/OrderStatusTableDetailsHelper/){
+				log("--> importing witing for approval")
+				@import pages/waitingForApproval.ts
 			}
 			with(/DiscountDetailsDisplayView/){
 				log("--> importing discount Page")

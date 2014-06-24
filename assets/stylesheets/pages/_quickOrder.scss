@@ -35,11 +35,12 @@
 			}
 		}
 		._addressQO{
-			float: right;
 			width: 300px;
-			.erp-shipping-address-detail{
-				width: 200px;
-			}
+			.erp-shipping-address{
+				font-weight: bold;
+			}		}
+		._textQO{
+			padding-bottom: 5px;
 		}
 		#WC_ContentAreaESpot_div_1_18351{
 			display: none;
@@ -54,7 +55,12 @@
 		width: 100%;
 		background-color: #ddd;
 		>div{
-			padding: 10px;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		ul{
+			padding-left: 10px;
+			padding-right: 10px;
 		}
 		h3{
 			display: block;
@@ -67,6 +73,7 @@
 		padding: 5px;
 		border: 2px solid #ccc;
 		.sub-col-Quick-Order{
+			padding-bottom: 10px;
 			border-bottom: 1px solid #333;
 			h2{
 				border-bottom: 2px solid #DFDFDF;

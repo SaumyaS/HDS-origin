@@ -120,6 +120,7 @@ $("/html"){
 			with(/SingleShipmentOrderSummaryView/){}
 			with(/OrderShippingBillingConfirmationView/){}
 			with(/AjaxRequisitionListCreateView/){}
+			with(/quickorder/){}
 			# with(/OrderCalculate/){}
 			with(/AjaxOrderDetail/){}
 			else(){
@@ -192,6 +193,11 @@ $$(".nav_wrapper"){
 		}
 		$("./li[@id='menu1']"){
 			attributes(class: "_accordian")
+		}
+		$("./li[@id='menu5']"){
+			$("./a"){
+				attributes(href: "/webapp/wcs/stores/servlet/ContentDisplayView?catalogId=11101&langId=-1&storeId=11301&page=Resources_mHome")
+			}
 		}
 
 		$("./li[@id='menu6']"){

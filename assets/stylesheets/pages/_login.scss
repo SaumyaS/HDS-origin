@@ -11,6 +11,10 @@
 	}
 }
 
+.progress_bar{
+	display: none !important;
+}
+
 .login-box{
 
 	.col-1{
@@ -96,4 +100,7 @@
 		margin-left: 1px;
 		margin-right: 1px;
 	}
+}
+._sbInd{
+	margin-right: 10px;
 }

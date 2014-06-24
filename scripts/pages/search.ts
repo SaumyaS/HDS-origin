@@ -127,8 +127,23 @@ $("/html"){
 				}
 				$("./div[contains(@class, 'item-description')]"){
 					move_to("../a", position("before"))
-					insert_after("div", class: "_SKUList", "")
+					wrap_text_children("div", class: "_SKUList")
+					$(".//div[not(text())]"){
+						remove()
+					}
+					$("./div[@class='_SKUList'][1]"){
+						remove()
+					}
+					$("./div[@class='_SKUList'][2]"){
+						remove()
+					}
+					$("./div[@class='_SKUList']"){
+						inner(){
+							replace(/#/, "#<br>")
+						}
+					}
 				}
+
 				$("./div[contains(@class, 'item-action ')]"){
 					$("./span[@class='discount-price']/div[contains(@class, 'offerprice')]"){
 						$("./span[contains(@class, 'price')]"){

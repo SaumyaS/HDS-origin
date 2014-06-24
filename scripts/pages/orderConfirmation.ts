@@ -7,6 +7,16 @@ $("/html/body"){
 	$("//*[@id='content_wrapper']/div"){
 		attributes(style: "background-color: #fff;")
 		add_class("_reviewPage")
+		$("./label[contains(text(), Hello)]"){
+			add_class("_emailGreeting")
+		}
+		$("./div[contains(text(), Customer)]"){
+			attributes(style: "")
+			add_class("_customerNo")
+		}
+		$("./br[1]"){
+			remove()
+		}
 	}
 	$(".//div[@id='QucikBuild_Order_ESpot']"){
 		$(".//div[@class='ad']"){

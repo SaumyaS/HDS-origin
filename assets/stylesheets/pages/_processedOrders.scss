@@ -1,5 +1,13 @@
 ._myOrders{
 	padding: 10px;
+	._SpeedbuildInd{
+		padding: 5px 0 0 0;
+		font-size: 11px;
+		font-style: italic;
+		p{
+			float: none !important;
+		}
+	}
 }
 #OrderStatusDetailPagination{
 	text-align: right;

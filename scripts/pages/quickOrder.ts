@@ -20,7 +20,7 @@ $$(".account-col-quick-order"){
 			insert_after("hr")
 		}
 		$("./div[@class='_addressQO']"){
-
+			insert_after("hr")
 		}
 		$("./div[@id='WC_ContentAreaESpot_div_1_18351']"){
 			insert_after("div", class: "_textQO"){
@@ -51,7 +51,9 @@ $$(".account-col-quick-order"){
 	}
 
 	$(".//form[@name='MQuickOrderForm']"){
-		attributes(style: "margin-bottom:10px;")
+		$("./div[1]"){
+			add_class("_formContainter")
+		}
 		$("./div[1]/div"){
 			
 			$("./div[1]"){

@@ -1,4 +1,4 @@
-$(".//div[@class='checkout-container']"){
+	$(".//div[@class='checkout-container']"){
 	add_class("_myOrders")
 	$("./h3"){
 		match(text()){
@@ -7,6 +7,7 @@ $(".//div[@class='checkout-container']"){
 			}
 			with(/Waiting/){
 				add_class("_waiting")
+				attributes(style: "display: none;")
 			}
 		}
 	}
@@ -60,6 +61,9 @@ $(".//div[@class='mw_was_tbody']/div"){
 			}
 			$("./div[2]"){
 				attributes(style: "float: right;")
+				$("img"){
+					add_class("_sbInd")
+				}
 			}
 		}
 	}
@@ -67,3 +71,13 @@ $(".//div[@class='mw_was_tbody']/div"){
 
 
 }
+
+$(".//div[@id='ProcessedOrdersStatusDisplay']"){
+	$("./div/img"){
+		$(".."){
+			add_class("_SpeedbuildInd")
+			attributes(style: "")
+		}
+	}
+}
+
