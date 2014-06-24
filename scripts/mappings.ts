@@ -122,7 +122,7 @@ match($status) {
 				log("--> Importing contact us")
 				@import pages/contactus.ts
 			}
-			with(/Navigation_Resources/){
+			with(/Resources_mHome/){
 				log("--> Importing Resources")
 				@import pages/resources.ts
 			}
