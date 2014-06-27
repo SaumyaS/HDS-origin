@@ -54,6 +54,13 @@ $("/html"){
 			}
 
 			$(".//div[@class='_tabWidget']"){
+				$(".//a"){
+					$url = fetch("@href")
+					$url{
+						replace(/ /, "")
+					}
+					attributes(href: $url)
+				}
 				attributes(data-ur-set: "tabs", data-ur-closeable: "true")
 				$("ul[1]"){
 					$("./li/h4"){
@@ -69,6 +76,7 @@ $("/html"){
 					}
 					$("./li/ul"){
 						attributes(data-ur-tabs-component: "content", data-ur-tab-id: "2")
+
 					}
 				}
 				$("ul[3]"){
