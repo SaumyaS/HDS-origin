@@ -9,6 +9,28 @@ $("/html"){
 	}
 
 	$$(".main-col"){
+		# Defect 2888 - Add Tabs to PDP - Start
+		$("./div[@class='specs']"){
+			$("./div[@class='tabs']"){
+				# Hide Tab Logic
+				$("./span[3]"){
+					$id_tab = fetch("@id")
+					log($id_tab)
+
+					match($id_tab){
+						not(/RelatedInfo/){
+							$("//div[@class='info']/div[@id='product-related-information']"){
+								attribute("class","_hideRI")
+							}
+						}
+					}
+				}
+				remove()
+			}
+
+		}
+		# Defect 2888 - Add Tabs to PDP - End
+
 		$("./div[@class='product-info']"){
 			$("./p/select[@id='shipAddressDropDown']"){
 
@@ -46,21 +68,6 @@ $("/html"){
 		$("./div[@class='gallery']"){
 			insert_before("div", class: "_mainInfo")
 
-			# Reduce image size, optimize
-			$(".//img") {
-				perf.optimize_image("src") {
-					# Change image formats: jpeg, png, and webp!
-					perf.format("jpeg")
-
-					# # Resize the pixels
-					perf.width("149")
-					perf.height("149")
-
-					# Change the image quality: 0 - 100
-					# This affects the image resolution
-					perf.quality("100")
-				}
-			}
 		}
 		$("./div[@class='_mainInfo']"){
 			move_here("../div[@class='gallery']")
@@ -85,7 +92,37 @@ $("/html"){
 			move_here("../div[@class='_mainInfo']")
 			move_here("../div[@class='_item-info']")
 			insert_after("div", class: "_product-info"){
-				move_here("../div[@class='product-more-info']")
+
+				# Defect 2888 - Add Tabs to PDP - Start
+				move_here("../div[@class='specs']/div[@class='info']/div[@id='product-description']")
+
+
+				move_here("../div[@class='specs']/div[@class='info']/div[@id='product-related-information']"){
+					wrap("div", class: "_relatedInfoTab"){
+
+						# Hide Tab Logic
+						$("./div[@id='product-related-information']"){
+							$RI_class = fetch("@class")
+							match($RI_class){
+								with(/_hideRI/){
+									$(".."){
+										remove()
+									}
+								}
+							}
+						}
+						attributes(data-ur-set: "toggler")
+						insert_top("h2", "Related Information")
+						$("./h2"){
+							attributes(data-ur-toggler-component: "button", data-ur-id: "4")
+						}
+						$("./div[@id='product-related-information']"){
+							attributes(data-ur-toggler-component: "content", data-ur-id: "4")
+						}
+					}
+					attributes(style: "")
+				}
+				# Defect 2888 - Add Tabs to PDP - End
 			}
 		}
 	}
@@ -96,7 +133,7 @@ $("/html"){
 		}
 	}
 
-	$$(".product-more-info"){
+	$$("#product-description"){
 		attribute("data-ur-set", "toggler")
 		$("./h2[1]"){
 			attributes(data-ur-toggler-component: "button", data-ur-id: "1")
