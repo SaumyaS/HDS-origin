@@ -1,0 +1,24 @@
+._videoPagesResources{
+	h1{
+		padding-left: 10px;
+	}
+	._VideoLinkRows{
+		height: 39px;
+		._playButtonContainer {
+			float: left;
+		}
+		._linkTextContainer{
+			padding-top: 8px;
+			background-color: #aaa;
+			height: 30px;
+			border-bottom: 1px solid red;
+			._linkText{
+				padding-left: 10px;
+				text-align: middle;
+				color: #000;
+				font-weight: bold;
+
+			}
+		}
+	}
+}
