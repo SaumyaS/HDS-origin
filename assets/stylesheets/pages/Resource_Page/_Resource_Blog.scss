@@ -1,0 +1,47 @@
+._resource_blog{
+	#main_blog{
+		width: 320px;
+		margin: 0 auto;
+	}
+	h1{
+		padding-left: 10px;
+	}
+	#blogredarrow{
+		height: 27px;
+		#b_redarrow{
+			float: left;
+		}
+		.redarrowtext{
+			float: right;
+			background: gold;
+			padding-right: 5px;
+			padding-bottom: 4px;
+			font-size: 17px;
+			font-weight: bold;
+			width: 280px;
+			text-align: right;
+			color: black;
+		}
+
+	}
+	#blogtextbox{
+		padding: 5px;
+
+		.relatedLink_Blog{
+			h3{
+				border-bottom: 1px solid black;
+			}
+			.blog_links{
+				list-style: inherit;
+				.blogURL{
+					margin-left: 30px;
+					a{
+						color: black;
+						border-bottom: 1px solid black;
+					}
+
+				}
+			}
+		}
+	}
+}

@@ -122,9 +122,30 @@ match($status) {
 				log("--> Importing contact us")
 				@import pages/contactus.ts
 			}
+			# Resource Pages
 			with(/Resources_mHome/){
-				log("--> Importing Resources")
-				@import pages/resources.ts
+				log("--> Importing Resources home")
+				@import pages/Resource_Page/resources_home.ts
+			}
+			with(/Resources_mVideo/){
+				log("--> Importing Resources video")
+				@import pages/Resource_Page/resource_video.ts
+			}
+			with(/Resources_mNews/){
+				log("--> Importing Resources news")
+				@import pages/Resource_Page/resource_news.ts
+			}
+			with(/Resources_N/){
+				log("--> Importing Resources news")
+				@import pages/Resource_Page/News/resource_N.ts
+			}
+			with(/Resources_mBlog/){
+				log("--> Importing Resources blog")
+				@import pages/Resource_Page/resource_blog.ts
+			}
+			with(/Resources_V/){
+				log("--> Importing Resources Individual video pages")
+				@import pages/Resource_Page/resource_V.ts
 			}
 			with(/Navigation_Specials/){
 				log("--> Importing specials")
@@ -178,14 +199,6 @@ match($status) {
 				@import pages/login.ts
 			}
 			with(/AjaxLogonForm/){
-				# $$("h1"){
-				# 	match(text()){
-				# 		with(/SpeedBuild/){
-							
-				# 		}
-				# 	}
-				# }
-
 				log("--> Importing Login")
 				@import pages/login.ts
 
