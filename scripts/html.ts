@@ -1,37 +1,63 @@
 # HTML Transformations go here
 
 $("/html") {
+	match($host){
+		with(/qa-whitecap/){
+			match($path){
+				with(/Branch_114/){
+				}
+				else(){
+					rewrite_links()
+					absolutize_srcs()
 
-  match($path){
-    with(/Branch_114/){
-    }
-    else(){
-      rewrite_links()
-      absolutize_srcs()
 
-        
-      # Add the mobile meta tags 
-      clean_mobile_meta_tags()
+					# Add the mobile meta tags
+					clean_mobile_meta_tags()
 
-        
-      # Needed to begin mobilizing
-      remove_all_styles()
-      remove_html_comments()
-      
-      # Late load all the images on the site
-      #lateload()
 
-      add_assets()
+					# Needed to begin mobilizing
+					remove_all_styles()
+					remove_html_comments()
 
-      @import sections/header.ts
-      @import sections/footer.ts
+					# Late load all the images on the site
+					#lateload()
 
-      @import sections/pagination.ts
+					add_assets()
 
-      @import mappings.ts
-    }
-  }
-  
+					@import sections/header.ts
+					@import sections/footer.ts
 
+					@import sections/pagination.ts
+
+					@import mappings.ts
+				}
+			}
+		}
+		else(){
+			rewrite_links()
+			absolutize_srcs()
+
+
+			# Add the mobile meta tags
+			clean_mobile_meta_tags()
+
+
+			# Needed to begin mobilizing
+			remove_all_styles()
+			remove_html_comments()
+
+			# Late load all the images on the site
+			#lateload()
+
+			add_assets()
+
+			@import sections/header.ts
+			@import sections/footer.ts
+
+			@import sections/pagination.ts
+
+			@import mappings.ts
+		}
+	}
 }
 
