@@ -28,6 +28,18 @@ $("/html"){
 					attributes(class: "_mainLink", id: "_VideoLink")
 				}
 				$("./div[3]"){
+					$(".//strong[contains(text(),'Product')]"){
+						$(".."){
+							$(".."){
+								$(".."){
+									remove()
+								}
+							}
+						}
+						
+					}
+				}
+				$("./div[3]"){
 					attributes(class: "_newsToggler", id: "_NewsLink")
 					$("./div"){
 						remove()
@@ -80,12 +92,17 @@ $("/html"){
 				}
 
 				$("./div[@class='_subLink']"){
-					move_here(".//a")
-					$("./div"){
-						remove()
-					}
+					 move_here(".//a")
+					# $("./div"){
+					# 	remove()
+					# }
 
 					$("./a"){
+						text(){
+							replace(/> /, "")
+						}
+					}
+					$(".//div"){
 						text(){
 							replace(/> /, "")
 						}
@@ -115,6 +132,11 @@ $("/html"){
 				}
 				$("./div[1]"){
 					attributes(class: "_titleContainer")
+					$("./strong"){
+						name(){
+							set("h2")
+						}
+					}
 				}
 				$("./div[2]"){
 					attributes(class: "_titleImage")
@@ -125,6 +147,19 @@ $("/html"){
 			}
 			$("./div[3]"){
 				attributes(class: "_textContent")
+				$("./div/p"){
+					add_class("_textSection")
+					$("./strong[1]"){
+						add_class("_textLink")
+						insert_after("br")
+					}
+					$("./strong[2]"){
+						add_class("_readMore")
+						insert_before("br")
+					}
+					insert_after("br")
+
+				}
 			}
 
 

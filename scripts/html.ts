@@ -4,8 +4,16 @@ $("/html") {
 	match($host){
 		with(/qa-whitecap/){
 			match($path){
-				with(/Branch_114/){
-				}
+				with(/Branch_114/){}
+        with(/Event-Registration/){}
+        with(/Events/){}
+        with(/Services-Rental-Centers/){}
+        with(/Services-Rebar-Fabrication/){}
+        with(/Services-Tool-Repair/){}
+        with(/Trader_Downloads/){}
+        with(/Footer_Catalog_Request/){}
+        with(/LP-Mobile-Site/){}
+
 				else(){
 					rewrite_links()
 					absolutize_srcs()
