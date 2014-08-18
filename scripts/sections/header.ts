@@ -408,7 +408,17 @@ $("./body"){
 	}
 
 	# Move GTM (Google Tag Manager) to top of body
+	$("./div[@id='body-content']"){
+		$("./script"){
+			match(text()){
+				with(/www.googletagmanager.com/){
+					move_to("../../../body", "top")
+				}
+			}
+		}	
+	}
 	move_here(".//noscript","top")
+	
 }
 
 $$(".checkout_wrapper"){
