@@ -4,7 +4,7 @@ $("/html") {
 	match($host){
 		with(/qa-whitecap/){
 			match($path){
-				with(/Branch-114/){}
+				with(/branch-114/){}
         with(/Event-Registration/){}
         with(/Events/){}
         with(/Services-Rental-Centers/){}
