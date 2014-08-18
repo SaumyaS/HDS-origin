@@ -114,11 +114,11 @@ match($status) {
 			# 	log("--> Importing Search")
 			# 	@import pages/search.ts
 			# }
-			with(/Store_Locations/){
+			with(/store-locations/){
 				log("--> Importing Store_Locations")
 				@import pages/location.ts
 			}
-			with(/Navigation_Help/){
+			with(/navigation-help/){
 				log("--> Importing contact us")
 				@import pages/contactus.ts
 			}

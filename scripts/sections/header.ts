@@ -406,10 +406,9 @@ $("./body"){
 			}
 		}
 	}
-	# $("./div[@id='dijit_DialogUnderlay_0']"){
-	# remove()
-	# }
 
+	# Move GTM (Google Tag Manager) to top of body
+	move_here(".//noscript","top")
 }
 
 $$(".checkout_wrapper"){
