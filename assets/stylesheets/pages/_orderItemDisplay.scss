@@ -14,6 +14,7 @@
 		padding: 5px;
 		font-size: 16px;
 	}
+	
 	#ShopcartPaginationText1{
 		text-align: right;
 		margin-right: 10px;
@@ -25,6 +26,10 @@
 	#order-summary{
 		display: block;
 		padding-bottom: 1px;
+		
+		h2{
+			padding-left: 5px;
+		}
 
 		>a{
 			margin-bottom: 10px;
@@ -151,6 +156,12 @@
 					color: #ff6311;
 				}
 
+			}
+			._removeSB{
+				a{
+					text-decoration: underline;
+					color: #ff6311;
+				}
 			}
 		}
 
@@ -386,7 +397,7 @@
 }
 
 ._margin-bottom{
-	margin-bottom: 50px;
+	margin-bottom: 55px;
 }
 
 #free_gifts_popup{

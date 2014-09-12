@@ -1,5 +1,7 @@
 
 
+remove(".//script[contains(@src,'jquery.dataTables.min.js')]")
+
 $$("#ad_17601"){
 		$("./img"){
 			attributes(style: "max-width: 74%;padding-left: 10px;margin-top: -6px;margin-bottom: -11px;")
@@ -14,7 +16,7 @@ $$("#requisition_list_popup_main_div"){
 
 $$("body"){
   	add_class("_home")
-  	table_dump(".//table")
+	table_dump(".//table")
 }
 
 $("./head"){

@@ -306,6 +306,9 @@ match($status) {
 				log("--> Importing processed Orders")
 				@import pages/processedOrders.ts
 			}
+			with(/RequisitionListReviewOrderView/){
+				@import pages/speedbuildReviewPage.ts
+			}
 			with(/RequisitionListDetailTableView/){
 				@import pages/RequisitionListDetailTableView.ts
 			}

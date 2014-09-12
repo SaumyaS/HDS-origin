@@ -52,11 +52,10 @@ $(".//div[@class='main_container']"){
 				}
 			}
 			$("./div[@id='detailsTable']"){
+				$("./div[@class='mw_was_thead']"){
+					remove()
+				}
 				$("./div[@class='mw_was_tbody']"){
-					$("./div[1]"){
-						attributes(class: "_title")
-						remove()
-					}
 					$("./div[contains(@class,'mw_was_tr')]"){
 						# attributes(class: "_items")
 						attributes(class: "color-bg disable")
@@ -140,22 +139,6 @@ $(".//div[@class='main_container']"){
 						}
 						$("./div[6]"){
 							attributes(class: "_imgContainer")
-							# Reduce image size, optimize
-							# $(".//img") {
-							# 	perf.optimize_image("src") {
-							# 		# Change image formats: jpeg, png, and webp!
-							# 		perf.format("jpeg")
-
-							# 		# # Resize the pixels
-							# 		perf.width("52")
-							# 		perf.height("52")
-
-							# 		# Change the image quality: 0 - 100
-							# 		# This affects the image resolution
-							# 		perf.quality("100")
-							# 	}
-							# }
-							# insert_top("label", class: "_imgTitle", "Image")
 						}
 						$("./div[7]"){
 							attributes(class: "_priceContainer")
@@ -173,10 +156,6 @@ $(".//div[@class='main_container']"){
 									}
 								}
 							}
-
-							# $("./span[contains(text(), 'SKU is inactive')]"){
-								
-							# }
 						}
 						$("./div[8]"){
 							attributes(class: "_totalPriceContainer")
@@ -190,29 +169,6 @@ $(".//div[@class='main_container']"){
 								attributes(style: "")
 							}
 						}
-						$("./div[@class='mw_was_td']"){
-							$(".."){
-								attributes(class: "_bottom")
-							}
-							$("./a[1]"){
-								attributes(id: "SubmitButton")
-							}
-							$("./a"){
-								attributes(style: "")
-								add_class("expand")
-								$(".."){
-									attributes(class: "_buttons")
-								}
-							}
-							$("./span"){
-								attributes(style: "")
-							}
-
-						}
-
-
-
-
 					}
 					$("./div[contains(@id, 'zrowB')]"){
 						remove()
@@ -241,6 +197,27 @@ $(".//div[@class='main_container']"){
 							move_to("../../../../div[@class='_priceHolder']")
 							insert_before("br")
 							insert_before("br")
+						}
+					}
+				}
+				$("./div[@class='mw_was_tfoot']"){
+					attributes(class: "_bottom")
+					$("./div[2]"){
+						attributes(class: "_buttonsContainer")
+						$("./div"){
+							$("./a[1]"){
+								attributes(id: "SubmitButton")
+							}
+							$("./a"){
+								attributes(style: "")
+								add_class("expand")
+								$(".."){
+									attributes(class: "_buttons")
+								}
+							}
+							$("./span"){
+								attributes(style: "")
+							}
 						}
 					}
 				}
