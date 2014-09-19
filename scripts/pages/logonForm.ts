@@ -22,6 +22,18 @@ $("//div[@class='login-box']"){
 					replace(/::/, ":")
 				}
 			}
+			$("./div"){
+				attributes(style: "")
+			}
+			$("./div[2]"){
+				attributes(class: "_userButtons")
+				remove_text_nodes()
+				$("./a[1]"){
+					insert_after("div", "or", class: "_or"){
+
+					}
+				}
+			}
 		}
 		$("./label[@for='password']"){
 			insert_before("br")
