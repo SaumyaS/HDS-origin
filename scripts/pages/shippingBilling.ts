@@ -38,12 +38,6 @@ $("/html/body"){
 				$("./input[@name='phone1']"){
 					attributes(type: "tel")
 				}
-				$("./span[@id='stateDiv2']"){
-					$("./a"){
-						add_class("_shipCalculate")
-						add_class("expand")
-					}
-				}
 				move_here("./span[@id='stateDiv2']/a[contains(@class,'_shipCalculate')]", "bottom")
 			}
 			$("./div[@class='sub-col']/form"){
