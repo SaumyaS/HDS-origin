@@ -222,7 +222,7 @@
 			border: 2px solid #555;
 			padding: 10px 10px 10px 130px;
 			background-color: #ededed;
-			height: 114px;
+			height: 135px;
 			margin: 10px 5px;
 			font-weight: bold;
 			font-size: 16px;
@@ -231,7 +231,7 @@
 				margin-top: -8px;
 				position: absolute;
 				width: 95px;
-				height: 120px;
+				height: 135px;
 				color: white;
 				background-color: #555555;
 				padding: 5px;
@@ -256,6 +256,12 @@
 			a{
 				font-size: 13px;
 				margin-left: -17px;
+			}
+			p{
+				font-size: 67% !important;
+				margin-left: -15px;
+				line-height: 1.5;
+				margin-top: 5px;
 			}
 		}
 		._tax{
