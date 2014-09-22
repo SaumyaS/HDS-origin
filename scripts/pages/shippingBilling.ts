@@ -59,6 +59,7 @@ $("/html/body"){
 			}
 			$(".//form[@id='PromotionCodeForm']"){
 				$("./a"){
+					add_class("expand")
 					insert_before("br")
 				}
 			}
