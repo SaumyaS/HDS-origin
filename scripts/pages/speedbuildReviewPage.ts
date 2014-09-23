@@ -67,6 +67,7 @@ $("/html"){
 			}
 			$("./div[@id='order-total']"){
 				$("./div"){
+					attributes(style: "", class: "_order_total")
 					$("./label"){
 						insert_before("br")
 					}
