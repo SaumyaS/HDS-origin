@@ -51,10 +51,10 @@ $(".//div[@class='main_container']"){
 					attributes(style: "")
 				}
 				$("./a[@id='selectAllBtn']"){
-					attributes(onclick: "javascript:selectAllRowMB();")
+					attributes(onclick: "javascript:selectAllRowM();")
 				}
 				$("./a[@name='deselectAllBtn']"){
-					attributes(onclick: "javascript:deselectAllRowMB();")
+					attributes(onclick: "javascript:deselectAllRowM();")
 				}
 			}
 			$("./div[@id='detailsTable']"){

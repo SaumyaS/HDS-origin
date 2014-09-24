@@ -1,6 +1,6 @@
 
 
-function deselectAllRowMB(){
+function deselectAllRowM(){
 	var totalLineItems = document.getElementById("totalOrderItems").value;
 	for(var x=1;x<=totalLineItems;x++) {
 	    document.getElementById("chkselected_"+x).value="false";
@@ -23,10 +23,10 @@ function deselectAllRowMB(){
         	}
         }
     }
-    updateAllListItems("unSelectItems","N");
+    updateAllListItemsM("unSelectItems","N");
 }
 
-function selectAllRowMB(){
+function selectAllRowM(){
 	var totalLineItems = document.getElementById("totalOrderItems").value;
 	for(var i=1;i<=totalLineItems;i++) {
 		document.getElementById("chkselected_"+i).value="true";
@@ -82,5 +82,52 @@ function selectAllRowMB(){
 
 
 
-    updateAllListItems("selectItems","Y");
+    updateAllListItemsM("selectItems","Y");
+}
+
+function updateAllListItemsM(operation,status) {
+	var params = {};
+	var totalLineItems = document.getElementById("totalOrderItems").value;
+    for(var i=1;i<=totalLineItems;i++) {
+    	if (document.getElementById("checkboxOrg" + i).checked && status=='Y'){
+			if(document.getElementById("singleOutPrice_" + i).value != null && document.getElementById("singleOutPrice_" + i).value != 0 && document.getElementById("singleOutPrice_" + i).value != ""){
+	    			var orderItemId = document.getElementById("orderItemId_"+i).value;
+	    			params["orderItemId_"+i] = orderItemId;
+	    			params["price_"+i] = RequisitionList.getSingleOutPrice(i);
+			}
+    	}
+    	else{
+    		if (document.getElementById("buyable_"+i) != null && document.getElementById("buyable_"+i) != undefined && document.getElementById("buyable_"+i).value=='false'){
+    			
+    		}
+    		else{
+    			if (document.getElementById("checkboxOrg" + i).disabled != "true"){
+    				var orderItemId = document.getElementById("orderItemId_"+i).value;
+		    		params["orderItemId_"+i] = orderItemId;
+		    		params["price_"+i] = RequisitionList.getSingleOutPrice(i);
+    			}
+    			if(document.getElementById("totalPrice_" + i) != null && document.getElementById("totalPrice_" + i) != undefined){
+    	    		var numberString = new String(document.getElementById("totalPrice_" + i).innerHTML);
+    	    		if(numberString.indexOf("Price") == -1){
+			    		var orderItemId = document.getElementById("orderItemId_"+i).value;
+			    		params["orderItemId_"+i] = orderItemId;
+			    		params["price_"+i] = RequisitionList.getSinglePrice(i);
+    				}
+    	    		if(numberString.indexOf("Quote") == -1){
+			    		var orderItemId = document.getElementById("orderItemId_"+i).value;
+			    		params["orderItemId_"+i] = orderItemId;
+			    		params["price_"+i] = RequisitionList.getSinglePrice(i);
+    				}
+    			}
+    		}
+    	}
+    }
+    params.status=status;
+	params.operation = operation;
+	params.orderId = document.getElementById("WC_NonAjaxRequisitionListDetailDisplay_FormInput_0").value;
+	if(!submitRequest()){
+		return;
+	}
+	cursor_wait();
+	wc.service.invoke("AjaxUpdateQBListCmd", params);
 }
