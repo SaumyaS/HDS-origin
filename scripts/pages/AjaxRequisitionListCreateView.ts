@@ -50,6 +50,12 @@ $(".//div[@class='main_container']"){
 					add_class("expand")
 					attributes(style: "")
 				}
+				$("./a[@id='selectAllBtn']"){
+					attributes(onclick: "javascript:selectAllRowMB();")
+				}
+				$("./a[@name='deselectAllBtn']"){
+					attributes(onclick: "javascript:deselectAllRowMB();")
+				}
 			}
 			$("./div[@id='detailsTable']"){
 				$("./div[@class='mw_was_thead']"){
