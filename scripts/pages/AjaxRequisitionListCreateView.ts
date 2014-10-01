@@ -74,12 +74,6 @@ $(".//div[@class='main_container']"){
 					add_class("expand")
 					attributes(style: "")
 				}
-				$("./a[@id='selectAllBtn']"){
-					attributes(onclick: "javascript:selectAllRowM();")
-				}
-				$("./a[@name='deselectAllBtn']"){
-					attributes(onclick: "javascript:deselectAllRowM();")
-				}
 				insert_after("div", class: "_SBsearchContainer")
 			}
 			
