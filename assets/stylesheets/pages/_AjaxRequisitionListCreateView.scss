@@ -59,6 +59,25 @@
 					margin: 2px 0;
 				}
 			}
+			._SBsearchContainer{
+				height: 38px;
+				margin-top: 3px;
+				margin-bottom: -25px;
+				#search{
+					width: 80px;
+				}
+				#findBtn{
+					float: right;
+					margin-top: 2px;
+					width: 50px;
+				}
+				#resetBtn{
+					float: right;
+					margin-top: 2px;
+					width: 50px;
+					margin-left: 10px;
+				}
+			}
 			#detailsTable{
 				label{
 					min-width: 90px;
@@ -100,6 +119,8 @@
 
 				}
 				._productContainer{
+					// border-bottom: 1px dashed #999;
+					// padding-bottom: 5px;
 					._toggle{
 						display: inline-block;
 						padding: 5px;
@@ -138,6 +159,8 @@
 				}
 				._quantityContainer{
 					border-bottom: 1px dashed #999;
+					// float: right;
+					// width: 93px;
 					._quantityTitle {
 						float: left;
 						margin-top: 9px;

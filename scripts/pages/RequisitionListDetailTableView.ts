@@ -1,9 +1,50 @@
+$$("#RequisitionListAdd_Widget"){
+	$("./input[@id='searchURL']"){
+		$value = fetch("@value")
+		$value{
+			match($host){
+				with(/whitecap.com/){
+					replace(/whitecap.com/,"m.whitecap.com")
+				}
+				with(/stg-whitecap/){
+					replace(/stg-whitecap/,"mstage.stg-whitecap")
+				}
+				with(/qa-whitecap/){
+					replace(/qa-whitecap/,"mqa.qa-whitecap")
+				}
+				# with(/qa-whitecap/){
+				# 	replace(/qa-whitecap/,"mlocal.qa-whitecap")
+				# }
+			}
+			
+		}
+		attributes(value: $value)
+	}
+}
+
 $$("#shoppingdetail-note"){
 	$("./a"){
 		add_class("expand")
 		attributes(style: "")
 	}
+	$("./a[@id='selectAllBtn']"){
+		attributes(onclick: "javascript:selectAllRowM();")
+	}
+	$("./a[@name='deselectAllBtn']"){
+		attributes(onclick: "javascript:deselectAllRowM();")
+	}
+	insert_after("div", class: "_SBsearchContainer")
 }
+
+$$("._SBsearchContainer"){
+	move_here("../input[@id='search']"){
+		attributes(style: "")
+	}
+	move_here("../a[@id='findBtn']"){
+		attributes(style: "")
+	}
+}
+
 $$("#detailsTable"){
 	$("./div[@class='mw_was_tbody']"){
 		$("./div[1]"){

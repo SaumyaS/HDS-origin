@@ -325,6 +325,9 @@ match($status) {
 			with(/RequisitionListTableView/){
 				@import pages/requisitionListTableView.ts
 			}
+			with(/FindQBListCmd/){
+				@import pages/FindQBListCmd.ts
+			}
 			with(/WillCallModalView/){
 				log("--> Importing WillCallModalView")
 				@import pages/WillCallModalView.ts

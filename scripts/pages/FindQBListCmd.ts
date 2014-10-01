@@ -6,7 +6,7 @@ $$("#ad_17601"){
 $(".//div[@class='main_container']"){
 	add_class("_reqListCreateView")
 
-	$("./div[@id='RequisitionListAdd_Widget']"){
+		$("./div[@id='RequisitionListAdd_Widget']"){
 		$("./input[@id='searchURL']"){
 			$value = fetch("@value")
 			$value{
@@ -53,9 +53,6 @@ $(".//div[@class='main_container']"){
 						}
 						$("./div[2]"){
 							attributes(class: "_address")
-							# text(){
-							# 	replace(//)
-							# }
 						}
 					}
 				}
@@ -87,6 +84,9 @@ $(".//div[@class='main_container']"){
 				move_here("../input[@id='search']"){
 					attributes(style: "")
 				}
+				move_here("../a[@id='resetBtn']"){
+					attributes(style: "")
+				}
 				move_here("../a[@id='findBtn']"){
 					attributes(style: "")
 				}
@@ -103,14 +103,12 @@ $(".//div[@class='main_container']"){
 						}
 					}
 					$("./div[contains(@id,'row')]"){
-						# attributes(class: "_items")
 						attributes(class: "color-bg disable")
 						$("./div[1]/input"){
 							$(".."){
 								attributes(class: "_checkboxContainer")
 							}
 							attributes(class: "_checkbox")
-							# insert_before("label", class: "_checkboxTitle", "Select")
 						}
 						$("./div[2]/div[1]"){
 							$(".."){
@@ -162,10 +160,12 @@ $(".//div[@class='main_container']"){
 							}
 							attributes(class: "_productName")
 
+							# insert_before("label", class: "_productNameTitle", "Name")
 							
 						}
 						$("./div[3]"){
 							attributes(class: "_skuContainer")
+							# insert_top("label", class: "_skuTitle", "SKU")
 						}
 						$("./div[4]"){
 							attributes(class: "_quantityContainer")
@@ -173,6 +173,7 @@ $(".//div[@class='main_container']"){
 							$("./div/input[contains(@id, 'quantity')]"){
 								attributes(type: "tel", class: "_quantity")
 							}
+
 						}
 						$("./div[5]"){
 							wrap("div"){
@@ -212,15 +213,6 @@ $(".//div[@class='main_container']"){
 								attributes(style: "")
 							}
 						}
-						# $("./div[@class='_productContainer']"){
-						# 	insert_before("div", class: "_quantityContainer"){
-						# 		move_here("../div[@class='_quantityContainerM']/label[@class='_quantityTitle']")
-						# 		move_here("../div[@class='_quantityContainerM']/div[contains(@id, 'tooltip')]")
-						# 	}
-						# 	$("../div[@class='_quantityContainerM']"){
-						# 		remove()
-						# 	}
-						# }
 					}
 					$("./div[contains(@id, 'zrowB')]"){
 						remove()
@@ -280,11 +272,5 @@ $(".//div[@class='main_container']"){
 					
 			}
 		}
-	}
-}
-
-$("/html"){
-	$("./body"){
-		move_here("//img[contains(@src, 'expand_icon.gif')]", "bottom")
 	}
 }
