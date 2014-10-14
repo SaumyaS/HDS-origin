@@ -28,6 +28,11 @@ $(document).ready(function() {
 		$("._waiting").show();
 	});
 
+	$("._quantityInput").on('click', function(){
+		this.focus();
+		this.setSelectionRange(0,999);
+	});
+
 	$(".category-item:empty").remove();
 	$("._industries:empty").remove();
 
@@ -74,20 +79,64 @@ $(document).ready(function() {
 	});
 });
 
-$(".cart_check_btn").DOMNodeAppear(function () {
+$("#shopcartContainer .cart_check_btn").DOMNodeAppear(function () {
 
-	var str = $(".cart_check_btn").text();
-	var empty = "cart empty";
-	var full = "cart checkout";
-	str = str.toLowerCase();
-	str = str.trim();
+	var empty = $("#shopcartContainer .cart_check_btn").text();
+	var full = $("#shopcartContainer .checkout_text").text();
+	var quantity = $("#shopcartContainer .checkout_quanitity").text();
+	var emptyStr = "cart empty";
+	var fullStr = "cart checkout";
+	empty = empty.toLowerCase();
+	empty = empty.trim();
+	full = full.toLowerCase();
+	full = full.trim();
 
-	if (str.localeCompare(empty) === 0) {
+
+	if (empty.localeCompare(emptyStr) === 0) {
+
+		$("._cartStatus").hide();
+		$("#image-cart .checkout_quanitity").css("display", "none");
+		$("#cart-indicator").css("display", "none");
+		$("#cart-indicator").attr("class", "");
+		$("#cart-indicator").hide();
 		$("#cart-image").attr("class", "Icons-cart-empty");
 	}
-	if (str.localeCompare(full) === 0) {
+	else if (full.localeCompare(fullStr) === 0) {
+
+		var $checkout_info = $("#image-cart .checkout_info");
+
+		if($checkout_info.length === 0){
+			$("#image-cart .cart_check_btn").append("<div class='checkout_info'><div class='checkout_quanitity'></div><div id='cart_indicator'></div></div>");
+		}
+
 		$("#cart-image").attr("class", "Icons-cart-full");
+		$("#cart-indicator").css("display", "block");
+		$("#cart_indicator").attr("class", "Icons-cart-indicator");
+		if(quantity < 100){
+			$("#image-cart .checkout_quanitity").text(quantity);
+			$("#image-cart .checkout_quanitity").css("font-weight", "none");
+			$("#image-cart .checkout_quanitity").css("font-size", "13px");
+		}
+		else{
+			$("#image-cart .checkout_quanitity").text("+");
+			$("#image-cart .checkout_quanitity").css("font-weight", "bold");
+			$("#image-cart .checkout_quanitity").css("font-size", "19px");
+		}
+
+		if(quantity < 10){
+			$("#image-cart .checkout_quanitity").css("left", "24px");
+		}
+		else if(quantity < 100){
+			$("#image-cart .checkout_quanitity").css("left", "20px");
+		}
+		else{
+			$("#image-cart .checkout_quanitity").css("left", "22px");
+			$("#image-cart .checkout_quanitity").css("top", "-37px")
+		}
+
+
 	}
+
 });
 
 $(".close").DOMNodeAppear(function(){
@@ -132,6 +181,9 @@ $("#errormsgDialog_title").DOMNodeAppear(function(){
 $("#dijit_DialogUnderlay_0").DOMNodeAppear(function(){
 	$("#dijit_DialogUnderlay_0").hide();
 });
+$("#quick_cart_container").DOMNodeAppear(function(){
+	$("#quick_cart_container").hide();
+});
 
 $("#progress_bar").DOMNodeAppear(function(){
 	$("#progress_bar").attr("style", "display:none !important;");
@@ -146,6 +198,7 @@ function errorMessagePosition(){
 			$("#dijit__MasterTooltip_0").css("left", left);
 	}, 1);
 }
+
 
 
 

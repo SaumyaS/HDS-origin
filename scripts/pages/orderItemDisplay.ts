@@ -50,7 +50,7 @@ $$(".order-confirm"){
 					}
 				}
 				$("./input"){
-					attributes(type: "tel")
+					attributes(type: "tel", class: "_quantityInput")
 				}
 			}
 			$("./div[6]"){

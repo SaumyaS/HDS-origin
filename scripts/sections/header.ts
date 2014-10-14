@@ -7,7 +7,7 @@ $$("#ad_17601"){
 			attributes(style: "max-width: 74%;padding-left: 10px;margin-top: -6px;margin-bottom: -11px;")
 		}
 		# insert("div", class: "Icons-white-cap-logo-no-tagline", )
-	move_here("//div[@id='_icons_bar']")
+	# move_here("//div[@id='_icons_bar']")
 }
 
 $$("#requisition_list_popup_main_div"){
@@ -256,31 +256,45 @@ $$(".checkout_wrapper"){
 		
 
 		insert("div", id: "image-cart"){
-		  	copy_here("//div[@id='shopping-cart']"){
-		  		$(".//a[@id='shoppingCartBar']"){
-					wrap_text_children("span") {
-						match(text()) {
-							with(/Empty/){
-								$("../img") {
-									remove()
-								}
-						 		insert("div", id: "cart-image")
+		  	copy_here("//a[@id='shoppingCartBar']"){
+				wrap_text_children("span", class: "_cartStatus") {
+					attributes(style: "display:none;")
+					match(text()) {
+						with(/Empty/){
+							$("../img") {
+								remove()
 							}
-							with(/Checkout/){
-						  		$("../img") {
-									remove()
-						  		}
-						  		insert("div", id: "cart-image")
+					 		insert_before("div", id: "cart-image")
+						}
+						else(){
+							$("../span[1]"){
+								remove()
 							}
 						}
-						remove_text_nodes()
 					}
+					# remove_text_nodes()
+				}
+				$("./div[@class='checkout_text']"){
+					attributes(style: "display:none;")
+				}
+				$("./div[@class='checkout_info']"){
+					attributes(style: "")
+					$("./div[2]"){
+						remove()
+					}
+					$("./div[@class='checkout_price']"){
+						attributes(style: "display:none;")
+					}
+					insert_before("div", id: "cart-image")
+					insert("div", id: "cart_indicator")
 				}
 		  	}
 		  	add_class("_cart")
 		}
 		insert("div", id: "image-user", data-ur-tab-id: "user", data-ur-tabs-component: "button")
 		insert("div", id: "image-menu")
+
+		remove(".//a[contains(@href, 'wc/home')]")
 	}
 
 	$$("#image-menu"){
