@@ -125,9 +125,11 @@ $("#shopcartContainer .cart_check_btn").DOMNodeAppear(function () {
 
 		if(quantity < 10){
 			$("#image-cart .checkout_quanitity").css("left", "24px");
+			$("#image-cart .checkout_quanitity").css("top", "-35px");
 		}
 		else if(quantity < 100){
 			$("#image-cart .checkout_quanitity").css("left", "20px");
+			$("#image-cart .checkout_quanitity").css("top", "-35px");
 		}
 		else{
 			$("#image-cart .checkout_quanitity").css("left", "22px");
