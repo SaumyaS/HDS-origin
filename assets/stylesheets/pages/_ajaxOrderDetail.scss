@@ -47,6 +47,7 @@
 					display: block;
 					float: left;
 					width: 30%;
+					padding-right: 9px;
 				}
 				.info{
 					display: block;
@@ -166,6 +167,38 @@
 				margin-left: 10px;
 				margin-right: 10px;
 				margin-bottom: 10px;
+			}
+		}
+		._returnSummary{
+			#collapse1{
+				._retContentContainer{
+					border: 2px solid #aaa;
+					background: white;
+					clear: both;
+					line-height: 140%;
+					margin: 10px 5px;
+					overflow: hidden;
+					padding: 10px;
+					
+					._orderSummaryContainer{
+						padding-top: 10px;
+					}
+					.order-product-info{
+						margin: 10px 0;
+						._skuInfo{
+							margin-left: 100px;
+							span{
+								min-width: 118px;
+								display: inline-block;
+							}
+							._credBT{
+								min-width: 121px;
+								display: inline-block;
+							}
+						}
+					}
+				}
+					
 			}
 		}
 	}

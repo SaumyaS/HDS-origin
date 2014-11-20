@@ -169,6 +169,10 @@ $("._orderDetails").DOMNodeAppear(function() {
 	Ur.setup("._orderSummaryContainer");
 });
 
+$("._orderDetails").DOMNodeAppear(function() {
+	Ur.setup("[id^=collapse]");
+});
+
 $(".highslide-container").DOMNodeAppear(function(){
 	$('.highslide-container').hide();
 });

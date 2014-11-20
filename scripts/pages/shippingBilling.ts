@@ -31,12 +31,27 @@ $("/html/body"){
 	
 
 		$("./div[@class='checkout-container']"){
+			$("./div[@class='sub-col']"){
+				$("./div[@id='willCallDisplayArea']"){
+					remove("./br")
+					$("./br"){
+						remove()
+					}
+				}
+
+			}
 			$("./div[@class='sub-col']/div[@id='willCallShippingAddressForm']/form"){
 				$("./input[@name='zipCode']"){
 					attributes(type: "tel")
 				}
 				$("./input[@name='phone1']"){
 					attributes(type: "tel")
+				}
+				$("./span[@id='stateDiv2']"){
+					$("./a[@class='btn']"){
+						add_class("_shipCalculate")
+						add_class("expand")
+					}
 				}
 				move_here("./span[@id='stateDiv2']/a[contains(@class,'_shipCalculate')]", "bottom")
 			}
@@ -168,5 +183,10 @@ $$(".card_info"){
 				}
 			}
 		}
+	}
+}
+$$("#willCallDisplayArea"){
+	$(".//br"){
+		remove()
 	}
 }
