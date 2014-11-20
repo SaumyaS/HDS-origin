@@ -360,5 +360,14 @@ $$("._returnSummary"){
 				move_here("../../div[contains(@class,'order-product-last')]/div[contains(@class,'_sku')]")
 			}
 		}
+		$("./div[@id='order-total']"){
+			$(".//label[@class='total_details']"){
+				insert_before("br")
+			}
+			$(".//br[1]"){
+				remove()
+			}
+
+		}
 	}
 }
