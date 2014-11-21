@@ -173,7 +173,7 @@
 			}
 		}
 		._returnSummary{
-			#collapse1{
+			div[id*='collapse']{
 				._retContentContainer{
 					border: 2px solid #aaa;
 					background: white;

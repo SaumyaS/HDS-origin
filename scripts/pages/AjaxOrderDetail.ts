@@ -38,8 +38,8 @@ $("/html"){
 		}
 		insert_after("div", class: "_returnSummary"){
 			move_here("../h1")
-			move_here("../div[@id='expand1']")
-			move_here("../div[@id='collapse1']")
+			move_here("../div[contains(@id,'expand')]")
+			move_here("../div[contains(@id,'collapse')]")
 		}
 	}
 	$(".//div[@class='_returnSummary']"){
@@ -49,6 +49,9 @@ $("/html"){
 		}
 		$("./div[contains(@id,'collapse')]"){
 			$("./br"){
+				remove()
+			}
+			$("./br[1]"){
 				remove()
 			}
 			attributes(style:"")
@@ -368,6 +371,14 @@ $$("._returnSummary"){
 				remove()
 			}
 
+		}
+	}
+}
+
+$("/html"){
+	$(".//div[contains(@id, 'collapse')]"){
+		$("./br"){
+			remove()
 		}
 	}
 }
