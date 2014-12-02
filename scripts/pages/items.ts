@@ -8,10 +8,10 @@ $("/html"){
 		$(".//div[@class='brandname_breadcrumbs']"){
 			$("./ul"){
 				$("./li[1]"){
-					add_class("_itemInfo")
+					add_class("_brandInfo")
 				}
 				$("./li[3]"){
-					add_class("_itemInfo")
+					add_class("_brandInfo")
 				}
 			}
 		}
