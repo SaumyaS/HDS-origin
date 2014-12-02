@@ -127,7 +127,7 @@ match($status) {
 				log("--> Importing Resources home")
 				@import pages/Resource_Page/resources_home.ts
 			}
-			with(/Resources_mVideo/){
+			with(/mresources-video/){
 				log("--> Importing Resources video")
 				@import pages/Resource_Page/resource_video.ts
 			}
