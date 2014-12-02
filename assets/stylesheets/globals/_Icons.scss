@@ -1,169 +1,188 @@
 $Icons-url: url("/_moovweb_local_assets_/images/Icons.png");
 
-$Icons-width: 470px;
-$Icons-height: 504px;
+$Icons-width: 544px;
+$Icons-height: 597px;
+
+$Icons-HDS_WhiteCap-logo-x: 0px;
+$Icons-HDS_WhiteCap-logo-y: 0.5px;
+$Icons-HDS_WhiteCap-logo-width: 272px;
+$Icons-HDS_WhiteCap-logo-height: 46px;
 
 $Icons-HDSupply-Logo-x: 0px;
-$Icons-HDSupply-Logo-y: 0px;
+$Icons-HDSupply-Logo-y: -46.5px;
 $Icons-HDSupply-Logo-width: 235px;
 $Icons-HDSupply-Logo-height: 70px;
 
 $Icons-cart-empty-x: 0px;
-$Icons-cart-empty-y: -71px;
+$Icons-cart-empty-y: -117.5px;
 $Icons-cart-empty-width: 30px;
 $Icons-cart-empty-height: 30px;
 
 $Icons-cart-full-x: 0px;
-$Icons-cart-full-y: -102px;
+$Icons-cart-full-y: -148.5px;
 $Icons-cart-full-width: 30px;
 $Icons-cart-full-height: 30px;
 
 $Icons-cart-indicator-x: 0px;
-$Icons-cart-indicator-y: -133px;
+$Icons-cart-indicator-y: -179.5px;
 $Icons-cart-indicator-width: 20px;
 $Icons-cart-indicator-height: 20px;
 
 $Icons-check-x: 0px;
-$Icons-check-y: -308px;
+$Icons-check-y: -401px;
 $Icons-check-width: 20px;
 $Icons-check-height: 20px;
 
 $Icons-male_user-x: 0px;
-$Icons-male_user-y: -165px;
+$Icons-male_user-y: -211.5px;
 $Icons-male_user-width: 30px;
 $Icons-male_user-height: 30px;
 
 $Icons-menu-x: 0px;
-$Icons-menu-y: -196px;
+$Icons-menu-y: -242.5px;
 $Icons-menu-width: 30px;
 $Icons-menu-height: 30px;
 
 $Icons-uncheck-x: 0px;
-$Icons-uncheck-y: -454px;
+$Icons-uncheck-y: -547px;
 $Icons-uncheck-width: 20px;
 $Icons-uncheck-height: 20px;
 
 $Icons-white-cap-logo-no-tagline-x: 0px;
-$Icons-white-cap-logo-no-tagline-y: -475px;
+$Icons-white-cap-logo-no-tagline-y: -568px;
 $Icons-white-cap-logo-no-tagline-width: 147px;
 $Icons-white-cap-logo-no-tagline-height: 29px;
 
+@mixin Icons-HDS_WhiteCap-logo() {
+  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px 0.5px;
+  @include background-size(272px 298.5px);
+  width: 272px;
+  height: 46px;
+}
+
 @mixin Icons-HDSupply-Logo() {
-  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px 0px;
-  @include background-size(235px 252px);
+  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -46.5px;
+  @include background-size(272px 298.5px);
   width: 235px;
   height: 70px;
 }
 
 @mixin Icons-cart-empty() {
-  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -71px;
-  @include background-size(235px 252px);
+  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -117.5px;
+  @include background-size(272px 298.5px);
   width: 30px;
   height: 30px;
 }
 
 @mixin Icons-cart-full() {
-  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -102px;
-  @include background-size(235px 252px);
+  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -148.5px;
+  @include background-size(272px 298.5px);
   width: 30px;
   height: 30px;
 }
 
 @mixin Icons-cart-indicator() {
-  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -133px;
-  @include background-size(235px 252px);
+  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -179.5px;
+  @include background-size(272px 298.5px);
   width: 20px;
   height: 20px;
 }
 
 @mixin Icons-check() {
-  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -308px;
+  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -401px;
   width: 20px;
   height: 20px;
 }
 
 @mixin Icons-male_user() {
-  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -165px;
-  @include background-size(235px 252px);
+  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -211.5px;
+  @include background-size(272px 298.5px);
   width: 30px;
   height: 30px;
 }
 
 @mixin Icons-menu() {
-  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -196px;
-  @include background-size(235px 252px);
+  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -242.5px;
+  @include background-size(272px 298.5px);
   width: 30px;
   height: 30px;
 }
 
 @mixin Icons-uncheck() {
-  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -454px;
+  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -547px;
   width: 20px;
   height: 20px;
 }
 
 @mixin Icons-white-cap-logo-no-tagline() {
-  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -475px;
+  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -568px;
   width: 147px;
   height: 29px;
 }
 
+.Icons-HDS_WhiteCap-logo {
+  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px 0.5px;
+  background-size: 272px 298.5px;
+  width: 272px;
+  height: 46px;
+}
+
 .Icons-HDSupply-Logo {
-  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px 0px;
-  background-size: 235px 252px;
+  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -46.5px;
+  background-size: 272px 298.5px;
   width: 235px;
   height: 70px;
 }
 
 .Icons-cart-empty {
-  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -71px;
-  background-size: 235px 252px;
+  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -117.5px;
+  background-size: 272px 298.5px;
   width: 30px;
   height: 30px;
 }
 
 .Icons-cart-full {
-  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -102px;
-  background-size: 235px 252px;
+  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -148.5px;
+  background-size: 272px 298.5px;
   width: 30px;
   height: 30px;
 }
 
 .Icons-cart-indicator {
-  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -133px;
-  background-size: 235px 252px;
+  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -179.5px;
+  background-size: 272px 298.5px;
   width: 20px;
   height: 20px;
 }
 
 .Icons-check {
-  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -308px;
+  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -401px;
   width: 20px;
   height: 20px;
 }
 
 .Icons-male_user {
-  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -165px;
-  background-size: 235px 252px;
+  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -211.5px;
+  background-size: 272px 298.5px;
   width: 30px;
   height: 30px;
 }
 
 .Icons-menu {
-  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -196px;
-  background-size: 235px 252px;
+  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -242.5px;
+  background-size: 272px 298.5px;
   width: 30px;
   height: 30px;
 }
 
 .Icons-uncheck {
-  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -454px;
+  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -547px;
   width: 20px;
   height: 20px;
 }
 
 .Icons-white-cap-logo-no-tagline {
-  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -475px;
+  background: url("/_moovweb_local_assets_/images/Icons.png") no-repeat 0px -568px;
   width: 147px;
   height: 29px;
 }

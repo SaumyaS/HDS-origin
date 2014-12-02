@@ -5,7 +5,14 @@
 		"$.stg-whitecap.ecom.hdsupply.com => stg-whitecap.ecom.hdsupply.com",
 		"$.whitecap.com => www.whitecap.com",
 		"$.whitecap.com => whitecap.com",
-		"$.blog.whitecap.com => blog.whitecap.com"
+		"$.blog.whitecap.com => blog.whitecap.com",
+		"$.dev-whitecap.ecom.hdsupply.com => dev-whitecap.ecom.hdsupply.com",
+		"$.ghdecomdemo1.hsi.hughessupply.com => ghdecomdemo1.hsi.hughessupply.com",
+		"$.ghdecomdemo4.hsi.hughessupply.com => ghdecomdemo4.hsi.hughessupply.com"
+	],
+	"ssl_whitelist": [
 
+		"ghdecomdemo1.hsi.hughessupply.com",
+		"dev-whitecap.ecom.hdsupply.com"
 	]
 }

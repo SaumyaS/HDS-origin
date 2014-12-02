@@ -31,12 +31,30 @@ $("/html/body"){
 	
 
 		$("./div[@class='checkout-container']"){
+			$("./div[@class='sub-col']"){
+				$("./div[@class='label_spacer']"){
+					attributes(style: "")
+				}
+				$("./div[@id='willCallDisplayArea']"){
+					remove("./br")
+					$("./br"){
+						remove()
+					}
+				}
+
+			}
 			$("./div[@class='sub-col']/div[@id='willCallShippingAddressForm']/form"){
 				$("./input[@name='zipCode']"){
 					attributes(type: "tel")
 				}
 				$("./input[@name='phone1']"){
 					attributes(type: "tel")
+				}
+				$("./span[@id='stateDiv2']"){
+					$("./a[@class='btn']"){
+						add_class("_shipCalculate")
+						add_class("expand")
+					}
 				}
 				move_here("./span[@id='stateDiv2']/a[contains(@class,'_shipCalculate')]", "bottom")
 			}
@@ -46,6 +64,9 @@ $("/html/body"){
 				}
 				$("./input[@name='phone1']"){
 					attributes(type: "tel")
+				}
+				$("./div[3]"){
+					attributes(style: "")
 				}
 			}
 			$("./br"){
@@ -81,7 +102,17 @@ $("/html/body"){
 	}
 
 	$$(".shipping_method_content"){
-		
+		$("./div[@id='willCallShippingMethods']"){
+			$(".//span[1]"){
+				attributes(style: "")
+			}
+			$(".//span[2]"){
+				attributes(style: "")
+			}
+			$(".//span[3]"){
+				attributes(style: "")
+			}
+		}
 		$("./label[2]"){
 			inner(){
 				replace(/Shipping:Comments/, "Shipping:<br>Comments")
@@ -168,5 +199,10 @@ $$(".card_info"){
 				}
 			}
 		}
+	}
+}
+$$("#willCallDisplayArea"){
+	$(".//br"){
+		remove()
 	}
 }

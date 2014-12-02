@@ -36,7 +36,83 @@ $("/html"){
 				}
 			}
 		}
+		insert_after("div", class: "_returnSummary"){
+			move_here("../h1")
+			move_here("../div[contains(@id,'expand')]")
+			move_here("../div[contains(@id,'collapse')]")
+		}
 	}
+	$(".//div[@class='_returnSummary']"){
+		# attributes(data-ur-set: "toggler")
+		$("./div[contains(@id,'expand')]"){
+			remove()
+		}
+		$("./div[contains(@id,'collapse')]"){
+			$("./br"){
+				remove()
+			}
+			$("./br[1]"){
+				remove()
+			}
+			attributes(style:"")
+			$("./div[1]"){
+				remove()
+			}
+			wrap_text_children("div")
+			$("./div[1]"){
+				remove()
+			}
+			$("./div[1]"){
+				remove()
+			}
+			$("./div[1]"){
+				remove()
+			}
+			$("./div[4]"){
+				remove()
+			}
+			$("./label[1]"){
+				attributes(class: "_retNumber", style: "font-weight:normal;")
+			}
+			$("./label[2]"){
+				attributes(style: "min-width:80px;font-weight:normal;", class: "_retDate")
+				wrap_text_children("strong")
+				insert_before("br")
+				move_here("../div[1]")
+				$("./div"){
+					unwrap()
+				}
+			}
+			insert_top("div", class: "_retSummaryButton"){
+			 	move_here("../label")
+			 	insert_after("div", class: "_retContentContainer")
+			}
+
+			$("./div[3]"){
+				attributes(class: "_retComment", style: "")
+			}
+
+			$("./div[@class='_retContentContainer']"){
+				move_here("../div[@class='_retComment']")
+				move_here("../div[contains(@class,'checkout-container')]")
+			}
+
+		}
+
+		#implement toggler
+		# this has to be enabled with a Ur.setup() call
+		$("./div[contains(@id,'collapse')]"){
+			attributes(data-ur-set: "toggler")
+			$("./div[@class='_retSummaryButton']"){
+				attributes(data-ur-toggler-component: "button")
+			}
+			$("./div[@class='_retContentContainer']"){
+				attributes(data-ur-toggler-component: "content")
+			}
+		}
+	}
+
+
 }
 
 $$("._paymentInfo"){
@@ -213,6 +289,13 @@ $$(".checkout-container"){
 			# 	insert_before("br")
 			# }
 		}
+		$(".//div[@id='adhocChargesComment']"){
+			$("./font"){
+				$("./br"){
+					remove()
+				}
+			}
+		}
 	}
 	$("./a[@id='WC_OrderDetailDisplay_Print_Link']"){
 		remove()
@@ -228,5 +311,74 @@ $$(".checkout-container"){
 		$onclick = fetch("./@onclick")
 		attributes(onclick: concat($onclick, "Ur.setup(\"._togglerBillContainer\");Ur.setup(\"._togglerShipContainer\");Ur.setup(\"._orderSummaryContainer\");"))
 		add_class("expand")
+	}
+}
+
+$$("._returnSummary"){
+	$(".//div[contains(@class,'_orderSummaryContainer')]"){
+		$(".//div[contains(@class,'order-product-info')]"){
+			$("./div[contains(@class, 'image')]"){
+				insert_after("div", class:"_skuInfo")
+			}
+			$("./div[contains(@class, '_colWeight')]"){
+				attributes(class: "_QuantityContainer")
+				insert_top("span", class: "_quanitiy", "Quantity: ")
+			}
+			$("./div[contains(@class,'_colInStock')]"){
+				attributes(class: "_creditAmmount")
+				insert_top("span", class: "_credAmt", "Credit Amount: ")
+
+			}
+			$("./div[@class='info']"){
+				remove()
+			}
+			$("./div[@class='_Quantity']"){
+				attributes(class: "_creditAdjInfo")
+				$("./span[@class='_quantity']"){
+					remove()
+				}
+				$("./div[contains(@class, '_colQuantity')]"){
+					attributes(class: "_credAdjNum")
+					unwrap()
+				}
+				insert_top("span", class: "_credAdj", "Credit Adjustment: ")
+			}
+			$("./div[@class='_eachDiv']"){
+				attributes(class: "_creditBTInfo")
+				$("./div[@class='_each']"){
+					remove()
+				}
+				insert_top("span", class: "_credBT", "Credit Adjustment: ")
+				$("./div[contains(@class,'_colEach')]"){
+					unwrap()
+				}
+			}
+			$("./div[@class='_skuInfo']"){
+				move_here("../div[contains(@class,'_colTitle')]")
+				move_here("../div[@class='_QuantityContainer']")
+				move_here("../div[@class='_creditAmmount']")
+				move_here("../div[@class='_creditAdjInfo']")
+				move_here("../div[@class='_creditBTInfo']")
+				move_here("../div[@class='_QuantityContainer']")
+				move_here("../../div[contains(@class,'order-product-last')]/div[contains(@class,'_sku')]")
+			}
+		}
+		$("./div[@id='order-total']"){
+			$(".//label[@class='total_details']"){
+				insert_before("br")
+			}
+			$(".//br[1]"){
+				remove()
+			}
+
+		}
+	}
+}
+
+$("/html"){
+	$(".//div[contains(@id, 'collapse')]"){
+		$("./br"){
+			remove()
+		}
 	}
 }
