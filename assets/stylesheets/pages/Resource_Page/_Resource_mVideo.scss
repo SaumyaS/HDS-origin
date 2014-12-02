@@ -2,12 +2,17 @@
 	h1{
 		padding-left: 10px;
 	}
-	#main{
-		width: 320px;
+	#mainvideopage{
 		margin: 0 auto;
+		width: 320px;
+	}
+	#main{
+		// width: 320px;
+		// margin: 0 auto;
 	}
 	.redarrow{
 		height: 27px;
+		width: 320px;
 		.redArrowImage{
 			float: left;
 			width: 35px;
@@ -22,9 +27,9 @@
 			font-weight: bold;
 			width: 280px;
 			text-align: right;
-			a{
-				color: black;
-			}
+			
+			color: black;
+			
 		}
 	}
 }

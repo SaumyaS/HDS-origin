@@ -5,6 +5,10 @@ $$(".card_info"){
 		$("./label[@for='expire_month_1']"){
 			remove_text_nodes()
 			insert("span", "Expiration Date: ")
+			insert_before("br")
+		}
+		$("./label[@for='cc_cvc_1']"){
+			insert_before("br")
 		}
 		$("./span[@class='visaCVV2']"){
 			$("./span[@id='CVVDetailsSection']"){

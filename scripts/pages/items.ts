@@ -4,6 +4,19 @@ $("/html"){
 		move_here("//div[@id='_icons_bar']")
 	}
 
+	$(".//div[contains(@class, 'main_container')]"){
+		$(".//div[@class='brandname_breadcrumbs']"){
+			$("./ul"){
+				$("./li[1]"){
+					add_class("_itemInfo")
+				}
+				$("./li[3]"){
+					add_class("_itemInfo")
+				}
+			}
+		}
+	}
+
 	$$(".product_social_icons"){
 		remove()
 	}
