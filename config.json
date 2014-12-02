@@ -12,6 +12,7 @@
 	],
 	"ssl_whitelist": [
 
-		"ghdecomdemo1.hsi.hughessupply.com"
+		"ghdecomdemo1.hsi.hughessupply.com",
+		"dev-whitecap.ecom.hdsupply.com"
 	]
 }
