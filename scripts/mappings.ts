@@ -211,12 +211,12 @@ match($status) {
 				log("--> Importing Login")
 				@import pages/login.ts
 			}
-			with(/Logoff/){
-				@import pages/logonForm.ts
-			}
 			with(/forgetpassword/){
 				log("--> Importing forgetpassword")
 				@import pages/forgetpassword.ts
+			}
+			with(/Logoff/){
+				@import pages/logonForm.ts
 			}
 			with(/PersonChangeServicePasswordReset/){
 				log("--> Importing Wrong email address")
