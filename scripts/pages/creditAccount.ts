@@ -6,7 +6,7 @@ $$("#ad_17601"){
 $(".//div[@class='main_container']"){
 	add_class("_creditAccount")
 
-	$(".//div[@id='WC_ContentAreaESpot_div_1_148001']"){
+	$(".//div[@id='WC_ContentAreaESpot_div_1_114001']"){
 		$("./h1"){
 			remove()
 		}

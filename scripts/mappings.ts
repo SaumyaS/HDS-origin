@@ -203,7 +203,7 @@ match($status) {
 				@import pages/login.ts
 
 			}
-			with(/services-white-cap-credit-account/){
+			with(/Services-White-Cap-Credit-Account/){
 				log("--> Importing Cerdit Account Page")
 				@import pages/creditAccount.ts
 			}
