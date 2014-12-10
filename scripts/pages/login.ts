@@ -55,11 +55,13 @@ $("/html"){
 							attributes(onkeypress: "if(event.keyCode==13) Login2.submitSpecifiedForm(document.Logon, '"+$url+"');")
 						}
 						$("./a"){
-							attributes(onclick: "Login2.submitSpecifiedForm(document.Logon,'"+$url+"');return false;")
 							insert_before("br")
 							add_class("expand")
 							move_to("../../../div[@class='col-1']")
 							
+						}
+						$("./a[@id='WC_AccountDisplay_links_2']"){
+							attributes(onclick: "Login2.submitSpecifiedForm(document.Logon,'"+$url+"');return false;")
 						}
 					}
 				}
