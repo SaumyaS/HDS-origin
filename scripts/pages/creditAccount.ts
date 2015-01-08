@@ -6,11 +6,11 @@ $$("#ad_17601"){
 $(".//div[@class='main_container']"){
 	add_class("_creditAccount")
 
-	$(".//div[@id='WC_ContentAreaESpot_div_1_114001']"){
-		$("./h1"){
+	# $(".//div[@id='WC_ContentAreaESpot_div_1_114001']"){
+		$(".//h1"){
 			remove()
 		}
-		$("./hr"){
+		$(".//hr"){
 			remove() 
 		}
 
@@ -28,7 +28,7 @@ $(".//div[@class='main_container']"){
 				attributes(class: "_firstPara")
 			}
 			$("./div[@class='mw_was_table']"){
-				attributes(class: "creditTable")
+				attributes(class: "creditTable", id: "creditTable" + index())
 				$("./div"){
 					attributes(class: "_creditRows", id: "creditRows" + index())
 					$("./div"){
@@ -53,5 +53,5 @@ $(".//div[@class='main_container']"){
 				}
 			}
 		}
-	}
+	# }
 }

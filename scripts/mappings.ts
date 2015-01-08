@@ -117,6 +117,38 @@ match($status) {
 			with(/store-locations/){
 				log("--> Importing Store_Locations")
 				@import pages/location.ts
+			 }
+			with(/locations-branch/){
+				log("--> Importing Branch Landing Page")
+				@import pages/branchLandingPage.ts
+			}
+			with(/services-rebar-fabrication/){
+				log("--> Importing services-rebar-fabrication")
+				@import pages/servicesRebarFabrication.ts
+			}
+			with(/services-tool-repair/){
+				log("--> Importing services-tool-repair")
+				@import pages/servicesToolRepair.ts
+			}
+			with(/events/){
+				log("--> Importing events")
+				@import pages/events.ts
+			}
+			with(/event-registration/){
+				log("--> Importing event Registration")
+				@import pages/eventRegistration.ts
+			}
+			with(/services-rental-centers/){
+				log("--> Importing services-rental-centers")
+				@import pages/servicesRentalCenters.ts
+			}
+			with(/trader-downloads/){
+				log("--> Importing trader downloads")
+				@import pages/traderDownloads.ts
+			}
+			with(/footer-catalog-request/){
+				log("--> Importing footer-catalog-request")
+				@import pages/footerCatalogRequest.ts
 			}
 			with(/navigation-help/){
 				log("--> Importing contact us")
@@ -203,7 +235,7 @@ match($status) {
 				@import pages/login.ts
 
 			}
-			with(/Services-White-Cap-Credit-Account/){
+			with(/services-white-cap-credit-account/){
 				log("--> Importing Cerdit Account Page")
 				@import pages/creditAccount.ts
 			}

@@ -1,0 +1,161 @@
+.pages_branchLandingPage {
+  // add your page-specific sass here
+  background-color: #ccc;
+  ._BLP-Header{
+	._branchName{
+		display: block;
+		text-align: center;
+		padding: 5px;
+
+	}
+  }
+  ._BLP-body{
+	._BLP-bodyContent{
+		._BLP-bodyContainer{
+			#BLP-row1{
+				background: url("http://stg-whitecap.ecom.hdsupply.com/wcsstore/WhiteCap/Images/Locations/Buttons/metal.bg.jpg");
+				padding: 10px 0;
+				-moz-box-shadow:    inset  0  8px 8px -8px #696868, 
+			                        inset  0 -8px 8px -8px #696868;
+			    -webkit-box-shadow: inset  0  8px 8px -8px #696868, 
+			                        inset  0 -8px 8px -8px #696868;
+			     box-shadow:        inset  0  8px 8px -8px #696868, 
+			                        inset  0 -8px 8px -8px #696868;
+				._BLP-managerName{
+					span{
+						display: block;
+						margin-top: -8px;
+						margin-bottom: 4px;
+					}
+				}
+				._BLP-emailManager{
+					margin: 0px 70px;
+					a{
+						padding: 7px;
+						// border: 1px solid;
+						color: #000;
+						display: block;
+					}
+				}
+				#BLP-rowItems2{
+					margin: 10px 30px;
+					background-color: #ddd;
+					border: 1px solid #bbb;
+					background: rgba(215, 215, 215, 0.7);
+					._BLP-storeInfo{
+						text-align: center;
+						color: black;
+						._BLP-hoursHeader{
+							margin: 0px 40px;
+						}
+						._BLP-storeHours{
+							._time{
+								display: inline-block;
+							}
+						}
+						._getDirectionsBtn{
+							padding: 10px 30px;
+						}
+					}
+					#BLP-hours{
+						padding: 10px 0;
+						._BLP-storeHoursContainer{
+							border: 1px solid #aaa;
+							background-color: #bbb;
+							margin: 0 40px;
+							margin-top: -3px;
+							padding-bottom: 5px;
+						}
+					}
+				}
+				#BLP-rowItems3{
+					#map_canvas{
+						iframe{
+							width: 90%;
+						}
+					}
+				}
+			}
+			#BLP-row2{
+				padding: 10px;
+				._BLP-rowItems{
+					padding: 5px 0;
+				}
+			}
+			#BLP-row3{
+				background: url("http://stg-whitecap.ecom.hdsupply.com/wcsstore/WhiteCap/Images/Locations/Buttons/metal.bg.jpg");
+				padding: 10px 5px;
+				-moz-box-shadow:    inset  0  8px 8px -8px #696868, 
+			                        inset  0 -8px 8px -8px #696868;
+			    -webkit-box-shadow: inset  0  8px 8px -8px #696868, 
+			                        inset  0 -8px 8px -8px #696868;
+			     box-shadow:        inset  0  8px 8px -8px #696868, 
+			                        inset  0 -8px 8px -8px #696868;
+				#BLP-rowItems1{
+					padding-bottom: 20px;
+					._BLP-contents{
+						._BLP-productInfo{
+							a{
+								padding-bottom: 5px;
+							}
+						}
+					}
+				}
+				#BLP-rowItems2{
+					#BLP-contents1{
+						._item{
+							border-bottom: 1px solid #777;
+						}
+						._BLP-carouselContainer{
+							width: 500px !important;
+							padding-left: 20px;
+							._carouselItem{
+								margin-left: 30px;
+								margin-right: 30px;
+							}
+						}
+					}
+				}
+				._BLP-contents{
+					._header{
+						background: #000;
+						padding: 5px;
+					}
+					._item{
+						width: auto;
+						padding: 5px;
+						@include background(linear-gradient(#999, #fff));
+					}
+					._BLP-downloadLinks{
+						background-color: #fff;
+						a{
+							display: block;
+							padding: 5px;
+							border-bottom: 1px solid #777;
+							color: #444;
+							text-decoration: underline;
+						}
+					}
+					._BLP-HDSGear{
+						p{
+							color: #000;
+						}
+						a{
+							margin: 5px;
+						}
+					}
+					._BLP-mobileDesc{
+						._downloadLinkContainer{
+							text-align: center;
+							._downloadLink{
+								margin: 0 5px;
+								display: inline-block;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+  }
+}

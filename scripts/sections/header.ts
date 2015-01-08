@@ -125,6 +125,7 @@ $("/html"){
 			with(/quickorder/){}
 			# with(/OrderCalculate/){}
 			with(/AjaxOrderDetail/){}
+			with(/locations-branch/){}
 			else(){
 				$$("br"){
 					remove()
@@ -387,7 +388,7 @@ $("./body"){
 				insert_before("div", id: "pers-nav"){
 					copy_here("//div[@class='nav_wrapper']")
 					insert("div", class: "_hdsupplyLogo"){
-						insert("div", class: "Icons-HDSupply-Logo")
+						insert("div", class: "Icons-HDSupplyC-I_menu")
 					}
 				}
 			}
