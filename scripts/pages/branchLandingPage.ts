@@ -263,6 +263,12 @@ $("/html/body") {
 											$("./div"){
 												attributes(class: "_downloadLink", style: "")
 											}
+											$("./div[1]/a"){
+												attributes(href: "http://bit.ly/WC-iPhone")
+											}
+											$("./div[2]/a"){
+												attributes(href: "http://bit.ly/WC-Android")
+											}
 											
 										}
 									}
