@@ -158,4 +158,7 @@ $("//*[@id='cart-total']/div[2]"){
 			set("Shipping")
 		}
 	}
+	$("./p"){
+		attributes(style: "margin-top: 22px;")
+	}
 }
