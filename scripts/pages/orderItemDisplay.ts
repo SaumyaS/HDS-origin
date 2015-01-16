@@ -108,6 +108,9 @@ $$(".order-confirm"){
 					insert_after("br")
 					insert_before("br")
 				}
+				$(".//h2"){
+					attributes(style: "")
+				}
 			}
 			$("./div[2]"){
 				attributes(style: "", class: "_shipping")
@@ -150,6 +153,7 @@ $$(".order-confirm"){
 
 $("//*[@id='cart-total']/div[2]"){
 	$("./h2"){
+		attributes(style: "height: 141px;")
 		text(){
 			set("Shipping")
 		}
