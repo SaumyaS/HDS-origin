@@ -63,6 +63,3 @@ $$(".footer_wrapper"){
 	}
 }
 
-$$("._mainContainer"){
-			move_here("../div[@class='header_wrapper']/div[@id='_footer']")
-		}

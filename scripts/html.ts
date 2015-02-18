@@ -20,6 +20,7 @@ $("/html") {
 	add_assets()
 
 	# @import sections/header.ts
+	@import sections/head.ts
 	@import sections/newHeader.ts
 	@import sections/footer.ts
 	

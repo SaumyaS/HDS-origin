@@ -1,0 +1,31 @@
+.header_wrapper{
+	background-color: #000;
+	.header_top{
+		marquee{
+			color: #FFD700;
+		}
+	}
+	.header_container{
+		.logo{
+			display: inline-block;
+			img{
+				height: 35px;
+			}
+		}
+		._userButtons{
+			display: inline-block;
+			>div{
+				background-color: #777;
+				padding: 3px 4px;
+
+			}
+			.checkout_wrapper{
+
+			}
+			#image-user{
+			}
+			#image-menu{
+			}
+		}
+	}
+}

@@ -113,7 +113,7 @@ $("/html"){
 			move_to("../../head")
 		}
 
-# 		# Removes all the breakpoints
+		# Removes all the breakpoints
 		match($path){
 			with(/Footer_Terms_Conditions/){}
 			with(/OrderShippingBillingView/){}
@@ -131,11 +131,12 @@ $("/html"){
 			}
 		}
 
-# 		# Removes breadcrumbs
+ 		# Removes breadcrumbs
 		$$("#breadcrumb"){
 			attributes(style: "display: none;")
 		}
 
+		#Remove Session Timeout Div
 		$$("#sessionTimeoutModalDiv"){
 			remove()
 		}
