@@ -65,7 +65,7 @@ $$("body"){
 				}
 				$("./div[@id='outerCartContainer']"){
 					$(".//div[@class='shoppingcart_wrapper']"){
-						$(".//div[@class='shoppingcart_rect_full']"){
+						$(".//div[contains(@class,'shoppingcart_rect')]"){
 							$("./span"){
 								remove()
 							}
@@ -83,16 +83,57 @@ $$("body"){
 			}
 			$("./div[@class='_logonContainer']"){
 				move_here("../div[@class='_userButtons']/div[@class='checkout_wrapper']/ul[@class='_userTools']")
+
+				$("./form[@id='Logon']"){
+					$("./input[contains(@class, 'login_name')]"){
+						move_to("../input[contains(@class,'login_pass')]", position("before"))
+						insert_after("br")
+					}
+				}
+				$("./div[@class='new_login']"){
+					$("./span"){
+						remove()
+					}
+					$("./a[3]"){
+						remove()
+					}
+					$("./a[2]"){
+						move_to("..", position("top"))
+					}
+					$("./a[1]"){
+						insert_after("br")
+					}
+				}
+				$("./ul[@class='_userTools']"){
+					attributes(style: "display: none;")
+				}
+				insert("div", class: "_blkBG")
 			}
 			$("./div[@class='_userButtons']"){
-				insert("div", id: "image-user", data-ur-tab-id: "user", data-ur-tabs-component: "button"){
+				insert("div", id: "image-user"){
 					attributes(class: "Icons-user")
-					wrap("div", class: "_nav")
+					wrap("div", class: "_nav", id: "_userContainer")
 				}
 				insert("div", id: "image-menu"){
 					attributes(class: "Icons-menu-w")
 					wrap("div", class: "_nav")
 				}
+				insert_after("div", class: "_searchContainer")
+			}
+			$("./div[@class='_searchContainer']"){
+				move_here("//form[@id='CatalogSearchForm']")
+				$(".//input[contains(@class,'search_btn')]"){
+				}
+			}
+		}
+
+		$("./div[@class='header_container']"){
+			attributes(data-ur-set: "tabs", data-ur-closeable: "true")
+			$("./div[@class='_userButtons']/div[@id='_userContainer']"){
+				attributes(data-ur-tabs-component: "button", data-ur-tab-id: "user")
+			}
+			$("./div[@class='_logonContainer']"){
+				attributes(data-ur-tabs-component: "content", data-ur-tab-id: "user")
 			}
 		}
 		
