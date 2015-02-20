@@ -29,7 +29,7 @@ $base-line-height: 24px;
 }
 
 @mixin toggler{
-	@include background-image(url(../../../images/img/plus.png), linear-gradient(#333 0, black 100%));
+	@include background-image(url(../../../images/img/plus.png), linear-gradient(black 0, black 100%));
 	background-position: right center;
 	background-repeat: no-repeat;
 	color: white;
@@ -41,7 +41,7 @@ $base-line-height: 24px;
 	line-height: 1em;
 
 	&[data-ur-state="enabled"] {
-		@include background-image(url(../../../images/img/minus.png), linear-gradient(black 0, #333 100%));
+		@include background-image(url(../../../images/img/minus.png), linear-gradient(#333 0, #333 100%));
 	}
 }
 

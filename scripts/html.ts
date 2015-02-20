@@ -22,6 +22,7 @@ $("/html") {
 	# @import sections/header.ts
 	@import sections/head.ts
 	@import sections/newHeader.ts
+	@import sections/nav.ts
 	@import sections/footer.ts
 	
 

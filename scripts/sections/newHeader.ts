@@ -24,6 +24,24 @@ $$("body"){
 		move_to("../../head")
 	}
 
+	# Removes all the breakpoints
+	match($path){
+		with(/Footer_Terms_Conditions/){}
+		with(/OrderShippingBillingView/){}
+		with(/SingleShipmentOrderSummaryView/){}
+		with(/OrderShippingBillingConfirmationView/){}
+		with(/AjaxRequisitionListCreateView/){}
+		with(/quickorder/){}
+		# with(/OrderCalculate/){}
+		with(/AjaxOrderDetail/){}
+		with(/locations-branch/){}
+		else(){
+			$$("br"){
+				remove()
+			}
+		}
+	}
+
 	$(".//div[@class='header_wrapper']"){
 		$("./div[@class='header_top']"){
 			$("./div[@class='header_container']"){
@@ -75,7 +93,9 @@ $$("body"){
 							$("./div[2]"){
 								remove()
 							}
-							remove_text_nodes()
+							$("./div[2]"){
+								remove()
+							}
 						}
 					}
 				}
@@ -107,7 +127,8 @@ $$("body"){
 				$("./ul[@class='_userTools']"){
 					attributes(style: "display: none;")
 				}
-				insert("div", class: "_blkBG")
+				wrap("div", class: "_logonDiv")
+				insert_after("div", class: "_blkBG")
 			}
 			$("./div[@class='_userButtons']"){
 				insert("div", id: "image-user"){
@@ -123,6 +144,7 @@ $$("body"){
 			$("./div[@class='_searchContainer']"){
 				move_here("//form[@id='CatalogSearchForm']")
 				$(".//input[contains(@class,'search_btn')]"){
+					add_class("Icons-search-icon")
 				}
 			}
 		}
@@ -132,7 +154,7 @@ $$("body"){
 			$("./div[@class='_userButtons']/div[@id='_userContainer']"){
 				attributes(data-ur-tabs-component: "button", data-ur-tab-id: "user")
 			}
-			$("./div[@class='_logonContainer']"){
+			$("./div[@class='_logonDiv']"){
 				attributes(data-ur-tabs-component: "content", data-ur-tab-id: "user")
 			}
 		}
