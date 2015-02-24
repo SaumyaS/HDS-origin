@@ -106,13 +106,49 @@ $base-line-height: 24px;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.75);
 }
 
+@mixin add_to_cart_HP-new{
+	background: #FFD700;
+	font-weight: bold;
+	color: #292929;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	margin: 0px auto;
+	border-radius: 3px;
+	padding: 5px 10px;
+}
+
 @mixin bars{
 	font-family: 'FrancoisOne', sans-serif;
+	background-color: #000;
 	// border-bottom:1px solid #808080;
 	// border-top: 1px solid #808080;
 	// background: #aaa;
 	// background-position-x: right;
 	// @include background-image(linear-gradient(black 0, #333 100%));
+	display: block;
+	font-size: 16px;
+	line-height: 1;
+	text-decoration: none;
+	text-transform: capitalize;
+	font-weight: bold;
+	padding: 10px;
+	// color: #2C3539;
+	color: white;
+	margin: 5px 10px;
+	border-radius: 4px;
+}
+
+@mixin barsHP{
+	font-family: 'FrancoisOne', sans-serif;
+	background-color: #000;
+	// border-bottom:1px solid #808080;
+	// border-top: 1px solid #808080;
+	// background: #aaa;
+	// background-position-x: right;
+	@include background-image(url(../../../images/menu_go.png));
+	background-position: right center;
+	background-repeat: no-repeat;
 	display: block;
 	font-size: 16px;
 	line-height: 1;
