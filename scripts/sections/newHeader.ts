@@ -13,6 +13,9 @@ $$("#sessionTimeoutModalDiv"){
 }
 
 $$("body"){
+	# remove(".//script[contains(@src,'jcarousel.min.js')]")
+	# remove(".//script[@id='content_wrapper_box']/script[5]")
+	//*[@id="content_wrapper_box"]/script[5]
 	table_dump(".//table")
 	
 	# move scripts to bottom of page
@@ -20,6 +23,9 @@ $$("body"){
 	$("./script[contains(@src, 'jquery-1.7.2.min.js')]"){
 		move_to("../../head")
 	}
+
+	
+
 	$("./script[contains(@src, 'main.js')]"){
 		move_to("../../head")
 	}

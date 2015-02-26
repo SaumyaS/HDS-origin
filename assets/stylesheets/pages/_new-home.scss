@@ -1,0 +1,104 @@
+._home{
+	// padding: 5px;
+	._homepageThumbnail{
+		padding: 5px;
+		.hp_header{
+			font-weight: bold;
+			color: #000;
+			font-size: 20px;
+		}
+
+		.hp_topcat{
+			text-align: center;
+			._hp_topcatContainer{
+				._hp_topcatItem{
+					display: inline-block;
+					text-align: center;
+					vertical-align: middle;
+					position: relative;
+					width: 130px;
+					height: 130px;
+					border: 1px solid #ccc;
+					margin: 5px 3px;
+					padding: 5px;
+					z-index: 100;
+					.hp_cathead{
+						font-size: 15px;
+						color: #000;
+						font-weight: bold;
+						height: 45px;
+					}
+					img{
+						width: 68%;
+					}
+
+				}
+				._hp_topcatItem:active{
+					border: 1px solid #f3cd33;
+				}
+			}
+		}
+	}
+	.mid_promo_wrapper{
+		padding: 5px;
+		background-color: #eee;
+		.mid_promo_right_head{
+			font-weight: bold;
+			color: #000;
+			font-size: 20px;
+		}
+		._TPcarousel{
+			._TPcarouselContainer{
+				._TPcarouselItem{
+					height: 281px;
+					background: #fff;
+					border: 1px #ccc solid;
+					margin: 5px !important;
+					padding: 15px;
+					width: 141px;
+					float: left;
+				}
+
+			}
+		}
+	}
+	._bottomPromoContainer{
+		._featuredDealTitle{
+			font-weight: bold;
+			color: #000;
+			font-size: 20px;
+			padding: 5px;
+		}
+		.bottom-promos{
+			._specialsCarousel{
+				._specialsItem{
+					background-color: #fff;
+					vertical-align: middle;
+					padding: 5px;
+					height: 187px;
+					.bottom-promo-red{
+						background: url(../../../images/red-promo-bg.png) no-repeat 0 0;
+						width: 300px;
+						height: 40px;
+						font-family: 'OPen Sans', sans-serif;
+						color: #fff;
+						font-size: 20px;
+						text-align: center;
+						position: relative;
+						padding-top: 5px;
+						z-index: 10001;
+						margin-left: 5px;
+					}
+					._specialsContent{
+						width: 288px;
+						height: 125px;
+						border: 1px solid #ccc;
+						padding: 23px 10px 17px 10px;
+						position: relative;
+						top: -37px;
+					}
+				}
+			}
+		}
+	}
+}

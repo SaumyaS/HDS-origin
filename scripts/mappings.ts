@@ -74,7 +74,7 @@ match($status) {
 				log("--> Importing pages/new.ts in mapping.ts")
 				log("--> Importing pages/home.ts in mappring.ts")
 				@import pages/new.ts
-				@import pages/home.ts
+				@import pages/new-home.ts
 			}
 			# with(/brands/){
 			# 	log("--> Importing Brands")
@@ -320,7 +320,7 @@ match($status) {
 			with(/home/){
 				log("--> Importing pages/new.ts in mapping.ts")
 				@import pages/new.ts
-				@import pages/home.ts
+				@import pages/new-home.ts
 			}
 			with(/cartItemPopulatedDivView/){
 				log("--> Importing cart Item populated")

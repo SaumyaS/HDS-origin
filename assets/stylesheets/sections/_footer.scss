@@ -17,8 +17,15 @@
 	text-align: center;
 }
 
-.copyright_left_box{
+.copyright_container{
 	text-align: center;
 	background-color: #000;
 	color: #ccc;
+	._footerLinks{
+		a{
+			color: #fff;
+			padding: 0 3px;
+			text-decoration: underline;
+		}
+	}
 }
