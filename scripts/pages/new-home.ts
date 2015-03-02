@@ -35,6 +35,10 @@ $("/html"){
 						insert_after("div", class: "_dots", data-ur-carousel-component: "dots")
 						$("./li[@class='_TPcarouselItem']"){
 							attributes(data-ur-carousel-component: "item")
+							$("./a[@class='lpadd_tocart']"){
+								add_class("btn")
+								add_class("expand")
+							}
 						}
 					}
 

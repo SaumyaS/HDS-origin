@@ -13,9 +13,6 @@ $$("#sessionTimeoutModalDiv"){
 }
 
 $$("body"){
-	# remove(".//script[contains(@src,'jcarousel.min.js')]")
-	# remove(".//script[@id='content_wrapper_box']/script[5]")
-	//*[@id="content_wrapper_box"]/script[5]
 	table_dump(".//table")
 	
 	# move scripts to bottom of page
@@ -60,7 +57,7 @@ $$("body"){
 					}
 				}
 			}
-			$("./form[@id='Logon']"){
+			$("./form[@id='LogonHeader']"){
 				wrap("div", class: "_logonContainer")
 			}
 			$("./div[@class='_logonContainer']"){
@@ -110,10 +107,15 @@ $$("body"){
 			$("./div[@class='_logonContainer']"){
 				move_here("../div[@class='_userButtons']/div[@class='checkout_wrapper']/ul[@class='_userTools']")
 
-				$("./form[@id='Logon']"){
+				$("./form[@id='LogonHeader']"){
 					$("./input[contains(@class, 'login_name')]"){
-						move_to("../input[contains(@class,'login_pass')]", position("before"))
 						insert_after("br")
+					}
+					$("./a[@class='login_btn_container']"){
+						$("./img"){
+							remove()
+						}
+						insert("div", class: "_loginButton", "Sign In")
 					}
 				}
 				$("./div[@class='new_login']"){
@@ -134,7 +136,6 @@ $$("body"){
 					attributes(style: "display: none;")
 				}
 				wrap("div", class: "_logonDiv")
-				insert_after("div", class: "_blkBG")
 			}
 			$("./div[@class='_userButtons']"){
 				insert("div", id: "image-user"){
@@ -143,7 +144,7 @@ $$("body"){
 				}
 				insert("div", id: "image-menu"){
 					attributes(class: "Icons-menu-w")
-					wrap("div", class: "_nav")
+					wrap("div", class: "_nav", id: "_menuContainer")
 				}
 				insert_after("div", class: "_searchContainer")
 			}
@@ -153,6 +154,7 @@ $$("body"){
 					add_class("Icons-search-icon")
 				}
 			}
+			move_here("//div[@id='header-search']")
 		}
 
 		$("./div[@class='header_container']"){
@@ -164,10 +166,13 @@ $$("body"){
 				attributes(data-ur-tabs-component: "content", data-ur-tab-id: "user")
 			}
 		}
-		
+		insert_after("div", class: "_blkBG")
+		insert_after("div", class: "_logonTest"){
+			move_here("//div[@class='_logonContainer']")
+		}
 	}
-	$(".//div[@id='main_content_wrapper']"){
-		move_here("../div[@class='header_wrapper']/div[@class='nav_container']", "top")
+	$(".//div[@class='main_wrapper']"){
+		move_here("//div[@class='header_wrapper']/div[@class='nav_container']", "top")
 	}
 
 
@@ -179,5 +184,103 @@ $("/html"){
 	remove(".//script[contains(@src,'navigation.js')]")
 	remove(".//script[contains(@src,'jquery.dataTables.min.js')]")
 
+	
+}
+
+$("./body"){
+	match($path){
+		with(/AutoSuggestView/){}
+		with(/AjaxLogonFormCenterLinksDisplayView/){}
+		with(/AjaxAddressBookForm/){}
+		with(/AjaxRequisitionListDisplayView/){}
+		with(/AjaxRequisitionListDetailView/){}
+		with(/AjaxTrackOrderStatus/){}
+		with(/AjaxCouponWallet/){}
+		with(/WillCallModalView/){}
+		with(/AjaxQuickCartDisplay/){}
+		with(/AjaxCatalogSearchResultView/){}
+		with(/SearchBasedNavigationCategoryResultDisplayView/){}
+		with(/AddToCartModalView/){}
+		with(/AjaxOrderChangeServiceItemAdd/){}
+		with(/editRegistration/){}
+		with(/AjaxTrackOrderStatus/){}
+		with(/OrderStatusTableDetailsHelper/){}
+		with(/AjaxOrderDetail/){}
+		with(/ShopCartDisplayView/){}
+		with(/AjaxOrderChangeServiceItemUpdate/){}
+		with(/Standard/){}
+		with(/BillingAddressDisplayView_1/){}
+		with(/AddressEditView/){}
+		with(/POSnippetDisplay/){}
+		with(/ShopCartPageView/){}
+		with(/RequisitionListDetailTableView/){}
+		with(/ShippingAddressDisplayView/){}
+		with(/AjaxAddressDisplayView/){}
+		with(/AjaxOrderChangeServiceShipInfoUpdate/){}
+		with(/AjaxUpdateUserAddress/){}
+		with(/AjaxOrderChangeServiceItemAdd/){}
+		with(/QuickOrderCartDisplayView/){}
+		with(/OrderItemPageView/){}
+		with(/AjaxAccountAddressForm/){}
+		with(/OrderStatusTableDetailsDisplay/){}
+		with(/AjaxPromotionCodeDisplayView/){}
+		with(/RequisitionListTableView/){}
+		with(/AutoSuggestView/){}
+		else (){
+			inner_wrap("div", id: "body-content"){
+				insert_bottom("div", id: "pers-nav-mask")
+				insert_before("div", id: "pers-nav"){
+					copy_here("//div[@class='nav_container']")
+					insert("div", class: "_hdsupplyLogo"){
+						insert("div", class: "Icons-HDSupplyC-I_menu")
+					}
+				}
+			}
+			$("./div[@id='pers-nav']"){
+				$("./div[@class='nav_container']"){
+					attributes(style: "display: block;")
+				}
+				$(".//ul[@class='nav-primary']"){
+					# attributes(style: "display:block; !important")
+					# attributes(data-ur-state: "enabled")
+					$("./li"){
+						$("./a"){
+							add_class("_box-shadow")
+						}
+					}
+					$("./li[@id='menu1']"){
+						$("./a"){
+
+							attributes(data-ur-id: "pers-nav-menu")
+						}
+						$("./ul[@class='subnav']"){
+							attributes(data-ur-id: "pers-nav-menu")
+						}
+					}
+					$("./li[@id='menu6']"){
+						$("./a"){
+
+							attributes(data-ur-id: "pers-nav-account")
+						}
+						$("./ul[@class='subnav']"){
+							attributes(data-ur-id: "pers-nav-account")
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# Move GTM (Google Tag Manager) to top of body
+	$("./div[@id='body-content']"){
+		$("./script"){
+			match(text()){
+				with(/www.googletagmanager.com/){
+					move_to("../../../body", "top")
+				}
+			}
+		}	
+	}
+	move_here(".//noscript","top")
 	
 }

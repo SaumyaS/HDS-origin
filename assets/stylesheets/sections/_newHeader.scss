@@ -11,6 +11,11 @@
 	.header_top{
 		marquee{
 			color: #FFD700;
+			padding-top: 5px;
+			a{
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
 		}
 	}
 	.header_container{
@@ -80,7 +85,10 @@
 					
 				}
 			}
-				
+			
+			#_menuContainer:active{
+				background-color: #999;
+			}
 			#image-menu{
 
 			}
@@ -105,21 +113,21 @@
 				margin: 3px;
 				border: none;
 				position: relative;
-				top: 11px;
+				top: 10px;
 				border-radius: 3px;
 			}
 		}
 		._logonDiv{
 			._logonContainer{
 				position: absolute;
-				top: 75px;
+				top: 45px;
 				background-color: #000;
 				width: 100%;
-				padding: 5px;
+				padding: 10px 15px;
 				margin-left: -5px;
-				z-index: 100001;
+				z-index: 501;
 				box-shadow: 0 4px 8px rgba(0,0,0,0.25);
-				#Logon{
+				#LogonHeader{
 					.login_rounded{
 						background-color: #333;
 						border: solid 1px #333;
@@ -152,6 +160,19 @@
 
 
 			}
+		}
+	}
+}
+
+#pers-nav{
+	._hdsupplyLogo{
+		margin-top: -5px;
+		padding-left: 10px;
+		padding-right: 10px;
+		._image{
+			background: url(../../../images/HDSupply-Logo-2x.png) no-repeat;
+			height: 65px;
+			background-size: 235px 60px
 		}
 	}
 }

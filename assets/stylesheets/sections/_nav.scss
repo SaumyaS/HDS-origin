@@ -1,91 +1,89 @@
-#main_content_wrapper{
-	.nav_container{
-		display: none;
-		.nav-primary{
+.nav_container{
+	display: none;
+	.nav-primary{
 
-			background-color: #ccc;
-			padding-top: 1px;
-			padding-bottom: 3px;
-			._navToggler{
-				._topCatContainer{
-					.nav_cat{
-						span{
-							color: #fff;
-							font-weight: bold;
-						}
-					}
-				}
-				.subnav{
-					margin-top: -5px;
-					a{
-						display: block;
-						padding-left: 5px;
-						@include togglerContent;
+		background-color: #ccc;
+		padding-top: 1px;
+		padding-bottom: 3px;
+		._navToggler{
+			._topCatContainer{
+				.nav_cat{
+					span{
+						color: #fff;
+						font-weight: bold;
 					}
 				}
 			}
-			._navButtons{
-				@include barsHP;
+			.subnav{
+				margin-top: -5px;
 				a{
-					color: #fff;
+					display: block;
+					padding-left: 5px;
+					@include togglerContent;
 				}
 			}
-			._navToggler{
-				#qobutton{
-					@include toggler;
+		}
+		._navButtons{
+			@include barsHP;
+			a{
+				color: #fff;
+			}
+		}
+		._navToggler{
+			._QObutton{
+				font-weight: bold;
+			}
+			.quick_order_wrapper{
+				margin: -5px 15px 0 15px;
+				background-color: #eee;
+				padding: 5px;
+				.qo_title{
+					display: inline-block;
 				}
-				.quick_order_wrapper{
-					margin: -5px 15px 0 15px;
-					background-color: #eee;
-					padding: 5px;
-					.qo_title{
-						display: inline-block;
-					}
-					.qo-table{
-						._qopHeader{
-							._qopTitleContainer{
-								._qopItem{
-									text-align: left;
-									display: inline-block;
-									min-width: 80%;
-								}
-								._qopQTY{
-									display: inline-block;
-
-								}
-							}
-						}
-						.qo_item{
-							display: inline-block;
-							min-width: 80%;
-							input{
+				.qo-table{
+					._qopHeader{
+						._qopTitleContainer{
+							._qopItem{
+								text-align: left;
+								display: inline-block;
 								min-width: 80%;
-								height: 20px;
-								padding: 5px;
-								border: 1px #ccc solid;
-								margin: 10px 10px 0px 0px;
 							}
-								
-						}
-						.qo_qty{
-							display: inline-block;
-							input{
-								width: 20px;
-								height: 20px;
-								padding: 5px;
-								border: 1px #ccc solid;
-								margin-top: 10px;
+							._qopQTY{
+								display: inline-block;
+
 							}
-								
 						}
 					}
-					.btn_addtocart{
-						margin: 5px;
-						a{
-							@include add_to_cart_HP-new;
-							text-decoration: none;
-							color: #000;
+					.qo_item{
+						display: inline-block;
+						min-width: 80%;
+						input{
+							min-width: 80%;
+							height: 20px;
+							padding: 5px;
+							border: 1px #ccc solid;
+							margin: 10px 10px 0px 0px;
 						}
+							
+					}
+					.qo_qty{
+						display: inline-block;
+						input{
+							width: 20px;
+							height: 20px;
+							padding: 5px;
+							border: 1px #ccc solid;
+							margin-top: 10px;
+						}
+							
+					}
+				}
+				.btn_addtocart{
+					margin: 5px;
+					a{
+						@include add_to_cart_HP-new;
+						text-decoration: none;
+						color: #000;
 					}
 				}
 			}
