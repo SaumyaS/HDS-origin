@@ -1,7 +1,38 @@
 $("/html"){
 	$(".//div[@class='main_container']"){
 		add_class("_categories")
-		
+		$("./div[@class='topcat_left_content']"){
+			$("./div[@class='topcat_header']"){
+				remove()
+			}
+			$("./div[@class='content_wrapper_box']"){
+				$(".//div[@class='hp_topcat']"){
+					$("./ul/li"){
+						attributes(class: "_hp_topcatItem", style: "")
+						$(".//img"){
+							attributes(width: "", height: "")
+						}
+					}
+				}
+				$(".//div[contains(@class,'topcat_promo2')]"){
+					inner_wrap("div", class: "_topCatCarousel")
+				}
+				$(".//div[@id='SubCategoryDisplay_Widget']"){
+					$("./div[contains(@class,'topcat_promo2')]"){
+						attributes(data-ur-set: "carousel", data-ur-carousel-component: "view_container", data-ur-id: "cat_icons", data-ur-center: "enabled", data-ur-autoscroll: "enabled")
+						$("./div[@class='_topCatCarousel']"){
+							attributes(data-ur-carousel-component: "scroll_container", style: "width: 1500px !important;")
+							insert_after("div", class: "_dots", data-ur-carousel-component: "dots")
+
+							$("./div[contains(@class, 'topcat_promo2')]"){
+								attributes(data-ur-carousel-component: "item")
+								add_class("_promoItem")
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 

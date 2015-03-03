@@ -51,6 +51,8 @@
 					height: 40px;
 				}
 				.cart_check_btn{
+					display: block;
+					height: 40px;
 					.shoppingcart_circ{
 						display: inline-block;
 						background-color: #777;
@@ -173,6 +175,52 @@
 			background: url(../../../images/HDSupply-Logo-2x.png) no-repeat;
 			height: 65px;
 			background-size: 235px 60px
+		}
+	}
+}
+
+#autoSuggest_Container{
+	text-align: left;
+	.autoSuggestBoxPopup{
+		padding: 10px 19px 10px 10px;
+		.autoSuggest_wrapper{
+			a{
+				color: #3a00f4;
+				text-decoration: underline;
+			}
+			.heading{
+				color: #FFD700;
+				font-weight: bold;
+			}
+			display: block;
+			.dijitContentPane{
+				direction: ltr;
+				unicode-bidi: embed;
+			}
+			.results{
+				ul{
+					list-style-type: disc;
+					-webkit-padding-start: 40px;
+					li{
+						a{
+							background-position-x: right;
+							display: block;
+							font-size: 16px;
+							line-height: 1;
+							text-decoration: none;
+							text-transform: lowercase;
+							padding-top: 5px;
+							padding-bottom: 5px;
+							color: #fff;
+						}
+					}
+				}
+			}
+			.view_all_results{
+				a{
+					color: #FFD700;
+				}
+			}
 		}
 	}
 }

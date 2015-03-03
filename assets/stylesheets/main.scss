@@ -21,8 +21,8 @@
 @import "globals/bourbon/_bourbon.scss";
 
 // Header & Footer
-@import "sections/_newHeader";
-// @import "sections/_header";
+// @import "sections/_newHeader";
+@import "sections/_header";
 @import "sections/_nav";
 @import "sections/_footer";
 @import "sections/_popup";
@@ -31,7 +31,7 @@
 // Pages
 @import "pages/_categories";
 @import "pages/_home";
-@import "pages/_new-home";
+// @import "pages/_new-home";
 @import "pages/_login";
 @import "pages/_products";
 @import "pages/_items";
@@ -94,3 +94,4 @@
 @import "pages/servicesRentalCenters";
 @import "pages/servicesRebarFabrication";
 @import "pages/servicesToolRepair";
+@import "pages/returnPolicy";

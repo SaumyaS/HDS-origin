@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 	$("#_userContainer").on('click', function() {
 		$("._blkBG").toggleClass("_blkBG-active");
-		$("._logonContainer").toggleClass("_logonContainer-active");
+		$("._logonTest").toggleClass("_logonTest-active");
 	});
 
 	$('.search-sidebar:contains("No further refinement")').slideUp("fast");
