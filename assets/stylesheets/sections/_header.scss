@@ -31,6 +31,7 @@
 			padding-right: 5px;
 			position: absolute;
 			right: 0px;
+			top: 0px;
 			// margin-top: -17px;
 			>div{
 				border-radius: 3px;
@@ -39,10 +40,14 @@
 				display: inline-block;
 				background-color: #777;
 				padding: 10px 10px;
+				position: relative;
+				top: 0;
 			}
 			#_userContainer{
 				margin-left: 1px;
-				margin-right: 4px
+				margin-right: 4px;
+				position: relative;
+				top: 0;
 			}
 			.checkout_wrapper{
 				display: inline-block;
