@@ -25,8 +25,11 @@
 		}
 		._navButtons{
 			@include barsHP;
+			padding: 0;
 			a{
+				display: block;
 				color: #fff;
+				padding:10px;
 			}
 		}
 		._navToggler{

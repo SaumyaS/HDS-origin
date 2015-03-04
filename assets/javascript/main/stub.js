@@ -14,6 +14,11 @@ $(document).ready(function() {
 		$("._logonTest").toggleClass("_logonTest-active");
 	});
 
+	$("._blkBG").on('click', function(){
+		$("._blkBG").removeClass("_blkBG-active");
+		$("._logonTest").removeClass("_logonTest-active");
+	});
+
 	$('.search-sidebar:contains("No further refinement")').slideUp("fast");
 
 	$(".tabStrip-disabled").hide();
