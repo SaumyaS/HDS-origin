@@ -328,3 +328,13 @@ $("./body"){
 	move_here(".//noscript","top")
 	
 }
+
+
+$("/html"){
+	$(".//div[@class='header_container']"){
+		insert_top("div", class: "_classMiddleHeader"){
+			move_here("../div[contains(@class, 'left')]")
+			move_here("../div[@class='_userButtons']")
+		}
+	}
+}
