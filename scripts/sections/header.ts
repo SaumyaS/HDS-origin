@@ -107,10 +107,10 @@ $$("body"){
 						}
 					}
 				}
-				move_here("//div[@class='shoppingcart_wrapper']")
-				$("./div[@id='outerCartContainer']"){
-					remove()
-				}
+				# move_here("//div[@id='MiniShoppingCart']")
+				# $("./div[@id='outerCartContainer']"){
+				# 	remove()
+				# }
 				wrap("div", class: "_userButtons")
 			}
 			$("./div[@class='_logonContainer']"){
@@ -275,8 +275,18 @@ $("./body"){
 				insert_bottom("div", id: "pers-nav-mask")
 				insert_before("div", id: "pers-nav"){
 					copy_here("//div[@class='nav_container']")
-					insert("div", class: "_hdsupplyLogo"){
-						insert("div", class: "Icons-HDSupplyC-I_menu")
+					$("./div[@class='nav_container']"){
+						$(".//div[contains(@class,'qo-table')]"){
+							$("./div[@class='mw_was_tbody']"){
+								$("./div"){
+									attributes(class: "_itemContainer")
+
+								}
+								$("./div[@class='_itemContainer']"){
+									
+								}
+							}
+						}
 					}
 				}
 			}

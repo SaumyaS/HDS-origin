@@ -1,5 +1,6 @@
 $("/html"){
 	$(".//div[@class='main_container']"){
+		attributes(style: "")
 		add_class("_home")
 		$("./div[1]"){
 			attributes(class: "_homepageThumbnail")
