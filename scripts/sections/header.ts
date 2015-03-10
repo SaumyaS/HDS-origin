@@ -229,6 +229,7 @@ $$("body"){
 $("/html"){
 	remove(".//script[contains(@src,'navigation.js')]")
 	remove(".//script[contains(@src,'jquery.dataTables.min.js')]")
+	remove(".//div[@id='MiniShoppingCart']/@onmouseover")
 
 	
 }
@@ -278,15 +279,81 @@ $("./body"){
 				insert_before("div", id: "pers-nav"){
 					copy_here("//div[@class='nav_container']")
 					$("./div[@class='nav_container']"){
+						$(".//form"){
+							attributes(id: "MQuickOrderFormMW")
+						}
 						$(".//div[contains(@class,'qo-table')]"){
 							$("./div[@class='mw_was_tbody']"){
 								$("./div"){
 									attributes(class: "_itemContainer")
 
 								}
-								$("./div[@class='_itemContainer']"){
-									
+								$("./div[@class='_itemContainer'][1]"){
+									$("./div[contains(@class,'qo_item')]"){
+										$("./input"){
+											attributes(id: "mw_partNumber_1")
+										}
+									}
+									$("./div[contains(@class,'qo_qty')]"){
+										$("./input"){
+											attributes(id: "mw_quantityPad_1")
+										}
+									}
 								}
+								$("./div[@class='_itemContainer'][2]"){
+									$("./div[contains(@class,'qo_item')]"){
+										$("./input"){
+											attributes(id: "mw_partNumber_2")
+										}
+									}
+									$("./div[contains(@class,'qo_qty')]"){
+										$("./input"){
+											attributes(id: "mw_quantityPad_2")
+										}
+									}
+								}
+								$("./div[@class='_itemContainer'][3]"){
+									$("./div[contains(@class,'qo_item')]"){
+										$("./input"){
+											attributes(id: "mw_partNumber_3")
+										}
+									}
+									$("./div[contains(@class,'qo_qty')]"){
+										$("./input"){
+											attributes(id: "mw_quantityPad_3")
+										}
+									}
+								}
+								$("./div[@class='_itemContainer'][4]"){
+									$("./div[contains(@class,'qo_item')]"){
+										$("./input"){
+											attributes(id: "mw_partNumber_4")
+										}
+									}
+									$("./div[contains(@class,'qo_qty')]"){
+										$("./input"){
+											attributes(id: "mw_quantityPad_4")
+										}
+									}
+								}
+								$("./div[@class='_itemContainer'][5]"){
+									$("./div[contains(@class,'qo_item')]"){
+										$("./input"){
+											attributes(id: "mw_partNumber_5")
+										}
+									}
+									$("./div[contains(@class,'qo_qty')]"){
+										$("./input"){
+											attributes(id: "mw_quantityPad_5")
+										}
+									}
+								}
+							}
+							#addToMWOrderPadAjax
+						}
+						$(".//div[@class='btn_addtocart']"){
+							$("./a"){
+								attributes(onclick: "javaScript: setCurrentId('WC_QuickOrderForm_Submit_1'); quickOrderJS.addToMWOrderPadAjax('MQuickOrderFormMW');")
 							}
 						}
 					}
