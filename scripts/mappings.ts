@@ -313,7 +313,7 @@ match($status) {
 				log("--> Importing Confirmation View Page")
 				@import pages/orderConfirmation.ts
 			}
-			with(/pr-trader/){
+			with(/trader-specials/){
 				log("--> importing monthly Trader Specials")
 				@import pages/pr-trader.ts
 			}

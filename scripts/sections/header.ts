@@ -82,9 +82,11 @@ $$("body"){
 						remove()
 					}
 					$("./li[1]"){
+
 						attributes(class: "_userToolsLinks", id: "_payInvoice")
 					}
 					$("./li[2]"){
+						move_to("..", position("top"))
 						attributes(class: "_userToolsLinks", id: "_myAccount")
 					}
 
