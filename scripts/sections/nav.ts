@@ -108,4 +108,14 @@ $$("body"){
 
 		}
 	}
+	$(".//div[@id='pers-nav']"){
+		$(".//ul[@class='nav-primary']"){
+			$(".//div[@class='_topCatContainer']"){
+				attributes(data-ur-id: "sidebarProducts")
+			}
+		}
+		$(".//li[@id='quickOrderToggler']"){
+			attributes(data-ur-id: "sidebarQOP")
+		}
+	}
 }

@@ -5,6 +5,8 @@ $$(".shoppingcart_rect_full"){
 	}
 	$("./div[1]"){
 		attributes(class: "_numberSKUs", style: "")
+		$qty =  fetch("text()")
+		insert_before("input", type: "hidden", value: $qty, id: "qtyInputHolder")
 	}
 	$("./div[2]"){
 		remove()

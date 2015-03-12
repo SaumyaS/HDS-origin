@@ -37,13 +37,14 @@ $$(".order-confirm"){
 			$("./div[5]"){
 				add_class("_colQuantity")
 				$("./label"){
-					attributes(style: "display: block;", value: "Quantity:")
-					text(){
-						set("Quantity:")
-					}
+					remove()
 				}
+				insert_top("label", class: "_quantityLabel", "Quantity:")
 				$("./input"){
 					attributes(type: "tel", class: "_quantityInput")
+				}
+				$("./span"){
+					attributes(class: "_freeQty")
 				}
 			}
 			$("./div[6]"){
