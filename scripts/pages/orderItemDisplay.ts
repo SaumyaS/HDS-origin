@@ -119,6 +119,9 @@ $$(".order-confirm"){
 						set("Calculate")
 					}
 				}
+				$("./p"){
+					attributes(style: "")
+				}
 			}
 			$("./div[3]"){
 				insert("h2", "Estimated Tax")

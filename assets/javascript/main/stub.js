@@ -92,7 +92,7 @@ $(document).ready(function() {
 $(".shoppingcart_rect_full").DOMNodeAppear(function(){
 	var quantity = $(".shoppingcart_wrapper #qtyInputHolder").val();
 
-	if(quantity > 100){
+	if(quantity >= 100){
 		$(".shoppingcart_wrapper ._numberSKUs").text("+99");
 		$(".shoppingcart_wrapper ._numberSKUs").css("font-size", "13px");
 		$(".shoppingcart_rect_full").css("left", "3px");
