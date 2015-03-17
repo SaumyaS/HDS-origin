@@ -154,6 +154,10 @@ match($status) {
 				log("--> Importing contact us")
 				@import pages/contactus.ts
 			}
+			with(/Navigation_Contact_Us/){
+				log("--> Importing contact us")
+				@import pages/contactus.ts
+			}
 			# Resource Pages
 			with(/mresources-home/){
 				log("--> Importing Resources home")
@@ -184,6 +188,10 @@ match($status) {
 				@import pages/specials.ts
 			}
 			with(/quickorder/){
+				log("--> Importing Quick Order")
+				@import pages/quickOrder.ts
+			}
+			with(/QuickOrderView/){
 				log("--> Importing Quick Order")
 				@import pages/quickOrder.ts
 			}
