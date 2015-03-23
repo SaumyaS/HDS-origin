@@ -33,7 +33,7 @@ $base-line-height:  1.5em !default;
 // Establishes a font baseline for the given font-size.
 @mixin establish-baseline($font-size: $base-font-size) {
   html, body {
-    font-size: $font-size;
+    font-size: 12px;
     line-height:relative-font-size($base-line-height);
   }
 }

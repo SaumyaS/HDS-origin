@@ -208,7 +208,7 @@ $$("body"){
 				remove()
 			}
 			$("./a[1]"){
-				attributes(class: "_greeting")
+				attributes(class: "_greeting", id: "acct-name")
 			}
 			$("./a[@class='logout_btn']"){
 				add_class("btn")

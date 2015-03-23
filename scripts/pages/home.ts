@@ -4,6 +4,15 @@ $("/html"){
 		add_class("_home")
 		$("./div[1]"){
 			attributes(class: "_homepageThumbnail")
+			$("./div[@class='hp_header']"){
+				$("./div"){
+					remove()
+				}
+				insert("div", class: "_hp_headerTitle", "Top Categories")
+			}
+			$("./div[2]"){
+				attributes(style: "")
+			}
 			$(".//div[@class='hp_topcat']"){
 				$("./ul"){
 					attributes(class: "_hp_topcatContainer")

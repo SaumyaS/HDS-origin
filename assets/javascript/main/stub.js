@@ -134,6 +134,10 @@ $("._orderDetails").DOMNodeAppear(function() {
 	Ur.setup("._orderSummaryContainer");
 });
 
+// $("._orderSummaryContainer").DOMNodeAppear(function() {
+// 	Ur.setup("._orderSummaryContainer");
+// });
+
 $("._orderDetails").DOMNodeAppear(function() {
 	Ur.setup("[id^=collapse]");
 });
@@ -159,6 +163,12 @@ $("#quick_cart_container").DOMNodeAppear(function(){
 $("#progress_bar").DOMNodeAppear(function(){
 	$("#progress_bar").attr("style", "display:none !important;");
 });
+
+// $("#progress_bar").DOMNodeAppear(function(){
+// 	$("#progress_bar").fadeOut('slow').delay(4000);
+// 	$("#progress_bar").attr("style", "position: fixed; top: 45%; left: 45%; z-index: 100;");
+
+// });
 
 $("._colQuantity").DOMNodeAppear(function(){
 	var value = $('[id*=freeGift_qty]').val();

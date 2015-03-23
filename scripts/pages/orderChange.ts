@@ -5,6 +5,9 @@ $$("#cart-total"){
 			insert_after("br")
 			insert_before("br")
 		}
+		$(".//h2"){
+			attributes(style: "")
+		}
 	}
 	$("./div[2]"){
 		attributes(style: "", class: "_shipping")
@@ -21,6 +24,9 @@ $$("#cart-total"){
 		$("h2"){
 			insert_after("h2", "Shipping")
 			remove()
+		}
+		$("./p"){
+			attributes(style: "")
 		}
 	}
 	$("./div[3]"){

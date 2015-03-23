@@ -8,6 +8,8 @@ $$("#ad_17601"){
 # $("//script[@src]") {
 # 	attribute("data-mw_keep", "true")
 # }
+
+#Remove this for progress bar defect
 $$("#progress_bar"){
 	attributes(style: "display:none !important;")
 }
