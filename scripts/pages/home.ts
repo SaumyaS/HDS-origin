@@ -65,7 +65,10 @@ $("/html"){
 					attributes(class: "_specialsItem")
 
 					$(".//div[@class='ad']"){
-						$("./div[2]"){
+						$("./a"){
+							attributes(class: "_specialsTitleLink")
+						}
+						$("./div[1]"){
 							attributes(class: "_specialsContent")
 						}
 					}
