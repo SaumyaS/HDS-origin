@@ -135,6 +135,9 @@ $slider-width: 255px;
 			padding: 10px;
 		}
 		#LogonHeader{
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-top: 10px;
 			.login_rounded{
 				background-color: #333;
 				border: solid 1px #333;
@@ -146,6 +149,7 @@ $slider-width: 255px;
 				margin: 8px 5px 5px 0px;
 				color: #fff;
 				transition: box-shadow 0.3s, border 0.3s;
+
 			}
 			.login_btn_container{
 				position: absolute;
@@ -161,6 +165,9 @@ $slider-width: 255px;
 			}
 		}
 		.new_login{
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-bottom: 10px;
 			._userAccessBtnContainer{
 				// height: 60px;
 			}

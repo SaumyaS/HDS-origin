@@ -127,7 +127,7 @@
 			}
 		}
 		._logonDiv{
-			._logonContainer{
+			.loginFormContainer{
 				position: absolute;
 				top: 45px;
 				background-color: #000;
@@ -148,9 +148,11 @@
 						margin: 8px 5px 5px 0px;
 						color: #fff;
 						transition: box-shadow 0.3s, border 0.3s;
+						margin-left: 10px;
 					}
 				}
 				.new_login{
+					margin-left: 10px;
 					a{
 						text-decoration: underline;
 						color: #999;

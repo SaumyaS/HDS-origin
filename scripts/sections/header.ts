@@ -57,16 +57,20 @@ $$("body"){
 						}
 					}
 				}
+				$("./div[@class='loginFormContainer']"){
+					attributes(style: "")
+					move_here("../../div[@class='header_container']/div[@class='new_login']")
+				}
 			}
 			$("./form[@id='LogonHeader']"){
 				wrap("div", class: "_logonContainer")
 			}
 			$("./div[@class='_logonContainer']"){
-				move_here("../div[@class='header_container']/div[@class='new_login']")
+				
 			}
 		}
 		$("./div[@class='header_container']"){
-			move_here("../div[@class='header_top']/div[@class='_logonContainer']")
+			move_here("../div[@class='header_top']/div[@class='header_container']/div[@class='loginFormContainer']")
 			$("./div[contains(@class, 'logo')]"){
 				$(".//img"){
 					attributes(height: "", width: "")
@@ -117,7 +121,7 @@ $$("body"){
 				# }
 				wrap("div", class: "_userButtons")
 			}
-			$("./div[@class='_logonContainer']"){
+			$("./div[@class='loginFormContainer']"){
 				# move_here("../div[@class='_userButtons']/div[@class='checkout_wrapper']/ul[@class='_userTools']")
 
 				$("./form[@id='LogonHeader']"){
@@ -152,14 +156,11 @@ $$("body"){
 						remove()
 					}
 					insert("div", class: "_userAccessBtnContainer"){
-						move_here("../a[@class='_forgotPassBtn']")
+						move_here("//a[@class='_forgotPassBtn']")
 						insert("br")
-						move_here("../a[@class='_registerBtn']")
+						move_here("//a[@class='_registerBtn']")
 					}
 					
-				}
-				$("./ul[@class='_userTools']"){
-					attributes(style: "display: none;")
 				}
 				wrap("div", class: "_logonDiv")
 			}
@@ -194,29 +195,37 @@ $$("body"){
 		}
 		insert_after("div", class: "_blkBG")
 		insert_after("div", class: "_logonTest"){
-			move_here("//div[@class='_logonContainer']")
-			move_here("//div[@class='header_top']/div[@class='header_container']/div[@class='new_login']")
+			move_here("//div[@class='loginFormContainer']")
+			# move_here("//div[@class='header_top']/div[@class='header_container']/div[@class='new_login']")
 		}
 	}
 	$(".//div[contains(@class,'logonTest')]"){
-		$("./div[@class='new_login']"){
-			move_here("//div[@class='_userButtons']/div[@class='checkout_wrapper']/ul[@class='_userTools']")
-			$("./ul[@class='_userTools']"){
-				attributes(style: "display: block !important;")
+		$("./div[@class='loginFormContainer']"){
+			$("./div[@class='new_login']"){
+				attributes(style: "")
+				$("./span"){
+					remove()
+				}
+				$("./a[1]"){
+					attributes(class: "_greeting", id: "acct-name")
+				}
+				$("./a[@class='_greeting']"){
+					$("//ul[@class='_userTools']"){
+						attributes(style: "display: block !important;")
+					}
+					$("//div[@class='_userAccessBtnContainer']"){
+						remove("br")
+					}
+				}
+				$("./a[@class='logout_btn']"){
+					add_class("btn")
+					add_class("expand")
+				}
+				$("./a[3]"){
+					remove()
+				}
 			}
-			$("./span"){
-				remove()
-			}
-			$("./a[1]"){
-				attributes(class: "_greeting", id: "acct-name")
-			}
-			$("./a[@class='logout_btn']"){
-				add_class("btn")
-				add_class("expand")
-			}
-			$("./a[3]"){
-				remove()
-			}
+			move_here("//ul[@class='_userTools']")
 		}
 	}
 	$(".//div[@class='main_wrapper']"){

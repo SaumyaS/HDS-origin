@@ -16,8 +16,8 @@ $("/html"){
 			$(".//div[@class='hp_topcat']"){
 				$("./ul"){
 					attributes(class: "_hp_topcatContainer")
-					$("./li"){
-						attributes(class: "_hp_topcatItem", style: "")
+					$(".//li"){
+						attributes(class: "_hp_topcatItem")
 					}
 				}
 			}

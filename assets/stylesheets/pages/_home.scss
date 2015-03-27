@@ -14,13 +14,15 @@
 		.hp_topcat{
 			text-align: center;
 			._hp_topcatContainer{
+
 				._hp_topcatItem{
-					display: inline-block;
+					
 					text-align: center;
 					vertical-align: middle;
 					position: relative;
-					width: 130px;
-					height: 130px;
+					background-size: 130px;
+					width: 130px !important;
+					height: 130px !important;
 					border: 1px solid #ccc;
 					margin: 5px 3px;
 					padding: 5px;
