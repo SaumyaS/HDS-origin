@@ -14,25 +14,39 @@
 		.hp_topcat{
 			text-align: center;
 			._hp_topcatContainer{
+				>div{
+					display: inline-block;
+				}
+				.ad{
 
-				._hp_topcatItem{
-					
 					text-align: center;
 					vertical-align: middle;
 					position: relative;
-					background-size: 130px;
-					width: 130px !important;
-					height: 130px !important;
-					border: 1px solid #ccc;
-					margin: 5px 3px;
+					width: 140px !important;
+					height: 160px !important;
 					padding: 5px;
-					z-index: 100;
-					.hp_cathead{
-						font-size: 15px;
-						color: #000;
-						font-weight: bold;
-						height: 45px;
-					}
+				}
+				.hp_cathead{
+					display: -webkit-box;
+					overflow: hidden  !important;
+					text-overflow: ellipsis !important;
+					-webkit-line-clamp: 2 !important;
+					-webkit-box-orient: vertical !important;
+					height: 33px;
+
+					position: absolute;
+					font-size: 15px;
+					color: #000;
+					font-weight: bold;
+					width: 140px;
+					line-height: 1.1;
+					margin-top: 10px;
+				}
+				._hp_topcatItem{
+					background-size: 140px;
+					width: 140px !important;
+					height: 160px !important;
+					border: 1px solid #ccc;
 					img{
 						width: 68%;
 					}

@@ -16,9 +16,22 @@ $("/html"){
 			$(".//div[@class='hp_topcat']"){
 				$("./ul"){
 					attributes(class: "_hp_topcatContainer")
-					$(".//li"){
-						attributes(class: "_hp_topcatItem")
+					$(".//a"){
+						attributes(class: "_hp_topcatLink")
+						$(".//li"){
+							attributes(class: "_hp_topcatItem")
+						}
+						move_here(".//div[@class='hp_cathead']", "top")
+						$("./div[@class='hp_cathead']"){
+							attributes(style: "")
+						}
 					}
+				}
+				$("./ul[@class='_hp_topcatContainer'][1]"){
+					move_here("../ul[@class='_hp_topcatContainer'][2]/div")
+				}
+				$("./ul[2]"){
+					remove()
 				}
 			}
 		}
