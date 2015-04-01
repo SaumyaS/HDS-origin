@@ -60,14 +60,32 @@ $(document).ready(function() {
 	    return $.trim($(this).html()) === "&nbsp;";
 	}).remove();
 
-	$("#WC_UnregisteredCheckout_links_4, #WC_UserRegistrationAddForm_links_1, #SubmitButton, #WC_PromotionCodeDisplay_links_1, #Update").on('click',function(){
+	$("#WC_UnregisteredCheckout_links_4, #WC_UserRegistrationAddForm_links_1, #_SubmitButton, #SubmitButton, #WC_PromotionCodeDisplay_links_1, #Update").on('click',function(){
 		setTimeout(function(){ 
-			var height = $(":focus").outerHeight();
-			var top = $(":focus").offset().top + height;
-			var left = $(":focus").offset().left;
+			var focusedElement = document.activeElement;
+
+			var height = $(focusedElement).outerHeight();
+
+			var top = $(focusedElement).offset().top + height;
 			$("#dijit__MasterTooltip_0").css("top", top);
-			$("#dijit__MasterTooltip_0").css("left", left);
+			var focusedElement = document.activeElement;
+			
+			// Check for iOS8
+			var isIOS8 = function() {
+			  var deviceAgent = navigator.userAgent.toLowerCase();
+			  return /(iphone|ipod|ipad).* os 8_/.test(deviceAgent);
+			}
+
+			if(isIOS8()){
+				$('html,body').animate({
+					scrollTop: $(focusedElement).offset().top - 100
+				}, 500);
+			}
+			
 		}, 200);
+
+
+
 	});
 
 	$("input").keydown(function(){
