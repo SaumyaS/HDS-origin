@@ -33,6 +33,9 @@
 				}
 				._address{
 					margin-left: 100px;
+					.addressspan{
+						float: none !important;
+					}
 				}
 			}
 			._contactName{
