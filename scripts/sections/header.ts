@@ -422,7 +422,7 @@ $("./body"){
 
 $("/html"){
 	$(".//div[@class='header_container']"){
-		insert_top("div", class: "_classMiddleHeader"){
+		insert_top("div", class: "_classMiddleHeader", id: "classMiddleHeader"){
 			move_here("../div[contains(@class, 'left')]")
 			move_here("../div[@class='_userButtons']")
 		}
