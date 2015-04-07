@@ -12,9 +12,19 @@
 		}
 		.content_wrapper_box{
 			.hp_topcat{
+				>ul{
+					display: -webkit-box;
+					display: -webkit-flex;
+					display: flex;
+					display: -moz-box;
+					display: -ms-flexbox;
+
+					justify-content: space-around;
+					-webkit-flex-flow: row wrap;
+					flex-flow: row wrap;
+				}
 				text-align: center;
 				._hp_topcatItem{
-					display: inline-block;
 					text-align: center;
 					vertical-align: middle;
 					position: relative;
