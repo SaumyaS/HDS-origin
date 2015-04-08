@@ -14,15 +14,9 @@
 		.hp_topcat{
 			text-align: center;
 			._hp_topcatContainer{
-				  display: -webkit-box;
-				  display: -webkit-flex;
-				  display: flex;
-				  display: -moz-box;
-				  display: -ms-flexbox;
-				  
-				  justify-content: space-around;
-				  -webkit-flex-flow: row wrap;
-				  flex-flow: row wrap;
+				>div{
+					display: inline-block;
+				}
 				.ad{
 
 					text-align: center;
