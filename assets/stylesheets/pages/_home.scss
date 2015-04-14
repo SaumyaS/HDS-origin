@@ -15,8 +15,10 @@
 			text-align: center;
 			._hp_topcatContainer{
 				>div{
-					display: inline-block;
+					// display: inline-block;
 				}
+				@include flexSpaceAround;
+
 				.ad{
 
 					text-align: center;

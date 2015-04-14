@@ -12,6 +12,9 @@
 		}
 		.content_wrapper_box{
 			.hp_topcat{
+				>ul{
+					@include flexSpaceAround;
+				}
 				text-align: center;
 				._hp_topcatItem{
 					display: inline-block;
