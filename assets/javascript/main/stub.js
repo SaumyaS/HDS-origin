@@ -137,27 +137,27 @@ $(".closeText").DOMNodeAppear(function(){
 });
 
 $("#CVVDetailsSection").DOMNodeAppear(function() {
-	Ur.setup("#CVVDetailsSection");
+	$("#CVVDetailsSection").Uranium();
 });
 
 $("._ajaxCalledAccount").DOMNodeAppear(function() {
-	Ur.setup("._togglerInitialize");
+	$("._togglerInitialize").Uranium();
 });
 
 $("._companyInfoContainer2").DOMNodeAppear(function() {
-	Ur.setup("._companyInfoContainer2");
+	$("._companyInfoContainer2").Uranium();
 });
 
 $("._orderDetails").DOMNodeAppear(function() {
-	Ur.setup("._orderSummaryContainer");
+	$("._orderSummaryContainer").Uranium();
 });
 
 // $("._orderSummaryContainer").DOMNodeAppear(function() {
-// 	Ur.setup("._orderSummaryContainer");
+// 	$("._orderSummaryContainer").Uranium();
 // });
 
 $("._orderDetails").DOMNodeAppear(function() {
-	Ur.setup("[id^=collapse]");
+	$("[id^=collapse]").Uranium();
 });
 
 $(".highslide-container").DOMNodeAppear(function(){
