@@ -71,50 +71,51 @@
 		._TPcarousel{
 			._TPcarouselContainer{
 				height: 340px !important;
-				._TPcarouselItem{
-					background: #fff;
-					border: 1px #ccc solid;
-					margin: 5px !important;
-					padding: 15px;
-					width: 135px;
+				._itemContainer{
+					padding:5px;
 					float: left;
-					.letest_proimage{
+					width: 160px;
+					._TPcarouselItem{
+						background: #fff;
+						border: 1px #ccc solid;
+						padding: 15px;
+						.letest_proimage{
 
-					}
-					.lproduct_name{
-						display: -webkit-box;
-						color: #000;
-						font-family: 'Open Sans', sans-serif;
-						display: block;
-						font-size: 12px;
-						font-weight: bold;
-						padding: 8px 0 0 0;
-						margin-top: 15px;
-						position: relative;
-						overflow: hidden  !important;
-						text-overflow: ellipsis !important;
-						-webkit-line-clamp: 2 !important;
-						-webkit-box-orient: vertical !important;
-						height: 45px;
-						line-height: 1.3;
-					}
-					.lproduct_desc{
-						color: #000;
-						font-family: 'Open Sans', sans-serif;
-						display: block;
-						font-size: 12px;
-						line-height: 14px;
-						margin-bottom: 5px;
-					}
-					.llproduct_price{
-						color: #000;
-						font-family: 'Open Sans', sans-serif;
-						font-size: 16px !important;
-						font-weight: 700;
-						text-decoration: none;
+						}
+						.lproduct_name{
+							display: -webkit-box;
+							color: #000;
+							font-family: 'Open Sans', sans-serif;
+							display: block;
+							font-size: 12px;
+							font-weight: bold;
+							padding: 8px 0 0 0;
+							margin-top: 15px;
+							position: relative;
+							overflow: hidden  !important;
+							text-overflow: ellipsis !important;
+							-webkit-line-clamp: 2 !important;
+							-webkit-box-orient: vertical !important;
+							height: 45px;
+							line-height: 1.3;
+						}
+						.lproduct_desc{
+							color: #000;
+							font-family: 'Open Sans', sans-serif;
+							display: block;
+							font-size: 12px;
+							line-height: 14px;
+							margin-bottom: 5px;
+						}
+						.llproduct_price{
+							color: #000;
+							font-family: 'Open Sans', sans-serif;
+							font-size: 16px !important;
+							font-weight: 700;
+							text-decoration: none;
+						}
 					}
 				}
-
 			}
 		}
 	}

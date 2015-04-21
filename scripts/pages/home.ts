@@ -49,6 +49,7 @@ $("/html"){
 						attributes(class: "_TPcarouselContainer")
 						$("./li"){
 							attributes(class: "_TPcarouselItem")
+							wrap("div", class: "_itemContainer")
 						}
 					}
 
@@ -69,11 +70,11 @@ $("/html"){
 				$("./div[@id='TPcarousel1']"){
 					attributes(data-ur-set: "carousel", data-ur-carousel-component: "view_container", data-ur-infinite: "enabled")
 					$("./ul[@class='_TPcarouselContainer']"){
-						attributes(data-ur-carousel-component: "scroll_container", style: "width: 3000px !important;")
+						attributes(data-ur-carousel-component: "scroll_container")
 						insert_after("div", class: "_dots", data-ur-carousel-component: "dots")
-						$("./li[@class='_TPcarouselItem']"){
+						$("./div[@class='_itemContainer']"){
 							attributes(data-ur-carousel-component: "item")
-							$("./a[@class='lpadd_tocart']"){
+							$(".//a[@class='lpadd_tocart']"){
 								add_class("btn")
 								add_class("expand")
 							}
@@ -83,11 +84,11 @@ $("/html"){
 				$("./div[@id='TPcarousel2']"){
 					attributes(data-ur-set: "carousel", data-ur-carousel-component: "view_container", data-ur-infinite: "enabled")
 					$("./ul[@class='_TPcarouselContainer']"){
-						attributes(data-ur-carousel-component: "scroll_container", style: "width: 3000px !important;")
+						attributes(data-ur-carousel-component: "scroll_container")
 						insert_after("div", class: "_dots", data-ur-carousel-component: "dots")
-						$("./li[@class='_TPcarouselItem']"){
+						$("./div[@class='_itemContainer']"){
 							attributes(data-ur-carousel-component: "item")
-							$("./a[@class='lpadd_tocart']"){
+							$(".//a[@class='lpadd_tocart']"){
 								add_class("btn")
 								add_class("expand")
 							}
